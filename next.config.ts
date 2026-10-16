@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["pdf-parse", "pdfjs-dist", "mammoth", "docx", "jspdf"],
+  serverExternalPackages: [
+    "firebase-admin",
+    "@google-cloud/firestore",
+    "pdf-parse",
+    "pdfjs-dist",
+    "mammoth",
+    "docx",
+    "jspdf",
+  ],
   images: {
     remotePatterns: [
       {
