@@ -1,9 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  serverExternalPackages: ["pdf-parse", "pdfjs-dist", "mammoth", "docx", "jspdf"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "edukyu.com",
+      },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {

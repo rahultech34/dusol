@@ -1,0 +1,35 @@
+import React from "react";
+import { AdminLayoutWrapper } from "@/components/admin/AdminLayoutWrapper";
+import { ProgramForm } from "@/components/admin/ProgramForm";
+import { getCurrentAdmin } from "@/lib/auth";
+import { getProgramById } from "@/lib/firestore-cms";
+import { notFound, redirect } from "next/navigation";
+
+export const dynamic = "force-dynamic";
+
+export default async function EditMBASpecializationPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const admin = await getCurrentAdmin();
+  if (!admin) redirect("/admin/login");
+
+  const { id } = await params;
+  const program = await getProgramById("mba", id);
+
+  if (!program) {
+    notFound();
+  }
+
+  return (
+    <AdminLayoutWrapper
+      title={`Edit: ${program.name}`}
+      subtitle={`Manage MBA Specialization curriculum, fees, and details. Last updated ${new Date(program.updatedAt).toLocaleString()}`}
+      adminEmail={admin.email}
+      adminName={admin.name}
+    >
+      <ProgramForm type="mba" initialData={program} isEdit={true} />
+    </AdminLayoutWrapper>
+  );
+}
