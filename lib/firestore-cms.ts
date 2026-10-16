@@ -1,4 +1,5 @@
 import { getDb } from "./firebase-admin";
+import type { Query, QueryDocumentSnapshot } from "firebase-admin/firestore";
 import { Blog, Program, Category, MediaItem, StudentZoneItem, DashboardStats } from "./types";
 import { HomePageContent } from "./home-page-types";
 import slugify from "slugify";
@@ -44,14 +45,14 @@ export async function getAllBlogs(onlyPublished = false): Promise<Blog[]> {
   const db = getDb();
   if (!db) return [];
   try {
-    let query: FirebaseFirestore.Query = db.collection("blogs");
+    let query: Query = db.collection("blogs");
     if (onlyPublished) {
       query = query.where("status", "==", "published");
     }
     const snapshot = await query.get();
     const blogs: Blog[] = [];
 
-    snapshot.forEach((doc) => {
+    snapshot.forEach((doc: QueryDocumentSnapshot) => {
       const data = doc.data();
       blogs.push({
         id: doc.id,
@@ -199,7 +200,7 @@ export async function saveBlog(
 
     // Validate slug uniqueness
     const slugQuery = await db.collection("blogs").where("slug", "==", slug).get();
-    const existingWithSlug = slugQuery.docs.find((d) => (id ? d.id !== id : true));
+    const existingWithSlug = slugQuery.docs.find((d: any) => (id ? d.id !== id : true));
     if (existingWithSlug) {
       return { success: false, error: `A blog with slug '${slug}' already exists. Please choose a different title or slug.` };
     }
@@ -250,14 +251,14 @@ export async function getAllPrograms(type: "ug" | "pg" | "mba", onlyPublished = 
   const collName = getProgramCollectionName(type);
 
   try {
-    let query: FirebaseFirestore.Query = db.collection(collName);
+    let query: Query = db.collection(collName);
     if (onlyPublished) {
       query = query.where("status", "==", "published");
     }
     const snapshot = await query.get();
     const programs: Program[] = [];
 
-    snapshot.forEach((doc) => {
+    snapshot.forEach((doc: QueryDocumentSnapshot) => {
       const data = doc.data();
       programs.push({
         id: doc.id,
@@ -408,7 +409,7 @@ export async function saveProgram(
 
     // Validate slug uniqueness
     const slugQuery = await db.collection(collName).where("slug", "==", slug).get();
-    const existing = slugQuery.docs.find((d) => (id ? d.id !== id : true));
+    const existing = slugQuery.docs.find((d: any) => (id ? d.id !== id : true));
     if (existing) {
       return { success: false, error: `A ${type.toUpperCase()} program with slug '${slug}' already exists.` };
     }
@@ -452,14 +453,14 @@ export async function getAllStudentZoneItems(onlyPublished = false): Promise<Stu
   if (!db) return [];
 
   try {
-    let query: FirebaseFirestore.Query = db.collection("studentZone");
+    let query: Query = db.collection("studentZone");
     if (onlyPublished) {
       query = query.where("status", "==", "published");
     }
     const snapshot = await query.get();
     const items: StudentZoneItem[] = [];
 
-    snapshot.forEach((doc) => {
+    snapshot.forEach((doc: QueryDocumentSnapshot) => {
       const data = doc.data();
       items.push({
         id: doc.id,
@@ -714,7 +715,7 @@ export async function getAllCategories(): Promise<Category[]> {
   try {
     const snap = await db.collection("categories").get();
     const categories: Category[] = [];
-    snap.forEach((d) => {
+    snap.forEach((d: any) => {
       const data = d.data();
       categories.push({
         id: d.id,
@@ -791,7 +792,7 @@ export async function getImportHistory(limit = 50): Promise<any[]> {
   try {
     const snap = await db.collection("importHistory").orderBy("createdAt", "desc").limit(limit).get();
     const items: any[] = [];
-    snap.forEach((doc) => {
+    snap.forEach((doc: any) => {
       items.push({ id: doc.id, ...doc.data() });
     });
     return items;

@@ -16,7 +16,7 @@ export async function GET() {
   if (db) {
     try {
       const snap = await db.collection("media").orderBy("createdAt", "desc").get();
-      snap.forEach((doc) => {
+      snap.forEach((doc: any) => {
         mediaList.push({ id: doc.id, ...doc.data() });
       });
     } catch (e) {
