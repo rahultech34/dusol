@@ -39,11 +39,23 @@ jobs:
             npm install
             npm run build
             
-            # Restart or reload PM2 process
-            if pm2 list | grep -q "dusol"; then
-              pm2 reload dusol --update-env || pm2 restart dusol --update-env
+            # Find the exact PM2 process running from this directory
+            TARGET_DIR="${{ secrets.PROJECT_PATH }}"
+            APP_NAME=$(pm2 jlist 2>/dev/null | node -e '
+              try {
+                const list = JSON.parse(require("fs").readFileSync(0, "utf-8"));
+                const target = process.argv[1];
+                const app = list.find(p => p.pm2_env && (p.pm2_env.pm_cwd === target || p.pm2_env.pm_cwd === target + "/"));
+                if (app) console.log(app.name);
+              } catch (e) {}
+            ' "$TARGET_DIR")
+            
+            if [ -n "$APP_NAME" ]; then
+              echo "🔄 Found PM2 app: '$APP_NAME'. Restarting..."
+              pm2 restart "$APP_NAME" --update-env
             else
-              pm2 restart all || pm2 start npm --name "dusol" -- start
+              echo "⚠️ No existing PM2 process found for $TARGET_DIR. Starting as 'dusol'..."
+              pm2 start npm --name "dusol" -- start
             fi
             
             pm2 save
