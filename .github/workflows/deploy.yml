@@ -18,45 +18,36 @@ jobs:
           port: 22
           script: |
             set -e
-            echo "🚀 Starting deployment on server..."
+            echo "🚀 Starting deployment for dusol-app..."
             
             # Load environment paths (Node, npm, nvm, pm2)
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:$HOME/.nvm/versions/node/$(ls $HOME/.nvm/versions/node 2>/dev/null | tail -n 1)/bin
             
-            echo "Using Node: $(node -v 2>/dev/null || echo 'not found')"
-            echo "Using NPM: $(npm -v 2>/dev/null || echo 'not found')"
-            
-            # Go to project directory
+            # 1. Verify target directory
             cd ${{ secrets.PROJECT_PATH }}
             
-            # Fetch and pull latest main branch
+            # 2. Pull latest code cleanly
             git fetch origin main
             git reset --hard origin/main
             
-            # Install dependencies and build
+            # 3. Install dependencies and build
             npm install
             npm run build
             
-            # Find the exact PM2 process running from this directory
-            TARGET_DIR="${{ secrets.PROJECT_PATH }}"
-            APP_NAME=$(pm2 jlist 2>/dev/null | node -e '
-              try {
-                const list = JSON.parse(require("fs").readFileSync(0, "utf-8"));
-                const target = process.argv[1];
-                const app = list.find(p => p.pm2_env && (p.pm2_env.pm_cwd === target || p.pm2_env.pm_cwd === target + "/"));
-                if (app) console.log(app.name);
-              } catch (e) {}
-            ' "$TARGET_DIR")
-            
-            if [ -n "$APP_NAME" ]; then
-              echo "🔄 Found PM2 app: '$APP_NAME'. Restarting..."
-              pm2 restart "$APP_NAME" --update-env
+            # 4. Strictly reload/restart ONLY the existing 'dusol-app' process
+            # (No new process creation to prevent port conflicts)
+            if pm2 describe dusol-app > /dev/null 2>&1; then
+              echo "🔄 Restarting existing 'dusol-app' PM2 process..."
+              pm2 reload dusol-app --update-env || pm2 restart dusol-app --update-env
             else
-              echo "⚠️ No existing PM2 process found for $TARGET_DIR. Starting as 'dusol'..."
-              pm2 start npm --name "dusol" -- start
+              echo "❌ ERROR: 'dusol-app' process not found in PM2. Aborting to prevent port conflicts."
+              exit 1
             fi
             
+            # 5. Verify process status
+            pm2 status dusol-app
             pm2 save
-            echo "✅ Deployment completed successfully!"
+            
+            echo "✅ Deployment completed successfully with zero conflicts!"
