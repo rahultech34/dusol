@@ -2,6 +2,7 @@ import { getDb } from "./firebase-admin";
 import type { Query, QueryDocumentSnapshot } from "firebase-admin/firestore";
 import { Blog, Program, Category, MediaItem, StudentZoneItem, DashboardStats } from "./types";
 import { HomePageContent } from "./home-page-types";
+import { getDefaultPrograms, getDefaultProgramBySlug, getDefaultProgramById } from "./default-programs";
 import slugify from "slugify";
 async function ensureDynamic() {
   // standard dynamic lifecycle
@@ -247,7 +248,9 @@ function getProgramCollectionName(type: "ug" | "pg" | "mba"): string {
 export async function getAllPrograms(type: "ug" | "pg" | "mba", onlyPublished = false): Promise<Program[]> {
   await ensureDynamic();
   const db = getDb();
-  if (!db) return [];
+  if (!db) {
+    return getDefaultPrograms(type);
+  }
   const collName = getProgramCollectionName(type);
 
   try {
@@ -256,6 +259,9 @@ export async function getAllPrograms(type: "ug" | "pg" | "mba", onlyPublished = 
       query = query.where("status", "==", "published");
     }
     const snapshot = await query.get();
+    if (snapshot.empty) {
+      return getDefaultPrograms(type);
+    }
     const programs: Program[] = [];
 
     snapshot.forEach((doc: QueryDocumentSnapshot) => {
@@ -289,19 +295,21 @@ export async function getAllPrograms(type: "ug" | "pg" | "mba", onlyPublished = 
     return programs;
   } catch (error) {
     handleFirestoreError(`getAllPrograms (${type})`, error);
-    return [];
+    return getDefaultPrograms(type);
   }
 }
 
 export async function getProgramById(type: "ug" | "pg" | "mba", id: string): Promise<Program | null> {
   await ensureDynamic();
   const db = getDb();
-  if (!db) return null;
+  if (!db) return getDefaultProgramById(id) || getDefaultProgramBySlug(type, id);
   const collName = getProgramCollectionName(type);
 
   try {
     const doc = await db.collection(collName).doc(id).get();
-    if (!doc.exists) return null;
+    if (!doc.exists) {
+      return getDefaultProgramById(id) || getDefaultProgramBySlug(type, id);
+    }
     const data = doc.data()!;
     return {
       id: doc.id,
@@ -328,21 +336,25 @@ export async function getProgramById(type: "ug" | "pg" | "mba", id: string): Pro
     };
   } catch (error) {
     console.error(`[getProgramById] Error for ${type}:`, error);
-    return null;
+    return getDefaultProgramById(id) || getDefaultProgramBySlug(type, id);
   }
 }
 
 export async function getProgramBySlug(type: "ug" | "pg" | "mba", slug: string, allowDraft = false): Promise<Program | null> {
   await ensureDynamic();
   const db = getDb();
-  if (!db) return null;
+  if (!db) {
+    return getDefaultProgramBySlug(type, slug);
+  }
   const collName = getProgramCollectionName(type);
 
   try {
     const snapshot = await db.collection(collName).where("slug", "==", slug).limit(1).get();
     if (snapshot.empty) {
       const byId = await db.collection(collName).doc(slug).get();
-      if (!byId.exists) return null;
+      if (!byId.exists) {
+        return getDefaultProgramBySlug(type, slug);
+      }
       const data = byId.data()!;
       if (!allowDraft && data.status !== "published") return null;
       return {
@@ -399,7 +411,7 @@ export async function getProgramBySlug(type: "ug" | "pg" | "mba", slug: string, 
     };
   } catch (error) {
     console.error(`[getProgramBySlug] Error for ${type}:`, error);
-    return null;
+    return getDefaultProgramBySlug(type, slug);
   }
 }
 

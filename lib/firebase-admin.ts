@@ -27,11 +27,22 @@ export function getAdminApp(): App | null {
         }
       }
     } else if (process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
-      const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
-      adminApp = initializeApp({
-        credential: cert(serviceAccount),
-      });
-      return adminApp;
+      let raw = process.env.FIREBASE_SERVICE_ACCOUNT_KEY.trim();
+      if (!raw.startsWith("{")) {
+        try {
+          raw = Buffer.from(raw, "base64").toString("utf8").trim();
+        } catch {}
+      }
+      if (raw.startsWith("{")) {
+        const serviceAccount = JSON.parse(raw);
+        if (serviceAccount.private_key) {
+          serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, "\n");
+        }
+        adminApp = initializeApp({
+          credential: cert(serviceAccount),
+        });
+        return adminApp;
+      }
     }
     console.warn("[Firebase Admin] No active service account key configured.");
     return null;

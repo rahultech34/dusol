@@ -60,6 +60,10 @@ async function findCourse(slug: string, isPreview = false) {
     "distance-mcom": "master-of-commerce",
     ma: "master-of-arts",
     "distance-ma": "master-of-arts",
+    blis: "bachelor-of-library-and-information-science",
+    "distance-blis": "bachelor-of-library-and-information-science",
+    mlis: "master-of-library-and-information-science",
+    "distance-mlis": "master-of-library-and-information-science",
   };
   const mappedSlug = acronymMap[slug.toLowerCase()];
   if (mappedSlug) {
