@@ -12,11 +12,9 @@ export function NavLogo({ className = "", isCompact = false }: NavLogoProps) {
     <div className={`flex items-center gap-2.5 sm:gap-3.5 ${className}`}>
       {/* 1. Edukyu Brand Logo (First) */}
       <Link
-        href="https://edukyu.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Edukyu - Education Simplified"
-        title="Edukyu - Distance Education Portal"
+        href="/"
+        aria-label="Edukyu - DU SOL Home"
+        title="Edukyu - DU SOL Home"
         className="flex items-center transition-opacity hover:opacity-85 shrink-0"
       >
         <div className="relative w-[88px] sm:w-[104px] md:w-[112px] h-6 sm:h-7 md:h-8">

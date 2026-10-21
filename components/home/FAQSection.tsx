@@ -156,7 +156,7 @@ export function FAQSection({ data }: FAQSectionProps) {
           <button
             type="button"
             onClick={openModal}
-            className="shrink-0 px-6 py-3 rounded-xl bg-[#f1ba02] hover:bg-[#e2ad00] active:bg-[#c99a00] text-slate-950 font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2 transform hover:-translate-y-0.5 cursor-pointer"
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#652a7c] hover:bg-[#521f66] active:bg-[#431754] text-white font-bold text-xs sm:text-sm border border-white/30 shadow-lg transition-all flex items-center gap-2 transform hover:-translate-y-0.5 cursor-pointer"
           >
             <PhoneCall className="w-4 h-4" />
             <span>Connect with Edukyu</span>

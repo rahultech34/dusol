@@ -117,7 +117,7 @@ export default async function StudentZoneDetailPage({ params, searchParams }: Pr
                   href={item.externalLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs sm:text-sm font-bold transition-all shadow-lg shadow-amber-400/20"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#652a7c] hover:bg-[#521f66] active:bg-[#431754] text-white text-xs sm:text-sm font-bold transition-all shadow-lg shadow-[#652a7c]/20"
                 >
                   <Globe className="w-4 h-4" />
                   <span>Go to Official DU SOL Portal</span>

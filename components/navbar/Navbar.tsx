@@ -95,8 +95,8 @@ export function Navbar() {
                         onMouseEnter={() => handleMouseEnter()}
                         className={`text-[15px] font-semibold transition-colors duration-150 py-2 ${
                           isCurrentActive
-                            ? "text-sky-600"
-                            : "text-slate-800 hover:text-sky-600"
+                            ? "text-[#652a7c]"
+                            : "text-slate-800 hover:text-[#652a7c]"
                         }`}
                       >
                         {item.title}
@@ -116,16 +116,16 @@ export function Navbar() {
                       onClick={() => handleDropdownClick(item.type)}
                       aria-expanded={isDropdownOpen}
                       aria-haspopup="true"
-                      className={`group flex items-center gap-1 text-[15px] font-semibold transition-colors duration-150 h-full py-0 outline-hidden focus-visible:ring-2 focus-visible:ring-sky-600 ${
+                      className={`group flex items-center gap-1 text-[15px] font-semibold transition-colors duration-150 h-full py-0 outline-hidden focus-visible:ring-2 focus-visible:ring-[#652a7c] ${
                         isDropdownOpen || isCurrentActive
-                          ? "text-sky-600"
-                          : "text-slate-800 hover:text-sky-600"
+                          ? "text-[#652a7c]"
+                          : "text-slate-800 hover:text-[#652a7c]"
                       }`}
                     >
                       <span>{item.title}</span>
                       <svg
                         className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                          isDropdownOpen ? "rotate-180 text-sky-600" : "text-slate-500 group-hover:text-sky-600"
+                          isDropdownOpen ? "rotate-180 text-[#652a7c]" : "text-slate-500 group-hover:text-[#652a7c]"
                         }`}
                         viewBox="0 0 20 20"
                         fill="currentColor"
@@ -157,7 +157,7 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="p-2 rounded-xl text-slate-700 hover:text-sky-600 hover:bg-slate-100 transition-colors focus:outline-hidden focus:ring-2 focus:ring-sky-600"
+                className="p-2 rounded-xl text-slate-700 hover:text-[#652a7c] hover:bg-purple-50 transition-colors focus:outline-hidden focus:ring-2 focus:ring-[#652a7c]"
                 aria-label="Open mobile menu"
               >
                 <Menu className="w-6 h-6" />

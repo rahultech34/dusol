@@ -74,7 +74,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           <div className="py-2.5">
             <button
               onClick={() => toggleSection("bachelor")}
-              className="w-full flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-sky-600 transition-colors"
+              className="w-full flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-[#652a7c] transition-colors"
             >
               <div className="flex items-center gap-2">
                 <span className="p-1 rounded bg-sky-100 text-sky-800">
@@ -84,7 +84,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               </div>
               <ChevronDown
                 className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                  expandedSection === "bachelor" ? "rotate-180 text-sky-600" : ""
+                  expandedSection === "bachelor" ? "rotate-180 text-[#652a7c]" : ""
                 }`}
               />
             </button>
@@ -96,7 +96,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                     key={item.id}
                     href={item.href}
                     onClick={onClose}
-                    className="block py-2 px-2.5 rounded-lg hover:bg-sky-50 text-xs font-semibold text-slate-700 hover:text-sky-600"
+                    className="block py-2 px-2.5 rounded-lg hover:bg-sky-50 text-xs font-semibold text-slate-700 hover:text-[#652a7c]"
                   >
                     {item.name}
                   </Link>
@@ -109,7 +109,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           <div className="py-2.5">
             <button
               onClick={() => toggleSection("master")}
-              className="w-full flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-sky-600 transition-colors"
+              className="w-full flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-[#652a7c] transition-colors"
             >
               <div className="flex items-center gap-2">
                 <span className="p-1 rounded bg-indigo-100 text-indigo-800">
@@ -119,7 +119,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               </div>
               <ChevronDown
                 className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                  expandedSection === "master" ? "rotate-180 text-sky-600" : ""
+                  expandedSection === "master" ? "rotate-180 text-[#652a7c]" : ""
                 }`}
               />
             </button>
@@ -131,7 +131,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                     key={item.id}
                     href={item.href}
                     onClick={onClose}
-                    className="block py-2 px-2.5 rounded-lg hover:bg-indigo-50 text-xs font-semibold text-slate-700 hover:text-sky-600"
+                    className="block py-2 px-2.5 rounded-lg hover:bg-indigo-50 text-xs font-semibold text-slate-700 hover:text-[#652a7c]"
                   >
                     {item.name}
                   </Link>
@@ -144,7 +144,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           <div className="py-2.5">
             <button
               onClick={() => toggleSection("mba")}
-              className="w-full flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-sky-600 transition-colors"
+              className="w-full flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-[#652a7c] transition-colors"
             >
               <div className="flex items-center gap-2">
                 <span className="p-1 rounded bg-amber-100 text-amber-800">
@@ -154,7 +154,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               </div>
               <ChevronDown
                 className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                  expandedSection === "mba" ? "rotate-180 text-sky-600" : ""
+                  expandedSection === "mba" ? "rotate-180 text-[#652a7c]" : ""
                 }`}
               />
             </button>
@@ -166,7 +166,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                     key={item.id}
                     href={item.href}
                     onClick={onClose}
-                    className="block py-2 px-2.5 rounded-lg hover:bg-amber-50 text-xs font-semibold text-slate-700 hover:text-sky-600"
+                    className="block py-2 px-2.5 rounded-lg hover:bg-amber-50 text-xs font-semibold text-slate-700 hover:text-[#652a7c]"
                   >
                     {item.name}
                   </Link>
@@ -179,7 +179,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           <div className="py-2.5">
             <button
               onClick={() => toggleSection("student")}
-              className="w-full flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-sky-600 transition-colors"
+              className="w-full flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-[#652a7c] transition-colors"
             >
               <div className="flex items-center gap-2">
                 <span className="p-1 rounded bg-emerald-100 text-emerald-800">
@@ -189,7 +189,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               </div>
               <ChevronDown
                 className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                  expandedSection === "student" ? "rotate-180 text-sky-600" : ""
+                  expandedSection === "student" ? "rotate-180 text-[#652a7c]" : ""
                 }`}
               />
             </button>
@@ -201,7 +201,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                     key={item.id}
                     href={item.href}
                     onClick={onClose}
-                    className="block py-2 px-2.5 rounded-lg hover:bg-emerald-50 text-xs font-semibold text-slate-700 hover:text-sky-600"
+                    className="block py-2 px-2.5 rounded-lg hover:bg-emerald-50 text-xs font-semibold text-slate-700 hover:text-[#652a7c]"
                   >
                     {item.name}
                   </Link>
@@ -215,7 +215,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             <Link
               href="/blogs"
               onClick={onClose}
-              className="flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-sky-600 transition-colors"
+              className="flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-[#652a7c] transition-colors"
             >
               <span>Blogs</span>
             </Link>
@@ -230,7 +230,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
               onClose();
               openModal();
             }}
-            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-bold text-sm shadow-md transition-all cursor-pointer"
+            className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#652a7c] hover:bg-[#521f66] active:bg-[#431754] text-white font-bold text-sm shadow-md transition-all cursor-pointer"
           >
             <span>Apply For Admission 2026</span>
             <ArrowRight className="w-4 h-4" />

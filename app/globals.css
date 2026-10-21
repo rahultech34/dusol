@@ -205,25 +205,52 @@ body {
 
 .editor-content table,
 .prose-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.25rem 0;
-  font-size: 0.9rem;
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 1.5rem 0 !important;
+  font-size: 0.925rem !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 0.875rem !important;
+  overflow: hidden !important;
 }
 
 .editor-content th,
 .prose-content th {
-  background-color: #f8fafc;
-  border: 1px solid #cbd5e1;
-  padding: 0.6rem 0.85rem;
-  text-align: left;
-  font-weight: 700;
-  color: #1e293b;
+  background-color: #f8fafc !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+  border-right: 1px solid #e2e8f0 !important;
+  padding: 0.85rem 1.15rem !important;
+  text-align: left !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.editor-content th:last-child,
+.prose-content th:last-child {
+  border-right: none !important;
 }
 
 .editor-content td,
 .prose-content td {
-  border: 1px solid #e2e8f0;
-  padding: 0.6rem 0.85rem;
-  color: #334155;
+  border-bottom: 1px solid #e2e8f0 !important;
+  border-right: 1px solid #e2e8f0 !important;
+  padding: 0.85rem 1.15rem !important;
+  color: #334155 !important;
+  background-color: #ffffff !important;
+}
+
+.editor-content td:last-child,
+.prose-content td:last-child {
+  border-right: none !important;
+}
+
+.editor-content tr:last-child td,
+.prose-content tr:last-child td {
+  border-bottom: none !important;
+}
+
+.editor-content tr:hover td,
+.prose-content tr:hover td {
+  background-color: #fbfcfe !important;
 }

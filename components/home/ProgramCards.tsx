@@ -48,14 +48,14 @@ export function ProgramCards() {
           <button
             type="button"
             onClick={openModal}
-            className="font-bold text-sky-700 hover:text-sky-900 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform cursor-pointer"
+            className="font-bold text-[#652a7c] hover:text-[#521f66] inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform cursor-pointer"
           >
             <span>Apply for UG Courses</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
           <Link
             href="/ug-programs"
-            className="text-[11px] font-semibold text-slate-400 hover:text-slate-700 transition-colors"
+            className="text-[11px] font-semibold text-slate-400 hover:text-[#652a7c] transition-colors"
           >
             View Details
           </Link>
@@ -98,14 +98,14 @@ export function ProgramCards() {
           <button
             type="button"
             onClick={openModal}
-            className="font-bold text-indigo-800 hover:text-indigo-950 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform cursor-pointer"
+            className="font-bold text-[#652a7c] hover:text-[#521f66] inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform cursor-pointer"
           >
             <span>Apply for PG Courses</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
           <Link
             href="/pg-programs"
-            className="text-[11px] font-semibold text-slate-400 hover:text-slate-700 transition-colors"
+            className="text-[11px] font-semibold text-slate-400 hover:text-[#652a7c] transition-colors"
           >
             View Details
           </Link>
@@ -113,17 +113,17 @@ export function ProgramCards() {
       </div>
 
       {/* MBA Specialization Card */}
-      <div className="bg-white rounded-2xl p-6 shadow-xl shadow-slate-900/10 border border-slate-200/90 hover:shadow-2xl hover:border-amber-300 transition-all duration-300 flex flex-col justify-between group">
+      <div className="bg-white rounded-2xl p-6 shadow-xl shadow-slate-900/10 border border-slate-200/90 hover:shadow-2xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group">
         <div>
           <div className="flex items-center justify-between">
-            <span className="p-3 rounded-xl bg-amber-100 text-amber-800">
+            <span className="p-3 rounded-xl bg-purple-100 text-[#652a7c]">
               <Briefcase className="w-6 h-6" />
             </span>
-            <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200/60">
+            <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-purple-50 text-[#652a7c] border border-purple-200/60">
               {mba.length} Specializations
             </span>
           </div>
-          <h3 className="text-lg font-bold text-slate-900 mt-4 group-hover:text-amber-800 transition-colors">
+          <h3 className="text-lg font-bold text-slate-900 mt-4 group-hover:text-[#652a7c] transition-colors">
             MBA Specializations
           </h3>
           <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
@@ -136,7 +136,7 @@ export function ProgramCards() {
               <Link
                 key={c.id}
                 href={c.href}
-                className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/60 hover:bg-amber-50 hover:text-amber-700 transition-colors"
+                className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200/60 hover:bg-purple-50 hover:text-[#652a7c] transition-colors"
               >
                 {c.name.replace(/^MBA in\s+/i, "")}
               </Link>
@@ -148,14 +148,14 @@ export function ProgramCards() {
           <button
             type="button"
             onClick={openModal}
-            className="font-bold text-amber-800 hover:text-amber-950 inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform cursor-pointer"
+            className="font-bold text-[#652a7c] hover:text-[#521f66] inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform cursor-pointer"
           >
             <span>Apply for MBA</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
           <Link
             href="/courses/mba"
-            className="text-[11px] font-semibold text-slate-400 hover:text-slate-700 transition-colors"
+            className="text-[11px] font-semibold text-slate-400 hover:text-[#652a7c] transition-colors"
           >
             View Details
           </Link>

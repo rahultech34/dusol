@@ -121,9 +121,9 @@ export function WhyChooseSection({ data }: WhyChooseSectionProps) {
           <button
             type="button"
             onClick={openModal}
-            className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-md font-bold text-sm sm:text-base bg-[#f1ba02] hover:bg-[#e2ad00] active:bg-[#c99a00] text-slate-950 shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl font-bold text-sm sm:text-base bg-[#652a7c] hover:bg-[#521f66] active:bg-[#431754] text-white shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
           >
-            <span className="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-slate-950 text-[#f1ba02] font-black text-xs leading-none">
+            <span className="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-white text-[#652a7c] font-black text-xs leading-none">
               !
             </span>
             <span>Claim FREE Counseling</span>

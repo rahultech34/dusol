@@ -50,6 +50,8 @@ async function findCourse(slug: string, isPreview = false) {
     "distance-bcom": "bachelor-of-commerce",
     bba: "bachelor-of-business-administration",
     "distance-bba": "bachelor-of-business-administration",
+    bms: "bachelor-of-management-studies",
+    "distance-bms": "bachelor-of-management-studies",
     bca: "bachelor-of-computer-application",
     "distance-bca": "bachelor-of-computer-application",
     mba: "master-of-business-administration",

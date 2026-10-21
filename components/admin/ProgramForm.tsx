@@ -15,10 +15,13 @@ import {
   Briefcase,
   Globe,
   Layers,
+  FileText,
+  HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { ImageUploader } from "./ImageUploader";
-import { Program, ProgramCurriculumSemester, ProgramFeeItem } from "@/lib/types";
+import { RichTextEditor } from "./RichTextEditor";
+import { Program, ProgramCurriculumSemester, ProgramFeeItem, ProgramFAQ } from "@/lib/types";
 import { notifyNavUpdated } from "@/components/navbar/useNavData";
 
 interface ProgramFormProps {
@@ -75,11 +78,19 @@ export function ProgramForm({ type, initialData, isEdit = false }: ProgramFormPr
     initialData?.careerOpportunities?.join(", ") || "Government Civil Services, Corporate Management, Banking & Finance, Academic Research"
   );
 
+  // Full Article / Course Guide Content (HTML / Rich text)
+  const [content, setContent] = useState(initialData?.content || "");
+
+  // FAQs
+  const [faqs, setFaqs] = useState<ProgramFAQ[]>(
+    initialData?.faqs && initialData.faqs.length > 0 ? initialData.faqs : []
+  );
+
   // SEO fields
   const [seoTitle, setSeoTitle] = useState(initialData?.seoTitle || "");
   const [seoDescription, setSeoDescription] = useState(initialData?.seoDescription || "");
 
-  const [activeTab, setActiveTab] = useState<"basic" | "eligibility" | "curriculum" | "fees" | "seo">("basic");
+  const [activeTab, setActiveTab] = useState<"basic" | "guide" | "eligibility" | "curriculum" | "fees" | "seo">("basic");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
@@ -139,6 +150,21 @@ export function ProgramForm({ type, initialData, isEdit = false }: ProgramFormPr
     setFees(fees.filter((_, idx) => idx !== index));
   };
 
+  // FAQ Handlers
+  const addFaq = () => {
+    setFaqs([...faqs, { question: "", answer: "" }]);
+  };
+
+  const updateFaq = (index: number, field: "question" | "answer", val: string) => {
+    const updated = [...faqs];
+    updated[index] = { ...updated[index], [field]: val };
+    setFaqs(updated);
+  };
+
+  const removeFaq = (index: number) => {
+    setFaqs(faqs.filter((_, idx) => idx !== index));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
@@ -159,6 +185,8 @@ export function ProgramForm({ type, initialData, isEdit = false }: ProgramFormPr
       duration,
       overview,
       description,
+      content,
+      faqs,
       eligibility,
       admissionProcess,
       curriculum,
@@ -273,6 +301,7 @@ export function ProgramForm({ type, initialData, isEdit = false }: ProgramFormPr
       <div className="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
         {[
           { id: "basic", label: "Basic Info", icon: GraduationCap },
+          { id: "guide", label: "Course Guide & FAQs", icon: FileText },
           { id: "eligibility", label: "Eligibility & Admission", icon: Layers },
           { id: "curriculum", label: "Curriculum & Semesters", icon: BookOpen },
           { id: "fees", label: "Fees & Careers", icon: DollarSign },
@@ -403,6 +432,114 @@ export function ProgramForm({ type, initialData, isEdit = false }: ProgramFormPr
                 Published programs appear on the public {publicBaseUrl} directory and navigation.
               </p>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Tab: Course Guide & Content (Rich Article & FAQs) */}
+      {activeTab === "guide" && (
+        <div className="space-y-8 max-w-5xl">
+          {/* Section 1: Comprehensive Course Guide Article */}
+          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-xs space-y-5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-[#652a7c]" />
+                  <span>Comprehensive Course Guide &amp; Article Content</span>
+                </h3>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Write or paste detailed course guides, specialisations, learning methodologies, tables, and admission insights.
+                </p>
+              </div>
+              <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-purple-50 text-[#652a7c] border border-purple-100 self-start sm:self-auto">
+                HTML &amp; Rich Text
+              </span>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
+              <RichTextEditor
+                value={content}
+                onChange={setContent}
+                placeholder="Write comprehensive course guide, insert tables, headings, and detailed syllabus details..."
+              />
+            </div>
+            <p className="text-[11px] text-slate-400">
+              Tip: You can use the Table button in the toolbar to insert comparison tables, specialisation matrices, and fee breakdowns.
+            </p>
+          </div>
+
+          {/* Section 2: Frequently Asked Questions (FAQs) */}
+          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-xs space-y-6">
+            <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+                  <HelpCircle className="w-5 h-5 text-[#652a7c]" />
+                  <span>Frequently Asked Questions (FAQs)</span>
+                </h3>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Add student questions and answers that appear in the interactive accordion on the course page.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={addFaq}
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-50 text-[#652a7c] hover:bg-purple-100 text-xs font-bold transition-colors cursor-pointer border border-purple-200/60"
+              >
+                <Plus className="w-4 h-4" />
+                <span>Add FAQ</span>
+              </button>
+            </div>
+
+            {faqs.length === 0 ? (
+              <div className="text-center py-8 px-4 rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50/50">
+                <HelpCircle className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                <p className="text-xs sm:text-sm font-semibold text-slate-600">No FAQs added yet</p>
+                <p className="text-xs text-slate-400 mt-1">Click &quot;Add FAQ&quot; above to create question and answer pairs.</p>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {faqs.map((faq, idx) => (
+                  <div key={idx} className="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-slate-50/50 space-y-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-xs font-bold text-[#652a7c] uppercase tracking-wider">
+                        Question #{idx + 1}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => removeFaq(idx)}
+                        className="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition-colors cursor-pointer"
+                        title="Remove FAQ"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </div>
+
+                    <div>
+                      <input
+                        type="text"
+                        value={faq.question}
+                        onChange={(e) => updateFaq(idx, "question", e.target.value)}
+                        placeholder="e.g. Is a distance BA from DU SOL valid?"
+                        className="w-full px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-xs sm:text-sm font-semibold text-slate-900 outline-none focus:border-[#652a7c]"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">
+                        Answer
+                      </label>
+                      <textarea
+                        rows={3}
+                        value={faq.answer}
+                        onChange={(e) => updateFaq(idx, "answer", e.target.value)}
+                        placeholder="e.g. Yes. It is UGC-DEB approved and valid for government jobs and higher studies."
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-200 text-xs sm:text-sm text-slate-700 outline-none focus:border-[#652a7c] leading-relaxed"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}

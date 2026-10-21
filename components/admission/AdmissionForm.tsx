@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   User,
   Mail,
@@ -18,6 +19,7 @@ interface AdmissionFormProps {
   source?: string;
   onSuccess?: () => void;
   isCompact?: boolean;
+  defaultCourse?: string;
 }
 
 const INDIAN_STATES = [
@@ -41,15 +43,22 @@ export function AdmissionForm({
   source = "hero_section",
   onSuccess,
   isCompact = false,
+  defaultCourse = "",
 }: AdmissionFormProps) {
   const { bachelor, master, mba } = useNavData();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     mobile: "",
-    course: "",
+    course: defaultCourse || "",
     state: "",
   });
+
+  React.useEffect(() => {
+    if (defaultCourse) {
+      setFormData((prev) => ({ ...prev, course: defaultCourse }));
+    }
+  }, [defaultCourse]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -113,7 +122,7 @@ export function AdmissionForm({
       {/* Balanced Middle-Size Header */}
       <div className="mb-3">
         <div className="flex items-center mb-1">
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sky-50 text-sky-800 border border-sky-200/70">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-[#652a7c] border border-purple-200/70">
             Admissions 2026-27
           </span>
         </div>
@@ -204,6 +213,12 @@ export function AdmissionForm({
               className="w-full pl-9 pr-7 py-2 rounded-lg border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-hidden focus:border-sky-600 focus:ring-1 focus:ring-sky-100 transition-all bg-slate-50/50 appearance-none font-medium truncate"
             >
               <option value="">Select Course</option>
+              {defaultCourse &&
+                !bachelor.some((c) => c.name === defaultCourse) &&
+                !master.some((c) => c.name === defaultCourse) &&
+                !mba.some((c) => c.name === defaultCourse) && (
+                  <option value={defaultCourse}>{defaultCourse}</option>
+                )}
               <optgroup label="Bachelor Programs (UG)">
                 {bachelor.map((c) => (
                   <option key={c.id} value={c.name}>
@@ -261,7 +276,7 @@ export function AdmissionForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-sky-700 via-sky-800 to-sky-950 hover:from-sky-800 hover:to-black text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-70 cursor-pointer active:scale-98 mt-1"
+          className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#652a7c] hover:bg-[#521f66] active:bg-[#431754] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-70 cursor-pointer active:scale-98 mt-1"
         >
           {isSubmitting ? (
             <span>Submitting details...</span>
@@ -277,13 +292,13 @@ export function AdmissionForm({
         <div className="pt-2 border-t border-slate-100">
           <span className="text-[9px] leading-relaxed text-slate-500 block text-center">
             I authorize EduKyu to contact me with updates &amp; notifications via email, SMS, WhatsApp, and voice call. This consent will override any registration for DNC / NDNC. View our{" "}
-            <a className="text-amber-600 font-semibold underline hover:text-amber-700" href="/privacy-policy">
+            <Link className="text-[#652a7c] font-semibold underline hover:text-[#521f66]" href="/privacy-policy">
               Privacy Policy
-            </a>{" "}
+            </Link>{" "}
             and{" "}
-            <a className="text-amber-600 font-semibold underline hover:text-amber-700" href="/terms-conditions">
+            <Link className="text-[#652a7c] font-semibold underline hover:text-[#521f66]" href="/terms-conditions">
               Terms and Conditions
-            </a>.
+            </Link>.
           </span>
         </div>
       </form>

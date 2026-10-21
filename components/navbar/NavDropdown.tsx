@@ -54,10 +54,10 @@ export function NavDropdown({ type, onClose, customItems }: NavDropdownProps) {
             key={item.id}
             href={item.href}
             onClick={onClose}
-            className="px-3.5 py-2.5 rounded-xl text-[14.5px] font-bold text-slate-800 hover:text-sky-600 hover:bg-white/80 transition-all duration-150 text-left leading-snug flex items-center justify-between group"
+            className="px-3.5 py-2.5 rounded-xl text-[14.5px] font-bold text-slate-800 hover:text-[#652a7c] hover:bg-white/80 transition-all duration-150 text-left leading-snug flex items-center justify-between group"
           >
             <span>{item.name}</span>
-            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-150 text-sky-500 text-xs shrink-0 ml-2">
+            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-150 text-[#652a7c] text-xs shrink-0 ml-2">
               →
             </span>
           </Link>
@@ -69,7 +69,7 @@ export function NavDropdown({ type, onClose, customItems }: NavDropdownProps) {
           <Link
             href={viewAllHref}
             onClick={onClose}
-            className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold text-sky-600 hover:text-sky-700 hover:bg-sky-50 transition-colors"
+            className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold text-[#652a7c] hover:text-[#521f66] hover:bg-purple-50 transition-colors"
           >
             <span>{viewAllLabel}</span>
             <ArrowRight className="w-3.5 h-3.5" />

@@ -54,10 +54,10 @@ export function EligibilitySection({ data }: EligibilitySectionProps) {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#652a7c] py-14 sm:py-16 lg:py-20 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#652a7c] via-purple-900 to-indigo-950 py-14 sm:py-16 lg:py-20 text-white">
       {/* Subtle atmospheric glow behind the section */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#652a7c]/25 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -110,7 +110,7 @@ export function EligibilitySection({ data }: EligibilitySectionProps) {
               <button
                 type="button"
                 onClick={openModal}
-                className="mt-6 w-full bg-[#ffcc00] hover:bg-[#e6b800] active:bg-[#cca300] text-slate-950 font-bold py-3.5 px-6 rounded-lg text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
+                className="mt-6 w-full bg-[#652a7c] hover:bg-[#521f66] active:bg-[#431754] text-white font-bold py-3.5 px-6 rounded-xl text-sm sm:text-base flex items-center justify-center gap-2 border-2 border-white/80 hover:border-white shadow-2xl transition-all duration-200 cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>Get FREE Consultation</span>
                 <ArrowRightCircle className="w-5 h-5 shrink-0" />

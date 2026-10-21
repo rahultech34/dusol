@@ -14,26 +14,14 @@ export function NoticesSection({ notices = [] }: NoticesSectionProps) {
   return (
     <section className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-          <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-50 text-rose-700 border border-rose-200/60 mb-2">
-              <Bell className="w-3.5 h-3.5 text-rose-600 animate-pulse" />
-              <span>Official DU SOL Notices</span>
-            </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Latest News & Examination Notifications
-            </h2>
+        <div className="mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-50 text-rose-700 border border-rose-200/60 mb-2">
+            <Bell className="w-3.5 h-3.5 text-rose-600 animate-pulse" />
+            <span>Official DU SOL Notices</span>
           </div>
-
-          <a
-            href="https://web.sol.du.ac.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#652a7c] hover:text-[#522165] transition-colors self-start sm:self-auto"
-          >
-            <span>View All at web.sol.du.ac.in</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Latest News & Examination Notifications
+          </h2>
         </div>
 
         {/* Notices Grid */}
@@ -58,7 +46,7 @@ export function NoticesSection({ notices = [] }: NoticesSectionProps) {
                       </span>
                     )}
                     <span className="text-[11px] text-slate-400 font-medium">
-                      web.sol.du.ac.in
+                      Official DU SOL
                     </span>
                   </div>
                   <h3 className="text-xs sm:text-sm font-semibold text-slate-900 group-hover:text-[#652a7c] transition-colors leading-snug line-clamp-2">

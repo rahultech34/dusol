@@ -40,6 +40,11 @@ export interface ProgramFeeItem {
   note?: string;
 }
 
+export interface ProgramFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Program {
   id: string;
   name: string;
@@ -49,6 +54,8 @@ export interface Program {
   duration: string;
   overview: string;
   description: string;
+  content?: string;
+  faqs?: ProgramFAQ[];
   eligibility: string;
   admissionProcess: string;
   curriculum: ProgramCurriculumSemester[];

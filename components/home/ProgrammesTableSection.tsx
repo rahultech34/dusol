@@ -160,7 +160,7 @@ export function ProgrammesTableSection({ data }: ProgrammesTableSectionProps) {
           <button
             type="button"
             onClick={openModal}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-xs sm:text-sm bg-[#ffd442] hover:bg-[#e6be35] text-slate-950 shadow-md transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-xs sm:text-sm bg-[#652a7c] hover:bg-[#521f66] active:bg-[#431754] text-white shadow-md transition-all cursor-pointer"
           >
             <span>Need Help Choosing a Programme? Consult Edukyu</span>
             <ArrowRightCircle className="w-4 h-4" />

@@ -17,10 +17,14 @@ export const metadata: Metadata = {
   title: "School of Open Learning (DU SOL) | University of Delhi",
   description:
     "Official portal for DU SOL undergraduate, postgraduate, and MBA programs, admission notifications, study material, admit cards, and student services.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 import { AdmissionModalProvider } from "@/components/admission/AdmissionModalContext";
 import { AdmissionModal } from "@/components/admission/AdmissionModal";
+import { Footer } from "@/components/footer/Footer";
 
 export default function RootLayout({
   children,
@@ -36,6 +40,7 @@ export default function RootLayout({
         <AdmissionModalProvider>
           <Navbar />
           <div className="flex-1 flex flex-col">{children}</div>
+          <Footer />
           <AdmissionModal />
         </AdmissionModalProvider>
       </body>
