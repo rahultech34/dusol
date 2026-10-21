@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { CheckCircle2, ArrowRightCircle, Sparkles, HelpCircle, PhoneCall, ListOrdered, AlertTriangle } from "lucide-react";
-import { useAdmissionModal } from "@/components/admission/AdmissionModalContext";
+import { ListOrdered, AlertTriangle } from "lucide-react";
 import { HomePageContent } from "@/lib/home-page-types";
 
 interface AdmissionProcedureSectionProps {
@@ -10,7 +9,6 @@ interface AdmissionProcedureSectionProps {
 }
 
 export function AdmissionProcedureSection({ data }: AdmissionProcedureSectionProps) {
-  const { openModal } = useAdmissionModal();
 
   const heading = data?.heading || "DU SOL Admission Procedure 2026";
   const intro =
@@ -119,30 +117,6 @@ export function AdmissionProcedureSection({ data }: AdmissionProcedureSectionPro
               ))}
             </div>
           </div>
-        </div>
-
-        {/* CTA Card: Still have a doubt? Connect with Edukyu */}
-        <div className="mt-12 bg-gradient-to-r from-slate-900 via-purple-950 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-400/20 text-amber-300 border border-amber-400/30 mb-2">
-              Free Guidance
-            </span>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-white">
-              Still have a doubt? Connect with Edukyu
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl">
-              Edukyu counsellors can guide you through every step of eligibility, documentation, registration, and fee payments.
-            </p>
-          </div>
-
-          <button
-            type="button"
-            onClick={openModal}
-            className="shrink-0 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-lg shadow-amber-500/20 flex items-center gap-2 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
-          >
-            <PhoneCall className="w-4 h-4" />
-            <span>Connect with Edukyu</span>
-          </button>
         </div>
       </div>
     </section>

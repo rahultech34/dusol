@@ -50,7 +50,6 @@ export const STUDENT_ZONE_ITEMS: CourseItem[] = [
 ];
 
 export const NAV_LINKS: NavCategory[] = [
-  { title: "Home", href: "/", hasDropdown: false },
   { title: "Bachelor Programs", href: "/ug-programs", hasDropdown: true, type: "bachelor" },
   { title: "Master Programs", href: "/pg-programs", hasDropdown: true, type: "master" },
   { title: "MBA Specialization", href: "/courses/mba", hasDropdown: true, type: "mba" },

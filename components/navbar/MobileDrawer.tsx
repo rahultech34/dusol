@@ -70,17 +70,6 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
 
         {/* Scrollable Navigation List */}
         <div className="flex-1 overflow-y-auto px-4 py-2 divide-y divide-slate-100">
-          {/* Home Link */}
-          <div className="py-2.5">
-            <Link
-              href="/"
-              onClick={onClose}
-              className="flex items-center justify-between py-1 text-sm font-bold text-slate-800 hover:text-sky-600 transition-colors"
-            >
-              <span>Home</span>
-            </Link>
-          </div>
-
           {/* Bachelor Programs Accordion */}
           <div className="py-2.5">
             <button

@@ -169,37 +169,12 @@ export function HomeClient({ content }: HomeClientProps) {
       {/* 8. Frequently Asked Questions (FAQs) */}
       <FAQSection data={content.faqs} />
 
-      {/* Admin Panel Quick Link Banner */}
-      <section className="py-10 bg-white border-t border-slate-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-slate-900 via-purple-950 to-indigo-950 rounded-2xl p-6 sm:p-8 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="max-w-xl">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400/20 text-amber-300 border border-amber-400/30 mb-2">
-                CMS Management
-              </span>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white">
-                Customize All 8 Home Page Sections from Admin Panel
-              </h3>
-              <p className="mt-1 text-xs sm:text-sm text-slate-300">
-                Update SEO metadata, notices, about story, course tables, admission roadmap, and FAQs with live synchronization.
-              </p>
-            </div>
-
-            <Link
-              href="/admin/home-page"
-              className="shrink-0 px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs sm:text-sm transition-colors shadow-md"
-            >
-              Open Home Page Admin Editor
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-slate-200">DU SOL Portal</span>
+            <span className="font-bold text-slate-200">DU SOL</span>
             <span>·</span>
             <span>School of Open Learning, University of Delhi</span>
           </div>
