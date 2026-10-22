@@ -1,6 +1,6 @@
 import { getDb } from "./firebase-admin";
 import type { Query, QueryDocumentSnapshot } from "firebase-admin/firestore";
-import { Blog, Program, Category, MediaItem, StudentZoneItem, DashboardStats } from "./types";
+import { Blog, Program, Category, MediaItem, StudentZoneItem, DashboardStats, Lead } from "./types";
 import { HomePageContent } from "./home-page-types";
 import { getDefaultPrograms, getDefaultProgramBySlug, getDefaultProgramById } from "./default-programs";
 import slugify from "slugify";
@@ -822,6 +822,121 @@ export async function getImportHistory(limit = 50): Promise<any[]> {
   }
 }
 
+// ---------------- LEADS / ENQUIRIES ----------------
+
+export async function insertLead(leadData: Partial<Lead>): Promise<{ id: string }> {
+  const db = getDb();
+  if (!db) throw new Error("Database not connected");
+
+  const now = new Date().toISOString();
+  const payload = {
+    name: leadData.name || "",
+    mobile: leadData.mobile || "",
+    email: leadData.email || "",
+    city: leadData.city || leadData.state || "Delhi",
+    state: leadData.state || leadData.city || "Delhi",
+    course: leadData.course || leadData.programme || "",
+    programme: leadData.programme || leadData.course || "",
+    prog_id: leadData.prog_id || "",
+    university_name: leadData.university_name || "Delhi University (DU SOL)",
+    university_code: leadData.university_code || "DU_SOL",
+    source_name: leadData.source_name || "WS",
+    source_id: leadData.source_id || "49",
+    supplier_id: leadData.supplier_id || "",
+    page_url: leadData.page_url || "",
+    data_from: leadData.data_from || leadData.page_url || "",
+    selected_challenges: leadData.selected_challenges || "",
+    crm_status: leadData.crm_status || "pending",
+    crm_lead_id: leadData.crm_lead_id || "",
+    crm_response: leadData.crm_response || "",
+    status: leadData.status || "new",
+    created_at_iso: now,
+    created_at: new Date(),
+  };
+
+  const docRef = await db.collection("crm_leads").add(payload);
+  return { id: docRef.id };
+}
+
+export async function getLeads(options?: {
+  limit?: number;
+  search?: string;
+  course?: string;
+}): Promise<Lead[]> {
+  const db = getDb();
+  if (!db) return [];
+  try {
+    const limitNum = options?.limit || 100;
+    const snap = await db
+      .collection("crm_leads")
+      .orderBy("created_at_iso", "desc")
+      .limit(limitNum)
+      .get();
+
+    let leads: Lead[] = [];
+    snap.forEach((doc: any) => {
+      const data = doc.data();
+      leads.push({
+        id: doc.id,
+        name: data.name || "",
+        mobile: data.mobile || "",
+        email: data.email || "",
+        city: data.city || data.state || "",
+        state: data.state || data.city || "",
+        course: data.course || data.programme || "",
+        programme: data.programme || data.course || "",
+        prog_id: data.prog_id || "",
+        university_name: data.university_name || "",
+        university_code: data.university_code || "",
+        source_name: data.source_name || "",
+        source_id: data.source_id || "",
+        supplier_id: data.supplier_id || "",
+        page_url: data.page_url || "",
+        data_from: data.data_from || "",
+        selected_challenges: data.selected_challenges || "",
+        crm_status: data.crm_status || "pending",
+        crm_lead_id: data.crm_lead_id || "",
+        crm_response: data.crm_response || "",
+        status: data.status || "new",
+        created_at_iso: data.created_at_iso || "",
+      });
+    });
+
+    if (options?.search) {
+      const q = options.search.toLowerCase().trim();
+      leads = leads.filter(
+        (l) =>
+          l.name.toLowerCase().includes(q) ||
+          l.mobile.includes(q) ||
+          l.email.toLowerCase().includes(q) ||
+          (l.course && l.course.toLowerCase().includes(q)) ||
+          (l.city && l.city.toLowerCase().includes(q))
+      );
+    }
+
+    if (options?.course) {
+      const c = options.course.toLowerCase().trim();
+      leads = leads.filter((l) => l.course && l.course.toLowerCase().includes(c));
+    }
+
+    return leads;
+  } catch (error) {
+    console.error("[getLeads] Error fetching leads:", error);
+    return [];
+  }
+}
+
+export async function deleteLead(leadId: string): Promise<{ success: boolean; error?: string }> {
+  const db = getDb();
+  if (!db) return { success: false, error: "Database not connected" };
+  try {
+    await db.collection("crm_leads").doc(leadId).delete();
+    return { success: true };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
 // ---------------- HOME PAGE CONTENT ----------------
 
 export {
@@ -829,3 +944,4 @@ export {
   getHomePageContent,
   saveHomePageContent,
 } from "./home-page-cms";
+

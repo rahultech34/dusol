@@ -17,6 +17,8 @@ interface AdmissionFormProps {
   formTitle?: string;
   formSubtitle?: string;
   source?: string;
+  sourceName?: string;
+  sourceId?: string;
   onSuccess?: () => void;
   isCompact?: boolean;
   defaultCourse?: string;
@@ -40,7 +42,9 @@ const INDIAN_STATES = [
 export function AdmissionForm({
   formTitle = "Apply for DU SOL Admission 2026",
   formSubtitle = "Direct Admission Without CUET · Free Expert Counseling",
-  source = "hero_section",
+  source = "WS",
+  sourceName = "WS",
+  sourceId = "49",
   onSuccess,
   isCompact = false,
   defaultCourse = "",
@@ -64,7 +68,7 @@ export function AdmissionForm({
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
@@ -77,7 +81,8 @@ export function AdmissionForm({
       setError("Please enter a valid email address.");
       return;
     }
-    if (!formData.mobile.trim() || formData.mobile.length < 10) {
+    const cleanMobile = formData.mobile.replace(/\D/g, "");
+    if (!cleanMobile || cleanMobile.length < 10) {
       setError("Please enter a valid 10-digit mobile number.");
       return;
     }
@@ -88,14 +93,42 @@ export function AdmissionForm({
 
     setIsSubmitting(true);
 
-    // Simulate submission (ready for admin backend API / DB hook)
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const pageUrl = typeof window !== "undefined" ? window.location.href : "";
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.fullName.trim(),
+          email: formData.email.trim().toLowerCase(),
+          mobile: cleanMobile.slice(-10),
+          course: formData.course,
+          city: formData.state || "Delhi NCR",
+          state: formData.state || "Delhi NCR",
+          source: source || "WS",
+          source_name: sourceName || "WS",
+          source_id: sourceId || "49",
+          supplier_id: "",
+          page_url: pageUrl,
+        }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Failed to submit enquiry. Please try again.");
+      }
+
       setIsSubmitted(true);
       if (onSuccess) {
         setTimeout(onSuccess, 2200);
       }
-    }, 800);
+    } catch (err: any) {
+      console.error("[AdmissionForm] Error submitting lead:", err);
+      setError(err?.message || "Something went wrong. Please check your internet connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {

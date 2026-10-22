@@ -104,6 +104,32 @@ export interface MediaItem {
   createdAt: string;
 }
 
+export interface Lead {
+  id: string;
+  name: string;
+  mobile: string;
+  email: string;
+  city?: string;
+  state?: string;
+  course?: string;
+  programme?: string;
+  prog_id?: string;
+  university_name?: string;
+  university_code?: string;
+  source_name?: string;
+  source_id?: string;
+  supplier_id?: string;
+  page_url?: string;
+  data_from?: string;
+  selected_challenges?: string;
+  crm_status?: "synced" | "pending" | "failed";
+  crm_lead_id?: string;
+  crm_response?: string;
+  status?: "new" | "contacted" | "enrolled" | "closed";
+  created_at?: any;
+  created_at_iso?: string;
+}
+
 export interface DashboardStats {
   totalBlogs: number;
   publishedBlogs: number;
@@ -125,3 +151,4 @@ export interface DashboardStats {
     href: string;
   }[];
 }
+
