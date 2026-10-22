@@ -32,7 +32,15 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             
-            # 3. Install dependencies and build
+            # 3. Sync firebase-key.json from GitHub Secrets if provided
+            if [ -n '${{ secrets.FIREBASE_KEY_JSON }}' ]; then
+              cat << 'EOF' > firebase-key.json
+${{ secrets.FIREBASE_KEY_JSON }}
+EOF
+              echo "🔑 firebase-key.json synced from GitHub Secrets."
+            fi
+            
+            # 4. Install dependencies and build
             npm install
             npm run build
             
