@@ -2957,6 +2957,2144 @@ const MBA_ANALYTICS_CONTENT = `<h2>DU SOL MBA in Business Analytics: Fees, Eligi
 <h3>Conclusion</h3>
 <p>Looking to convert data into business decisions without hitting pause on your career? The DU SOL MBA in Business Analytics is worth serious consideration. Easy to do alongside your job, it leverages the strength of Delhi University, UGC-DEB accreditation, flexible learning, and a practical curriculum. Whether your goal is analytics, technology, or consulting, the MBA in Business Analytics at DU SOL is your sure-bet career path. Review options, check your eligibility, and register for free counseling to get started today.</p>`;
 
+const MBA_RURAL_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Rural Management: Fees, Eligibility and Admission</h2>
+<p>Looking for a fulfilling career in rural development without giving up your job? Your next move could be the DU SOL MBA in Rural Management. Brought to you by the School of Open Learning, University of Delhi, it is an affordable, flexible, postgraduate degree programme for working professionals and graduates. Here is everything you need to know about DU SOL MBA in Rural Management.</p>
+
+<h3>MBA in Rural Management at DU SOL: Overview</h3>
+<p>The program is an online and distance learning degree created to develop the knowledge and skills required to do well in rural development and management. It includes economics, agriculture management, community development, and environmentally friendly methods, getting students ready for meaningful jobs in rural areas.</p>
+<p>This MBA in Rural Management brings together hands-on work in the field, real-life examples, and engaging online classes to give a balanced education. Learners can take the classes from any location, which is perfect for people who work and students who live in faraway places. For any person who wants to make a difference, the MBA in Rural Management at DU SOL is a smart and easy option.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Particular</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Programme</strong></td>
+      <td>Master of Business Administration (MBA) in Rural Management</td>
+    </tr>
+    <tr>
+      <td><strong>University</strong></td>
+      <td>School of Open Learning, University of Delhi (DU SOL)</td>
+    </tr>
+    <tr>
+      <td><strong>Duration</strong></td>
+      <td>2 Years (4 Semesters, ~6 months per semester)</td>
+    </tr>
+    <tr>
+      <td><strong>Mode of Learning</strong></td>
+      <td>Distance Learning / Online with weekend academic counselling</td>
+    </tr>
+    <tr>
+      <td><strong>Approvals &amp; Accreditation</strong></td>
+      <td>UGC-DEB approved, NAAC 'A++' Accredited University, AICTE recognized</td>
+    </tr>
+    <tr>
+      <td><strong>Eligibility</strong></td>
+      <td>Bachelor's degree in any discipline from a recognized university. No age bar.</td>
+    </tr>
+    <tr>
+      <td><strong>Approximate Course Fee</strong></td>
+      <td>₹52,570 per year (plus nominal exam &amp; registration fees)</td>
+    </tr>
+    <tr>
+      <td><strong>Key Competencies</strong></td>
+      <td>Rural Economics, Agribusiness Management, Microfinance, Community Leadership &amp; Sustainable Livelihoods</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Why Choose the DU SOL MBA in Rural Management?</h3>
+<p>The DU SOL MBA in Rural Management offers several practical advantages for students and working professionals:</p>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Advantage</th>
+      <th>What It Delivers For You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Trusted university</strong></td>
+      <td>The degree carries the prestigious Delhi University name, universally respected by NGOs, CSR wings, and corporate employers.</td>
+    </tr>
+    <tr>
+      <td><strong>Purpose-driven syllabus</strong></td>
+      <td>It comprehensively covers rural economics, agriculture management, and community development frameworks.</td>
+    </tr>
+    <tr>
+      <td><strong>Study from anywhere</strong></td>
+      <td>Online sessions, downloadable modules, and weekend support suit working professionals and remote learners across India.</td>
+    </tr>
+    <tr>
+      <td><strong>No age bar</strong></td>
+      <td>Learners of any age can enroll, enabling career pivots and mature leadership development.</td>
+    </tr>
+    <tr>
+      <td><strong>Practical learning</strong></td>
+      <td>Fieldwork, live case studies, and grassroots project evaluations connect academic theory with ground reality.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Who Should Pursue This Programme?</h3>
+<p>This programme is tailored to meet the needs of diverse learners committed to rural transformation:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Development Professionals:</strong> Individuals working in NGOs, CSR divisions, grassroots foundations, and government departments who want formal management training to assume leadership roles.</li>
+  <li><strong>Graduates from Any Stream:</strong> Fresh or recent graduates passionate about sustainable livelihoods, rural economics, and community leadership.</li>
+  <li><strong>Agribusiness Workers &amp; Cooperatives:</strong> Executives in agricultural supply chains, seed/fertilizer companies, and dairy or farmer producer organizations (FPOs).</li>
+  <li><strong>Social Entrepreneurs:</strong> Innovators launching ventures, social enterprises, or self-help federations in tier-2, tier-3, and rural clusters.</li>
+</ul>
+<p>Because you can study from anywhere with flexible schedules, you can maintain your full-time job while earning a top-tier Delhi University master's degree.</p>
+
+<h3>DU SOL MBA in Rural Management Duration and Eligibility</h3>
+<p>The programme runs for two years and is divided into four semesters. Each semester typically lasts six months, making the academic schedule manageable for working learners.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Requirement Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Educational Qualification</strong></td>
+      <td>Bachelor's degree in any discipline from a recognized university.</td>
+    </tr>
+    <tr>
+      <td><strong>Age Criteria</strong></td>
+      <td>No age limit (No age bar for enrollment).</td>
+    </tr>
+    <tr>
+      <td><strong>Work Experience</strong></td>
+      <td>Applicants with relevant experience in the rural development or NGO sector are encouraged to apply, as practical insight enriches the learning experience.</td>
+    </tr>
+    <tr>
+      <td><strong>Admission Basis</strong></td>
+      <td>Merit-based admission / OPEN MAT as per annual DU SOL postgraduate admission guidelines.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Accreditation and Recognition</h3>
+<p>DU SOL is UGC-DEB approved, and the University of Delhi is NAAC accredited with the highest standards. The programme listing also mentions AICTE accreditation. Candidates can verify statutory approvals on the official UGC-DEB and Delhi University portals before enrolling. With these recognitions, the DU SOL MBA in Rural Management carries genuine academic and industry value across government and private sectors.</p>
+
+<h3>Curriculum and Learning Methodology</h3>
+<p>The curriculum runs across four semesters and combines foundational management papers with specialized rural development modules. Learners gain thorough conceptual clarity and field exposure:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Key Focus Papers &amp; Modules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semester 1</strong></td>
+      <td>Rural Society &amp; Economy, Agribusiness Supply Chain, Microfinance &amp; Rural Banking, Development Communication</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 2</strong></td>
+      <td>Cooperative Management, Commodity Trading, Rural Marketing Strategy, Project Formulation &amp; Appraisal</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 3</strong></td>
+      <td>Sustainable Livelihoods &amp; Natural Resource Management, Rural Infrastructure &amp; Enterprise, Public Policy &amp; Rural Governance, Research Methodology &amp; Fieldwork</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 4</strong></td>
+      <td>Agribusiness Entrepreneurship, CSR &amp; Social Impact Assessment, Strategic Rural Management, Capstone Rural Dissertation &amp; Field Project</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Learners benefit from comprehensive instructional resources designed for flexible self-paced study:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>E-books &amp; Printed Study Material:</strong> High-quality course booklets prepared by renowned Delhi University faculty.</li>
+  <li><strong>Live Interactive Sessions:</strong> Weekend academic counselling and online lectures with subject-matter experts.</li>
+  <li><strong>Projects &amp; Fieldwork Assignments:</strong> Practical assignments that evaluate real-world rural challenges and solutions.</li>
+  <li><strong>LMS Portal &amp; Digital Library:</strong> 24/7 access to e-journals, recorded lectures, repository archives, and reference materials.</li>
+</ul>
+
+<h3>DU SOL MBA in Rural Management Fee Structure</h3>
+<p>The fee structure of the DU SOL MBA in Rural Management is remarkably affordable compared to conventional private business schools:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Fee Component</th>
+      <th>Approximate Amount</th>
+      <th>Frequency / Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OPEN MAT Entrance Fee</strong></td>
+      <td>₹800 (Open Category) / ₹600 (Reserved Category)</td>
+      <td>One-time upon entrance exam registration (if applicable)</td>
+    </tr>
+    <tr>
+      <td><strong>Registration Fee</strong></td>
+      <td>₹300</td>
+      <td>One-time online registration charge at application</td>
+    </tr>
+    <tr>
+      <td><strong>Annual Course Fee</strong></td>
+      <td>₹52,570 per year</td>
+      <td>Tuition, LMS access, digital library, and study materials</td>
+    </tr>
+    <tr>
+      <td><strong>Examination Fee</strong></td>
+      <td>₹200 per subject</td>
+      <td>Payable per semester prior to term-end examinations</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Note: Fees may change each session, so always check the official portal before paying. University fees must be paid only through the official university website.</em></p>
+
+<h3>Career Scope After the Programme</h3>
+<p>Graduates of the DU SOL MBA in Rural Management can step into high-impact roles across international development agencies, national NGOs, government missions, agribusiness conglomerates, and rural banking institutions:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Career Designation</th>
+      <th>Core Responsibilities</th>
+      <th>Expected Salary Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Rural Development Officer</strong></td>
+      <td>Formulate, execute, and monitor government and institutional rural welfare schemes.</td>
+      <td>₹5.0 - 8.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Project Coordinator (NGO / Agency)</strong></td>
+      <td>Lead multi-stakeholder community projects in sanitation, water, education, and livelihood generation.</td>
+      <td>₹4.8 - 9.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Community Development Manager</strong></td>
+      <td>Drive grassroots engagement, self-help group (SHG) federations, and women empowerment initiatives.</td>
+      <td>₹5.2 - 9.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Agribusiness Executive</strong></td>
+      <td>Manage farm-to-consumer supply chains, cold storage logistics, crop procurement, and cooperative marketing.</td>
+      <td>₹5.5 - 10.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Sustainability &amp; CSR Consultant</strong></td>
+      <td>Advise corporations on corporate social responsibility projects, ESG compliance, and community impact.</td>
+      <td>₹6.0 - 12.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Microfinance &amp; Rural Banking Lead</strong></td>
+      <td>Manage priority sector lending, Kisan credit facilities, micro-insurance, and financial inclusion drives.</td>
+      <td>₹5.0 - 11.0 LPA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>How to Apply for DU SOL MBA in Rural Management</h3>
+<p>The entire DU SOL MBA in Rural Management admission process is handled online, allowing you to apply comfortably from any location:</p>
+<ol class="list-decimal pl-6 space-y-2 my-3">
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Register Online:</strong> Create your applicant profile with a valid email ID and mobile number, and fill in the online application form.</li>
+  <li><strong>Upload Mandatory Documents:</strong> Upload scanned copies of graduation marksheets, certificates, government ID proof, and passport-size photographs.</li>
+  <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online using net banking, UPI, debit, or credit card.</li>
+  <li><strong>Check Merit List &amp; Confirm Admission:</strong> Review the announced merit lists and complete the course fee payment once admitted to secure your seat.</li>
+</ol>
+
+<h3>Frequently Asked Questions</h3>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Official Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What is the duration of the DU SOL MBA in Rural Management?</strong></td>
+      <td>It is a two-year programme divided into four semesters of about six months each.</td>
+    </tr>
+    <tr>
+      <td><strong>Who can apply for the MBA in Rural Management at DU SOL?</strong></td>
+      <td>Graduates from a recognized university in any discipline. There is no age bar, and rural development sector experience is encouraged.</td>
+    </tr>
+    <tr>
+      <td><strong>What is the fee?</strong></td>
+      <td>Roughly ₹52,570 per year, plus a ₹300 registration fee, ₹200 per subject examination fee, and the OPEN MAT fee.</td>
+    </tr>
+    <tr>
+      <td><strong>Is the degree recognized?</strong></td>
+      <td>Yes, the listing notes UGC-DEB approval and NAAC accreditation, with degrees awarded directly by the University of Delhi.</td>
+    </tr>
+    <tr>
+      <td><strong>How do I get study material?</strong></td>
+      <td>Through printed books and digital resources, including the university's online LMS and digital library.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Conclusion</h3>
+<p>If you are looking to drive change in rural communities without taking a break from your career, the DU SOL MBA in Rural Management is a great program for you. You get the benefits of the prestigious Delhi University brand, UGC-DEB approval, distance-based learning, and hands-on fieldwork. Whether you want to work in an NGO, government body, or social enterprise, the DU SOL MBA in Rural Management can help you achieve your goal. Compare and contrast the different programs, determine the right eligibility, and get your free counseling today to begin your DU SOL MBA in Rural Management journey.</p>`;
+
+const MBA_RETAIL_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Retail Management: Fees, Eligibility and Admission</h2>
+<p>Want to lead in the fast-moving world of retail while continuing your job? The DU SOL MBA in Retail Management could be the right step. Offered by the School of Open Learning, University of Delhi, it is a flexible and affordable postgraduate programme for graduates and working professionals. This guide covers the DU SOL MBA in Retail Management in detail, including eligibility, fees, curriculum, and career scope.</p>
+
+<h3>MBA in Retail Management at DU SOL: Overview</h3>
+<p>The programme is an online, distance MBA for those who are passionate about retail and want to develop into leadership roles. It gives you the ability to build your retail, merchandising, and customer skills, which are more important than ever as you adapt to ongoing changing customer trends.</p>
+<p>An MBA in Retail Management equips learners with the knowledge to become leaders in the retail chain, brand management, and e-commerce. It is an online programme that is apt for working professionals who do not have the bandwidth for regular classes. For someone looking to develop their career in the retail industry, this course is appropriate.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Particular</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Programme</strong></td>
+      <td>Master of Business Administration (MBA) in Retail Management</td>
+    </tr>
+    <tr>
+      <td><strong>University</strong></td>
+      <td>School of Open Learning, University of Delhi (DU SOL)</td>
+    </tr>
+    <tr>
+      <td><strong>Duration</strong></td>
+      <td>2 to 5 Years (4 Semesters, flexible completion time)</td>
+    </tr>
+    <tr>
+      <td><strong>Mode of Learning</strong></td>
+      <td>Distance Learning / Online with weekend academic counselling</td>
+    </tr>
+    <tr>
+      <td><strong>Approvals &amp; Accreditation</strong></td>
+      <td>UGC-DEB approved, NAAC 'A++' Accredited University, AICTE recognized</td>
+    </tr>
+    <tr>
+      <td><strong>Eligibility</strong></td>
+      <td>Bachelor’s degree in any discipline from a government-recognized university. No age limit.</td>
+    </tr>
+    <tr>
+      <td><strong>Approximate Course Fee</strong></td>
+      <td>₹52,570 per year (plus nominal exam &amp; registration fees)</td>
+    </tr>
+    <tr>
+      <td><strong>Key Competencies</strong></td>
+      <td>Retail Store Operations, Visual Merchandising, Category Management, E-Commerce &amp; Retail Analytics</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Why Choose the DU SOL MBA in Retail Management?</h3>
+<p>The DU SOL MBA in Retail Management offers several practical advantages for students and working retail professionals:</p>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Advantage</th>
+      <th>What It Means For You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Trusted university</strong></td>
+      <td>The degree carries the prestigious Delhi University name, universally respected by retail chains, corporate brands, and multinational employers.</td>
+    </tr>
+    <tr>
+      <td><strong>Industry-relevant skills</strong></td>
+      <td>You master modern retail operations, visual merchandising, inventory management, and customer experience.</td>
+    </tr>
+    <tr>
+      <td><strong>Flexible completion time</strong></td>
+      <td>The listing mentions two to five years to finish the programme, giving you the freedom to balance work schedules and learning pace.</td>
+    </tr>
+    <tr>
+      <td><strong>Open to all graduates</strong></td>
+      <td>Candidates from any discipline (Commerce, Arts, Science, Engineering, Management) can apply and transition to retail management.</td>
+    </tr>
+    <tr>
+      <td><strong>Study while working</strong></td>
+      <td>Self-paced digital resources, recorded sessions, and weekend support let you keep your full-time job while earning a master's degree.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Who Should Pursue This Programme?</h3>
+<p>This course is ideal for ambitious individuals aiming for strategic growth in consumer-facing businesses:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Store Managers &amp; Retail Executives:</strong> Professionals looking to transition from floor operations into regional leadership, category management, or retail strategy.</li>
+  <li><strong>E-Commerce &amp; D2C Professionals:</strong> Individuals needing to hone marketplace merchandising, supply chain logistics, and digital consumer analytics skills.</li>
+  <li><strong>Brand &amp; Marketing Executives:</strong> Marketers who interact with modern trade, distributor networks, franchised chains, and retail marketing campaigns.</li>
+  <li><strong>Entrepreneurs &amp; Family Business Owners:</strong> Business owners looking to scale single stores into organized multi-city chains or omnichannel formats.</li>
+</ul>
+<p>Because you can study from anywhere online, you can remain in your job while studying. This course is suitable for graduates from any stream.</p>
+
+<h3>DU SOL MBA in Retail Management Duration and Eligibility</h3>
+<p>The programme comprises four semesters. According to the listing, students will be able to study this programme between two to five years, which is highly useful for learners who need to juggle work commitments and academic studies.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Requirement Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Educational Qualification</strong></td>
+      <td>Bachelor's Degree in any subject from a government accredited university.</td>
+    </tr>
+    <tr>
+      <td><strong>Minimum Percentage</strong></td>
+      <td>Standards may vary per admission session; candidates from all disciplines are eligible to apply. Cross-check latest guidelines on the official portal.</td>
+    </tr>
+    <tr>
+      <td><strong>Age Limit</strong></td>
+      <td>No age limit (No age bar for enrollment).</td>
+    </tr>
+    <tr>
+      <td><strong>Work Experience</strong></td>
+      <td>Professional retail or corporate experience is beneficial, though not strictly mandatory for application.</td>
+    </tr>
+    <tr>
+      <td><strong>Admission Basis</strong></td>
+      <td>Merit-based admission / OPEN MAT as per annual DU SOL postgraduate admission guidelines.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Accreditation and Recognition</h3>
+<p>DU SOL is UGC-DEB approved and the University of Delhi is NAAC accredited with top distinction, while the listing also mentions AICTE accreditation. Candidates can verify statutory approvals on the official UGC-DEB and university websites before enrolling. With these recognitions, the DU SOL MBA in Retail Management carries real academic value and corporate credibility across national and international brands.</p>
+
+<h3>Curriculum and Learning Methodology</h3>
+<p>The curriculum runs across four semesters and combines core management papers with specialized retail and omnichannel topics:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Key Focus Papers &amp; Modules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semester 1</strong></td>
+      <td>Principles of Retail Management, Consumer Behaviour in Retail, Retail Accounting &amp; Financial Control, Retail Store Operations</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 2</strong></td>
+      <td>Visual Merchandising &amp; Space Planning, Retail Category Management, Omnichannel &amp; E-Commerce Operations, Retail Logistics &amp; Inventory Control</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 3</strong></td>
+      <td>Retail Brand Management, Customer Experience &amp; Loyalty Programs, Retail Analytics &amp; Dynamic Pricing, Research Methodology &amp; Retail Field Study</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 4</strong></td>
+      <td>Luxury &amp; International Retailing, Mall &amp; Franchise Operations, Strategic Retail Leadership, Capstone Retail Management Dissertation &amp; Project</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Learners benefit from comprehensive resources that make studying manageable alongside a full-time job:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>E-books &amp; Printed Study Material:</strong> Well-structured course booklets authored by seasoned retail educators and Delhi University professors.</li>
+  <li><strong>Live Interactive Sessions:</strong> Weekend academic counselling and webinars led by retail and e-commerce leaders.</li>
+  <li><strong>Projects &amp; Assignments:</strong> Hands-on store evaluations, category audits, and omnichannel case assignments.</li>
+  <li><strong>LMS Portal &amp; Digital Library:</strong> Round-the-clock online access to recorded lectures, e-journals, and case studies.</li>
+</ul>
+
+<h3>DU SOL MBA in Retail Management Fee Structure</h3>
+<p>The fee structure of the DU SOL MBA in Retail Management is extremely affordable compared to conventional private business colleges:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Fee Component</th>
+      <th>Approximate Amount</th>
+      <th>Frequency / Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OPEN MAT Entrance Fee</strong></td>
+      <td>₹800 (Open Category) / ₹600 (Reserved Category)</td>
+      <td>One-time upon entrance exam registration (if applicable)</td>
+    </tr>
+    <tr>
+      <td><strong>Registration Fee</strong></td>
+      <td>₹300</td>
+      <td>One-time online registration fee at the time of application</td>
+    </tr>
+    <tr>
+      <td><strong>Annual Course Fee</strong></td>
+      <td>₹52,570 per year</td>
+      <td>Tuition, LMS access, digital library, and study materials</td>
+    </tr>
+    <tr>
+      <td><strong>Examination Fee</strong></td>
+      <td>₹200 per subject</td>
+      <td>Payable per semester prior to term-end examinations</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Note: Fees may change each session, so check the official portal before paying. University fees must be paid only through the official university website.</em></p>
+
+<h3>Career Scope After the Programme</h3>
+<p>The program prepares graduates for high-growth management positions across retail chains, e-commerce firms, supermarkets, luxury brands, and product organizations:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Core Industry Roles</th>
+      <th>Expected Salary Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Store Manager / Area Manager</strong></td>
+      <td>Lead daily store performance, visual standards, team targets, footfall conversion, and customer service.</td>
+      <td>₹5.5 - 9.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Category Manager</strong></td>
+      <td>Own product category P&amp;L, assortment planning, pricing, vendor negotiations, and promotion calendars.</td>
+      <td>₹6.0 - 12.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Merchandise Manager</strong></td>
+      <td>Manage seasonal stock planning, demand forecasting, sell-through rates, and distribution logistics.</td>
+      <td>₹5.8 - 11.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>E-Commerce Manager</strong></td>
+      <td>Oversee online marketplace channels, direct-to-consumer store operations, cataloguing, and fulfillment.</td>
+      <td>₹6.5 - 13.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Brand Manager</strong></td>
+      <td>Drive brand awareness, store launch campaigns, consumer insight programs, and experiential marketing.</td>
+      <td>₹6.0 - 12.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Retail Operations Director</strong></td>
+      <td>Steer multi-unit expansion, national store networks, franchise systems, and corporate retail strategy.</td>
+      <td>₹9.0 - 18.0 LPA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>How to Apply for DU SOL MBA in Retail Management</h3>
+<p>The entire DU SOL MBA in Retail Management admission process is online, so you can apply from anywhere without visiting the campus:</p>
+<ol class="list-decimal pl-6 space-y-2 my-3">
+  <li><strong>Visit the Official Portal:</strong> Go to the official admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Register &amp; Fill Form:</strong> Register with your primary email and phone number, and fill in your academic details.</li>
+  <li><strong>Upload Mandatory Documents:</strong> Upload clear scanned copies of marksheets, certificates, and ID proof.</li>
+  <li><strong>Pay Registration Fee:</strong> Complete the initial registration fee payment online.</li>
+  <li><strong>Check Merit List &amp; Pay Course Fee:</strong> Follow the published merit lists and pay your course fee once admitted to confirm your seat.</li>
+</ol>
+
+<h3>Frequently Asked Questions</h3>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Official Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What is the duration of the DU SOL MBA in Retail Management?</strong></td>
+      <td>It has four semesters, and the listing says it can be completed flexibly within two to five years.</td>
+    </tr>
+    <tr>
+      <td><strong>Who can apply for the MBA in Retail Management at DU SOL?</strong></td>
+      <td>Graduates in any discipline from a recognized university. Candidates from all streams are eligible.</td>
+    </tr>
+    <tr>
+      <td><strong>What is the fee?</strong></td>
+      <td>Roughly ₹52,570 per year, plus a ₹300 registration fee, ₹200 per subject examination fee, and the OPEN MAT fee.</td>
+    </tr>
+    <tr>
+      <td><strong>Is the degree recognized?</strong></td>
+      <td>Yes, the listing notes UGC-DEB approval and NAAC accreditation, with degrees awarded directly by Delhi University.</td>
+    </tr>
+    <tr>
+      <td><strong>How do I get study material?</strong></td>
+      <td>Through printed books and digital resources, including the university's online LMS and digital library.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Conclusion</h3>
+<p>If you want to grow in retail without stopping your job, the DU SOL MBA in Retail Management is worth looking into. It comes from Delhi University, which is well-known and recognized by UGC-DEB. You can study at your pace and the courses focus on real-world skills used in the industry. Whether you want to work in a retail chain, e-commerce, or brand management, this MBA program gives you a solid path forward. Take your time to compare options, check if you meet the requirements, and sign up for free counseling to start your DU SOL MBA in Retail Management journey today.</p>`;
+
+const MBA_BUSINESS_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Business Management: Fees, Eligibility and Admission</h2>
+<p>Want to lead teams and manage businesses without leaving your job? The DU SOL MBA in Business Management could be the right step. Offered by the School of Open Learning, University of Delhi, it is a flexible and affordable postgraduate programme for graduates and working professionals. This guide covers the DU SOL MBA in Business Management in detail, including eligibility, fees, curriculum, and career scope.</p>
+
+<h3>MBA in Business Management at DU SOL: Overview</h3>
+<p>It is an online and distance learning MBA for working professionals and other individuals seeking to acquire a high-quality management qualification without the need to visit the campus. It is a programme which addresses core business concepts including finance, marketing, human resources, operations, and leadership.</p>
+<p>Through the MBA in Business Management you will get online lectures, study material, and examination support that allows you to study along with your professional and personal commitments. An industry-ready syllabus is designed to give you a practical as well as holistic education. Be it for career enhancement or career change, the MBA in Business Management at DU SOL shall help you acquire the necessary skills to excel.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Particular</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Programme</strong></td>
+      <td>Master of Business Administration (MBA) in Business Management</td>
+    </tr>
+    <tr>
+      <td><strong>University</strong></td>
+      <td>School of Open Learning, University of Delhi (DU SOL)</td>
+    </tr>
+    <tr>
+      <td><strong>Duration</strong></td>
+      <td>2 Years (4 Semesters)</td>
+    </tr>
+    <tr>
+      <td><strong>Mode of Learning</strong></td>
+      <td>Distance Learning / Online with weekend academic counselling</td>
+    </tr>
+    <tr>
+      <td><strong>Approvals &amp; Accreditation</strong></td>
+      <td>UGC-DEB approved, NAAC 'A++' Accredited University, AICTE recognized</td>
+    </tr>
+    <tr>
+      <td><strong>Eligibility</strong></td>
+      <td>Graduation in any discipline with min. 50% marks (45% for reserved) and valid OPENMAT score</td>
+    </tr>
+    <tr>
+      <td><strong>Approximate Course Fee</strong></td>
+      <td>₹52,570 per year (plus nominal exam &amp; registration fees)</td>
+    </tr>
+    <tr>
+      <td><strong>Key Competencies</strong></td>
+      <td>Corporate Finance, Marketing Strategy, HR Management, Operations &amp; Enterprise Leadership</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Why Choose the DU SOL MBA in Business Management?</h3>
+<p>The DU SOL MBA in Business Management offers several practical advantages for graduates and professionals:</p>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Advantage</th>
+      <th>What It Delivers For You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Trusted university</strong></td>
+      <td>The degree carries the prestigious Delhi University name, widely respected by corporate employers, MNCs, and public institutions.</td>
+    </tr>
+    <tr>
+      <td><strong>Broad syllabus</strong></td>
+      <td>It provides comprehensive, multi-disciplinary coverage of finance, marketing, human resources, operations, and strategic leadership.</td>
+    </tr>
+    <tr>
+      <td><strong>Flexible learning</strong></td>
+      <td>Online lectures, digital study modules, and weekend counselling sessions fit seamlessly around your professional work schedule.</td>
+    </tr>
+    <tr>
+      <td><strong>Open to all graduates</strong></td>
+      <td>Candidates from any discipline (Commerce, Arts, Science, Engineering, Law) can apply to build strong management acumen.</td>
+    </tr>
+    <tr>
+      <td><strong>Career flexibility</strong></td>
+      <td>It accelerates internal promotions into managerial ranks and facilitates transitions into cross-functional leadership roles.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Who Should Pursue This Programme?</h3>
+<p>This programme is structured to benefit diverse profiles seeking broad-based management excellence:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Recent Graduates:</strong> Fresh degree holders in Arts, Science, or Commerce who want to enter the corporate management space with high-value qualifications.</li>
+  <li><strong>Working Professionals:</strong> Executives in technical, operational, or sales positions aiming to step up into general management and department leadership.</li>
+  <li><strong>Entrepreneurs &amp; Business Founders:</strong> Startup founders and family business managers who require structured finance, marketing, and organizational design knowledge.</li>
+  <li><strong>Career Switchers:</strong> Professionals from non-business backgrounds seeking to pivot into corporate strategy, consulting, or project management.</li>
+</ul>
+<p>Because you can study online with flexible schedules, you can maintain your full-time job while earning a prestigious master's degree from Delhi University.</p>
+
+<h3>DU SOL MBA in Business Management Duration and Eligibility</h3>
+<p>The programme is a two-year course divided into four semesters. This structure gives students ample time to master each business subject while continuing to work full-time.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Requirement Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Educational Qualification</strong></td>
+      <td>Bachelor's degree in any discipline from a recognized university.</td>
+    </tr>
+    <tr>
+      <td><strong>Minimum Percentage</strong></td>
+      <td>Normally requires a minimum of 50% aggregate marks (relaxation to 45% for reserved categories as per government norms).</td>
+    </tr>
+    <tr>
+      <td><strong>Entrance Examination</strong></td>
+      <td>Requires a valid OPENMAT score (distance education entrance test conducted by DU SOL).</td>
+    </tr>
+    <tr>
+      <td><strong>Age Criteria</strong></td>
+      <td>No age limit (No age bar for enrollment).</td>
+    </tr>
+    <tr>
+      <td><strong>Admission Basis</strong></td>
+      <td>Merit list based on graduation performance and OPENMAT results as per annual DU SOL guidelines.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Accreditation and Recognition</h3>
+<p>DU SOL has been approved by UGC-DEB, and the University of Delhi is accredited by NAAC with top-tier ratings. The programme listing also mentions AICTE accreditation. Candidates should verify statutory approvals on the official UGC-DEB and Delhi University websites before enrolling. The DU SOL MBA in Business Management carries authentic academic value across public and private sector organizations.</p>
+
+<h3>Curriculum and Learning Methodology</h3>
+<p>The curriculum runs across four semesters and combines foundational management papers with strategic applications:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Key Focus Papers &amp; Modules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semester 1</strong></td>
+      <td>Management Principles &amp; Organizational Behaviour, Managerial Economics, Financial Accounting &amp; Reporting, Marketing Management</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 2</strong></td>
+      <td>Corporate Finance, Human Resource Management, Operations &amp; Supply Chain Management, Business Research Methods</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 3</strong></td>
+      <td>Strategic Management &amp; Business Policy, Digital Business &amp; E-Commerce, International Business Environment, Enterprise Leadership &amp; Change Management</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 4</strong></td>
+      <td>Corporate Governance &amp; Business Ethics, Entrepreneurship &amp; Innovation, Cross-Functional Strategic Management, Capstone Business Management Dissertation / Major Project</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Learners benefit from comprehensive resources that make studying manageable alongside a full-time job:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>E-books &amp; Printed Study Material:</strong> High-quality course booklets prepared by senior Delhi University faculty.</li>
+  <li><strong>Live Interactive Sessions:</strong> Weekend academic counselling and online lectures with subject-matter experts.</li>
+  <li><strong>Projects &amp; Assignments:</strong> Hands-on business case evaluations, financial analyses, and management simulations.</li>
+  <li><strong>LMS Portal &amp; Digital Library:</strong> 24/7 access to e-journals, recorded lectures, repository archives, and reference materials.</li>
+</ul>
+
+<h3>DU SOL MBA in Business Management Fee Structure</h3>
+<p>The fee structure of the DU SOL MBA in Business Management is remarkably affordable compared to conventional private MBA colleges:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Fee Component</th>
+      <th>Approximate Amount</th>
+      <th>Frequency / Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OPEN MAT Entrance Fee</strong></td>
+      <td>₹800 (Open Category) / ₹600 (Reserved Category)</td>
+      <td>One-time upon entrance exam registration</td>
+    </tr>
+    <tr>
+      <td><strong>Registration Fee</strong></td>
+      <td>₹300</td>
+      <td>One-time online registration fee at the time of application</td>
+    </tr>
+    <tr>
+      <td><strong>Annual Course Fee</strong></td>
+      <td>₹52,570 per year</td>
+      <td>Tuition, LMS access, digital library, and study materials</td>
+    </tr>
+    <tr>
+      <td><strong>Examination Fee</strong></td>
+      <td>₹200 per subject</td>
+      <td>Payable per semester prior to term-end examinations</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Note: Fees may change each session, so check the official portal before paying. University fees must be paid only through the official university website.</em></p>
+
+<h3>Career Scope After the Programme</h3>
+<p>Graduates can take up leadership and functional management roles across diverse industries including IT, manufacturing, banking, FMCG, and consulting:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Job Title</th>
+      <th>Core Professional Responsibilities</th>
+      <th>Expected Salary Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Business Manager</strong></td>
+      <td>Oversee business unit performance, profit &amp; loss responsibility, operational strategy, and team leadership.</td>
+      <td>₹6.5 - 12.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Operations Manager</strong></td>
+      <td>Direct workflow optimization, logistics, resource allocation, and quality management protocols.</td>
+      <td>₹6.0 - 11.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Marketing Manager</strong></td>
+      <td>Formulate brand strategy, manage advertising campaigns, lead market research, and drive customer acquisition.</td>
+      <td>₹6.2 - 12.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>HR Manager</strong></td>
+      <td>Oversee talent management, workforce planning, performance appraisal systems, and corporate employee relations.</td>
+      <td>₹5.8 - 11.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Finance Executive / Manager</strong></td>
+      <td>Drive corporate financial planning, capital budgeting, risk management, and regulatory compliance.</td>
+      <td>₹6.5 - 13.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Business Development Manager</strong></td>
+      <td>Identify strategic expansion opportunities, cultivate B2B corporate partnerships, and drive institutional revenue.</td>
+      <td>₹6.0 - 13.5 LPA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>How to Apply for DU SOL MBA in Business Management</h3>
+<p>The entire DU SOL MBA in Business Management admission process is handled online, allowing you to apply comfortably from any location:</p>
+<ol class="list-decimal pl-6 space-y-2 my-3">
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Register &amp; Fill Form:</strong> Register with a valid email and mobile number, and enter your personal and academic details.</li>
+  <li><strong>Upload Mandatory Documents:</strong> Upload scanned marksheets, graduation certificates, ID proof, and photographs.</li>
+  <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online via net banking, UPI, or debit/credit card.</li>
+  <li><strong>Check Merit List &amp; Confirm Admission:</strong> Review the merit list based on OPENMAT scores and complete the course fee payment to confirm admission.</li>
+</ol>
+
+<h3>Frequently Asked Questions</h3>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Official Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What is the duration of the DU SOL MBA in Business Management?</strong></td>
+      <td>It is a two-year programme divided into four semesters.</td>
+    </tr>
+    <tr>
+      <td><strong>Who can apply for the MBA in Business Management at DU SOL?</strong></td>
+      <td>Graduates in any discipline with 50% marks (45% for reserved categories) and a valid OPENMAT score.</td>
+    </tr>
+    <tr>
+      <td><strong>What is the fee?</strong></td>
+      <td>Roughly ₹52,570 per year, plus a ₹300 registration fee, ₹200 per subject examination fee, and the OPEN MAT fee.</td>
+    </tr>
+    <tr>
+      <td><strong>Is the degree recognized?</strong></td>
+      <td>Yes, the listing says UGC-DEB approved. Verify details on the official website.</td>
+    </tr>
+    <tr>
+      <td><strong>How do I get study material?</strong></td>
+      <td>Through printed books and digital resources, including the university's online LMS and digital library.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Conclusion</h3>
+<p>If you are looking at carving out a place for yourself in the management space without a break in your career, then the DU SOL MBA in Business Management should feature in your top choices. DU SOL MBA Business Management has Delhi University legacy, recognition with UGC-DEB, flexible process and admission, and an industry-oriented syllabus. Whether it’s for getting a promotion, switching sectors, or starting up on your own, DU SOL MBA Business Management is a safe and high-ROI choice. Compare options, check eligibility, and take free counselling today to start your DU SOL MBA in Business Management journey.</p>`;
+
+const MBA_PROJECT_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Project Management: Fees, Eligibility and Admission</h2>
+<p>Want to lead projects and teams without leaving your job? The DU SOL MBA in Project Management could be the right step. Offered by the School of Open Learning, University of Delhi, it is a flexible and affordable postgraduate programme for graduates and working professionals. This guide covers the DU SOL MBA in Project Management in detail, including eligibility, fees, curriculum, and career scope.</p>
+
+<h3>MBA in Project Management at DU SOL: Overview</h3>
+<p>The programme is a distance learning online MBA focusing on core project skills. This programme provides you with a comprehensive understanding of project planning, execution and evaluation. You will learn how to manage time and risk, lead teams and complete projects to time and cost in real-world scenarios and situations.</p>
+<p>With this MBA in Project Management you will gain important skills through real-life case studies and hands-on assignments. Our online programs make it possible for working professionals to learn at their own pace and advance their careers. Whether you’re just starting your career or you want to sharpen your skillset, MBA Project Management at DU SOL is a versatile program.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Particular</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Programme</strong></td>
+      <td>Master of Business Administration (MBA) in Project Management</td>
+    </tr>
+    <tr>
+      <td><strong>University</strong></td>
+      <td>School of Open Learning, University of Delhi (DU SOL)</td>
+    </tr>
+    <tr>
+      <td><strong>Duration</strong></td>
+      <td>2 Years (4 Semesters)</td>
+    </tr>
+    <tr>
+      <td><strong>Mode of Learning</strong></td>
+      <td>Distance Learning / Online with weekend academic counselling</td>
+    </tr>
+    <tr>
+      <td><strong>Approvals &amp; Accreditation</strong></td>
+      <td>UGC-DEB approved, NAAC 'A++' Accredited University, AICTE recognized</td>
+    </tr>
+    <tr>
+      <td><strong>Eligibility</strong></td>
+      <td>Graduation in any discipline with min. 50% marks (relaxation for reserved categories) and valid OPENMAT score</td>
+    </tr>
+    <tr>
+      <td><strong>Approximate Course Fee</strong></td>
+      <td>₹52,570 per year (plus nominal exam &amp; registration fees)</td>
+    </tr>
+    <tr>
+      <td><strong>Key Competencies</strong></td>
+      <td>Project Lifecycle Planning, Agile &amp; Scrum Methodologies, Risk Mitigation, Resource Allocation &amp; Budget Control</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Why Choose the DU SOL MBA in Project Management?</h3>
+<p>The DU SOL MBA in Project Management offers several practical advantages:</p>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Advantage</th>
+      <th>What It Delivers For You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Trusted university</strong></td>
+      <td>The degree carries the Delhi University name, highly respected by employers and corporate organizations.</td>
+    </tr>
+    <tr>
+      <td><strong>Complete project cycle</strong></td>
+      <td>You learn end-to-end initiation, planning, execution, monitoring, and evaluation across diverse business scales.</td>
+    </tr>
+    <tr>
+      <td><strong>Self-paced study</strong></td>
+      <td>Online learning, weekend academic counselling, and digital materials fit seamlessly around your work schedule.</td>
+    </tr>
+    <tr>
+      <td><strong>Open to all graduates</strong></td>
+      <td>Candidates from any discipline (Engineering, IT, Commerce, Arts, Science) can apply to pivot into project leadership.</td>
+    </tr>
+    <tr>
+      <td><strong>Practical learning</strong></td>
+      <td>Case studies, real-world frameworks, and hands-on assignments connect management theory with tangible project outcomes.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Who Should Pursue This Programme?</h3>
+<p>This programme is structured for professionals and aspiring managers across diverse domains:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Team Leaders &amp; Coordinators:</strong> Professionals aspiring to transition into full-scale project management and program director roles.</li>
+  <li><strong>Engineers &amp; IT Professionals:</strong> Technical experts who take ownership of deliverables, software releases, infrastructure setups, and client SLAs.</li>
+  <li><strong>Graduates from Any Stream:</strong> Ambitious graduates willing to build a lucrative, high-growth career in corporate project leadership.</li>
+  <li><strong>Entrepreneurs &amp; Business Founders:</strong> Founders and business leaders managing several projects, product launches, and operational expansions simultaneously.</li>
+</ul>
+<p>You can study along with your job at your convenience through flexible digital learning and recorded lectures.</p>
+
+<h3>DU SOL MBA in Project Management Duration and Eligibility</h3>
+<p>The programme is a two-year course divided into four semesters. This structure gives students time to apply each concept at work before moving on.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Requirement Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Educational Qualification</strong></td>
+      <td>Bachelor's degree in any discipline from a recognized university.</td>
+    </tr>
+    <tr>
+      <td><strong>Minimum Percentage</strong></td>
+      <td>Minimum of 50% aggregate marks (relaxation for reserved categories as per government norms).</td>
+    </tr>
+    <tr>
+      <td><strong>Entrance Examination</strong></td>
+      <td>Clearing the OPENMAT entrance exam conducted by DU SOL.</td>
+    </tr>
+    <tr>
+      <td><strong>Age Criteria</strong></td>
+      <td>No age limit (No age bar for enrollment).</td>
+    </tr>
+    <tr>
+      <td><strong>Admission Basis</strong></td>
+      <td>Merit list based on graduation performance and OPENMAT results as per annual DU SOL guidelines.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Accreditation and Recognition</h3>
+<p>DU SOL is UGC-DEB approved and the University of Delhi is NAAC accredited with top-tier distinction. It also has AICTE accreditation as seen in the listing. Please double-check approvals at the official UGC-DEB website and the university website before enrolling. These accreditations make the DU SOL MBA in Project Management a recognized, high-value postgraduate degree across government and corporate sectors.</p>
+
+<h3>Curriculum and Learning Methodology</h3>
+<p>The curriculum runs across four semesters and combines core management papers with project-focused learning:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Key Focus Papers &amp; Modules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semester 1</strong></td>
+      <td>Principles of Management &amp; Organizational Behaviour, Managerial Economics, Project Planning &amp; Scope Definition, Business Communication</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 2</strong></td>
+      <td>Project Scheduling &amp; Cost Management, Risk Analysis &amp; Mitigation, Agile &amp; Scrum Methodologies, Procurement &amp; Contract Management</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 3</strong></td>
+      <td>Project Quality &amp; Compliance, Resource Management &amp; Team Leadership, Advanced Project Analytics &amp; MS Project, Research Methodology</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 4</strong></td>
+      <td>Strategic Program &amp; Portfolio Management, International Project Management, Project Ethics &amp; Governance, Capstone Project Management Dissertation / Live Simulation</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Learners benefit from comprehensive resources that make studying manageable alongside a full-time job:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>E-books &amp; Printed Study Material:</strong> High-quality course booklets authored by experienced project directors and Delhi University faculty.</li>
+  <li><strong>Live Interactive Sessions:</strong> Weekend academic counselling and online lectures with certified industry professionals.</li>
+  <li><strong>Projects &amp; Assignments:</strong> Hands-on project scheduling simulations, risk assessment matrices, and cost-benefit analyses.</li>
+  <li><strong>LMS Portal &amp; Digital Library:</strong> Round-the-clock access to recorded video lectures, project toolkits, and academic journals.</li>
+</ul>
+
+<h3>DU SOL MBA in Project Management Fee Structure</h3>
+<p>The fee structure of the DU SOL MBA in Project Management is remarkably economical:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Fee Component</th>
+      <th>Approximate Amount</th>
+      <th>Frequency / Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OPEN MAT Entrance Fee</strong></td>
+      <td>₹800 (Open Category) / ₹600 (Reserved Category)</td>
+      <td>One-time upon entrance exam registration</td>
+    </tr>
+    <tr>
+      <td><strong>Registration Fee</strong></td>
+      <td>₹300</td>
+      <td>One-time online registration fee at the time of application</td>
+    </tr>
+    <tr>
+      <td><strong>Annual Course Fee</strong></td>
+      <td>₹52,570 per year</td>
+      <td>Tuition, LMS access, digital library, and study materials</td>
+    </tr>
+    <tr>
+      <td><strong>Examination Fee</strong></td>
+      <td>₹200 per subject</td>
+      <td>Payable per semester prior to term-end examinations</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Note: Fees may change each session, so check the official portal before paying. University fees must be paid only to the university.</em></p>
+
+<h3>Career Scope After the Programme</h3>
+<p>This degree is a pathway to high-impact career opportunities across industries such as construction, IT, manufacturing, consulting, and public sector services. Employers seek professionals who can deliver projects on time, within scope, and within budget:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Job Role</th>
+      <th>Core Professional Responsibilities</th>
+      <th>Expected Salary Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Project Manager</strong></td>
+      <td>Define project scope, manage cross-functional teams, track milestones, control budgets, and deliver on SLAs.</td>
+      <td>₹7.0 - 14.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Programme Manager</strong></td>
+      <td>Oversee multiple interconnected projects, harmonize resources, manage stakeholder relations, and align with business strategy.</td>
+      <td>₹9.0 - 18.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Project Analyst</strong></td>
+      <td>Analyze project performance indicators, evaluate variances, perform cost-benefit analysis, and prepare executive dashboards.</td>
+      <td>₹5.5 - 10.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Operations Manager</strong></td>
+      <td>Supervise organizational process execution, resource optimization, workflow quality, and cross-departmental coordination.</td>
+      <td>₹6.5 - 12.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Delivery Lead</strong></td>
+      <td>Ensure end-to-end client deliverable quality, manage client escalations, maintain sprint velocities, and lead deployment.</td>
+      <td>₹8.0 - 16.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Scrum Master / Agile Transformation Lead</strong></td>
+      <td>Facilitate sprint ceremonies, coach teams in Agile/Scrum best practices, and remove process bottlenecks.</td>
+      <td>₹7.5 - 15.0 LPA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>How to Apply for DU SOL MBA in Project Management</h3>
+<p>The entire DU SOL MBA in Project Management admission process is online, so you can apply from anywhere:</p>
+<ol class="list-decimal pl-6 space-y-2 my-3">
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Register &amp; Fill Form:</strong> Register with a valid email and mobile number, and enter your personal and academic details.</li>
+  <li><strong>Upload Mandatory Documents:</strong> Upload scanned marksheets, graduation certificates, ID proof, and photographs.</li>
+  <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online via net banking, UPI, or debit/credit card.</li>
+  <li><strong>Check Merit List &amp; Pay Course Fee:</strong> Follow the published merit lists and pay your course fee once admitted to confirm your seat.</li>
+</ol>
+
+<h3>Frequently Asked Questions</h3>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Official Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What is the duration of the DU SOL MBA in Project Management?</strong></td>
+      <td>It is a two-year programme divided into four semesters.</td>
+    </tr>
+    <tr>
+      <td><strong>Who can apply for the MBA in Project Management at DU SOL?</strong></td>
+      <td>Graduates in any discipline with at least 50% marks who clear the OPENMAT exam.</td>
+    </tr>
+    <tr>
+      <td><strong>What is the fee?</strong></td>
+      <td>Roughly ₹52,570 per year, plus a ₹300 registration fee, ₹200 per subject examination fee, and the OPEN MAT fee.</td>
+    </tr>
+    <tr>
+      <td><strong>Is the degree recognized?</strong></td>
+      <td>The listing says UGC-DEB approved. Verify details on the official website.</td>
+    </tr>
+    <tr>
+      <td><strong>How do I get study material?</strong></td>
+      <td>Through printed books and digital resources, including the university's digital library.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Conclusion</h3>
+<p>If you want to advance your career without taking a break, consider the DU SOL MBA in Project Management. It offers Delhi University’s reputation, UGC-DEB recognition, flexible study options, and practical case studies. Whether you’re seeking a promotion or a move into project leadership, the DU SOL MBA in Project Management provides a dependable path. Compare your options, check eligibility, and take advantage of free counseling to start your DU SOL MBA in Project Management journey today.</p>`;
+
+const MBA_MARKETING_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Marketing Management: Syllabus, Eligibility and Admission Guide</h2>
+<p>Marketing is one of those domains where experience often speaks louder than theoretical knowledge, making the majority of working professionals consider pursuing an MBA in Marketing Management. The School of Open Learning at the University of Delhi offers a two-year, four-semester distance learning programme that empowers aspirants to continue their career while studying. To help you understand better if an MBA in Marketing through SOL is worth your time and effort, we have prepared this informative guide to the syllabus, eligibility, admission process, and career prospects.</p>
+
+<h3>What Is DU SOL MBA in Marketing Management?</h3>
+<p>DU SOL MBA in Marketing Management is a postgraduate management programme with marketing as the chosen specialisation. You first study core management subjects, then move into marketing-focused papers in the later semesters. The degree comes from the University of Delhi, a name employers recognise easily. Compared with a full-time campus MBA, the fees are lower and the schedule is far more flexible, which suits professionals who can't pause their careers.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Particular</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Programme</strong></td>
+      <td>Master of Business Administration (MBA) in Marketing Management</td>
+    </tr>
+    <tr>
+      <td><strong>University</strong></td>
+      <td>School of Open Learning, University of Delhi (DU SOL)</td>
+    </tr>
+    <tr>
+      <td><strong>Duration</strong></td>
+      <td>2 Years (4 Semesters)</td>
+    </tr>
+    <tr>
+      <td><strong>Mode of Learning</strong></td>
+      <td>Distance Learning / Online with weekend academic counselling</td>
+    </tr>
+    <tr>
+      <td><strong>Approvals &amp; Accreditation</strong></td>
+      <td>UGC-DEB approved, NAAC 'A++' Accredited University, AICTE recognized</td>
+    </tr>
+    <tr>
+      <td><strong>Eligibility</strong></td>
+      <td>Graduation in any discipline from a recognized university with minimum required marks</td>
+    </tr>
+    <tr>
+      <td><strong>Approximate Course Fee</strong></td>
+      <td>₹52,570 per year (plus nominal exam &amp; registration fees)</td>
+    </tr>
+    <tr>
+      <td><strong>Key Competencies</strong></td>
+      <td>Consumer Behaviour, Brand Strategy, Digital Marketing, Market Research, Advertising &amp; Sales Management</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Why Choose an MBA in Marketing Management?</h3>
+<p>Every business needs customers, so marketing skills travel across industries. An MBA in Marketing Management trains you to understand buyer behaviour, plan campaigns, build brands, and read market data. It's also a good fit if you're already in sales, advertising, or digital work and want a formal qualification to go with your experience.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Advantage</th>
+      <th>What It Delivers For You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Delhi University brand value</strong></td>
+      <td>The degree carries the prestigious Delhi University name, universally recognised by employers at an affordable cost.</td>
+    </tr>
+    <tr>
+      <td><strong>Anytime study resources</strong></td>
+      <td>Access high-quality study materials, digital e-books, and online library resources you can use whenever your schedule allows.</td>
+    </tr>
+    <tr>
+      <td><strong>Freedom around a full-time job</strong></td>
+      <td>Flexible weekend counselling and digital modules allow you to gain a respected credential without interrupting your employment.</td>
+    </tr>
+    <tr>
+      <td><strong>Cross-industry marketing skills</strong></td>
+      <td>Marketing, brand management, digital outreach, and analytics apply to FMCG, tech, banking, healthcare, retail, and media.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Who Should Apply?</h3>
+<p>This programme is suitable for a select group of motivated candidates:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Graduates Switching to Marketing:</strong> Fresh degree holders in Arts, Science, Commerce, or Engineering looking to build a high-demand commercial qualification.</li>
+  <li><strong>Career Marketers Seeking Growth:</strong> Executives with prior experience in sales, advertising, PR, or customer relations aiming to step up to brand director or marketing manager roles.</li>
+  <li><strong>Entrepreneurs &amp; Business Owners:</strong> Founders who need practical know-how for market research, dynamic pricing, customer acquisition, and brand building.</li>
+  <li><strong>Working Professionals:</strong> Individuals with a few hours to spare each week who want to upgrade their credentials without taking a career sabbatical.</li>
+</ul>
+
+<h3>DU SOL MBA in Marketing Management Syllabus</h3>
+<p>The programme runs for four semesters. The first year builds a comprehensive management base, while the second year dives into specialized marketing papers:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Key Focus Papers &amp; Modules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semester 1</strong></td>
+      <td>Marketing Management, Management Principles &amp; Organizational Behaviour, Managerial Economics, Management Accounting</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 2</strong></td>
+      <td>Human Resource Management, Production and Operations Management, Financial Management, Business Research Methods</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 3</strong></td>
+      <td>Marketing Research, Advertising Management, Services Marketing, Brand Management</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 4</strong></td>
+      <td>Digital Marketing, Sales Force Management, International Marketing, Strategic Marketing Capstone Dissertation / Major Project</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Exact paper names and their sequencing may be updated by the university, so candidates should check the latest curriculum on the official portal.</em></p>
+
+<h3>Eligibility Criteria</h3>
+<p>Generally, candidates must have a bachelor's degree from a recognised university with minimum marks deemed satisfactory (typically 50% aggregate marks, with relaxation to 45% for reserved categories as per government norms). Selection criteria such as merit lists or entrance test scores (such as OPENMAT) may vary for different admission cycles, so confirm the active guidelines on the official SOL website before applying.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Requirement Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Educational Qualification</strong></td>
+      <td>Bachelor's degree in any discipline from a recognized university.</td>
+    </tr>
+    <tr>
+      <td><strong>Minimum Aggregate Marks</strong></td>
+      <td>Minimum 50% marks (45% for reserved categories as per statutory rules).</td>
+    </tr>
+    <tr>
+      <td><strong>Selection Mode</strong></td>
+      <td>Merit-based admission / OPENMAT entrance score as per annual DU SOL guidelines.</td>
+    </tr>
+    <tr>
+      <td><strong>Age Criteria</strong></td>
+      <td>No age limit (No age bar for enrollment).</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Fees and Important Points</h3>
+<p>Fees are charged per annum and are significantly lower than those of private business schools. The approximate fee breakdown is:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Fee Component</th>
+      <th>Approximate Amount</th>
+      <th>Frequency / Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OPEN MAT Entrance Fee</strong></td>
+      <td>₹800 (Open Category) / ₹600 (Reserved Category)</td>
+      <td>One-time upon entrance exam registration (if applicable)</td>
+    </tr>
+    <tr>
+      <td><strong>Registration Fee</strong></td>
+      <td>₹300</td>
+      <td>One-time online registration fee at the time of application</td>
+    </tr>
+    <tr>
+      <td><strong>Annual Course Fee</strong></td>
+      <td>₹52,570 per year</td>
+      <td>Tuition, LMS access, digital library, and study materials</td>
+    </tr>
+    <tr>
+      <td><strong>Examination Fee</strong></td>
+      <td>₹200 per subject</td>
+      <td>Payable per semester prior to term-end examinations</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Note: Fees may vary from session to session. Always check the official prospectus before paying. University fees must be paid only through the official university portal.</em></p>
+
+<h3>Documents Required</h3>
+<p>Ensure you have scanned copies of the following documents ready before beginning the application:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li>Graduation marksheets (all semesters/years) and degree certificate</li>
+  <li>Class 10 and 12 marksheets and certificates</li>
+  <li>Recent passport-sized photograph and scanned signature</li>
+  <li>Valid government ID proof such as Aadhaar Card, Voter ID, or Passport</li>
+  <li>Category certificate (SC/ST/OBC/EWS/PwD), if applicable</li>
+</ul>
+
+<h3>How to Apply for DU SOL MBA in Marketing Management</h3>
+<p>The entire admission process is conducted online via the official DU SOL portal:</p>
+<ol class="list-decimal pl-6 space-y-2 my-3">
+  <li><strong>Register:</strong> Open the official SOL admission portal at <code>sol.du.ac.in</code> and register with your email and mobile number.</li>
+  <li><strong>Select Specialisation:</strong> Choose the Master of Business Administration (MBA) programme and select Marketing Management.</li>
+  <li><strong>Enter Details:</strong> Fill in your personal, academic, and contact details accurately.</li>
+  <li><strong>Upload Documents:</strong> Upload your photograph, signature, graduation marksheets, and ID proof.</li>
+  <li><strong>Pay Online:</strong> Complete the registration and application fee payment online via net banking, UPI, or debit/credit card.</li>
+  <li><strong>Submit &amp; Download:</strong> Submit the application form and download the confirmation slip and fee receipt for future reference.</li>
+</ol>
+
+<h3>Career Scope After an MBA in Marketing Management</h3>
+<p>Marketing roles exist across every commercial sector including FMCG, telecom, banking, retail, technology, and e-commerce:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Career Role</th>
+      <th>Key Professional Responsibilities</th>
+      <th>Expected Salary Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Marketing Manager / Executive</strong></td>
+      <td>Formulate brand campaigns, plan product launches, oversee promotional budgets, and coordinate cross-channel execution.</td>
+      <td>₹6.5 - 13.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Brand Manager</strong></td>
+      <td>Build brand equity, guide visual identity, run consumer perception surveys, and execute positioning strategies.</td>
+      <td>₹7.0 - 14.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Digital Marketing Manager</strong></td>
+      <td>Steer SEO, SEM, performance marketing, social media campaigns, and conversion rate optimization across digital touchpoints.</td>
+      <td>₹6.0 - 13.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Sales &amp; Business Development Manager</strong></td>
+      <td>Drive B2B/B2C revenue pipelines, manage distributor networks, lead client acquisition, and hit organizational sales targets.</td>
+      <td>₹6.0 - 14.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Market Research Analyst</strong></td>
+      <td>Analyze consumer survey data, benchmark competitors, evaluate price elasticity, and produce actionable strategic insights.</td>
+      <td>₹5.5 - 11.0 LPA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Tips to Succeed in a Distance MBA</h3>
+<p>Distance learning rewards self-discipline. Here are actionable tips to maximize your learning return:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Block Fixed Study Hours:</strong> Set aside 6 to 8 hours each week consistently to review e-books and recorded lectures.</li>
+  <li><strong>Complete Assignments Early:</strong> Submit assignments well ahead of deadlines to get constructive feedback.</li>
+  <li><strong>Join Peer Study Groups:</strong> Connect with fellow DU SOL learners to share notes, debate case studies, and network.</li>
+  <li><strong>Apply Learning at Work:</strong> Implement campaign ideas, customer surveys, or analytics tools directly into your day job to convert theory into practical skills.</li>
+</ul>
+
+<h3>Frequently Asked Questions</h3>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Official Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Is DU SOL MBA in Marketing Management a recognised degree?</strong></td>
+      <td>Yes, it is offered by the School of Open Learning, University of Delhi, carrying the prestigious DU name with UGC-DEB entitlement and NAAC accreditation.</td>
+    </tr>
+    <tr>
+      <td><strong>How long does an MBA in Marketing Management take?</strong></td>
+      <td>The programme is two years, divided into four semesters. Check the official site for flexible completion limits.</td>
+    </tr>
+    <tr>
+      <td><strong>Can I do DU SOL MBA in Marketing Management while working?</strong></td>
+      <td>Yes. The study material is online and you can plan your study time around your job with weekend counselling sessions.</td>
+    </tr>
+    <tr>
+      <td><strong>What is the fee for DU SOL MBA in Marketing Management?</strong></td>
+      <td>Roughly ₹52,570 per year, plus a ₹300 registration fee, ₹200 per subject examination fee, and the OPEN MAT fee.</td>
+    </tr>
+    <tr>
+      <td><strong>What documents are required to apply?</strong></td>
+      <td>Graduation marksheets, Class 10 and 12 certificates, photo, signature, ID proof (Aadhaar), and category certificate if applicable.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Conclusion</h3>
+<p>The DU SOL MBA in Marketing Management degree offers working professionals a cost-effective and flexible approach to obtaining a respected postgraduate qualification. For those interested in marketing and wishing to pursue their professions within this sector, the DU SOL MBA in Marketing Management is ideally suited. Check the latest eligibility criteria, get your documents ready, and apply on the official portal today!</p>`;
+
+const MBA_HOSPITAL_ADMINISTRATION_CONTENT = `<h2>DU SOL MBA in Hospital Administration Management: Eligibility, Subjects and Admission Guide</h2>
+<p>Your hospital needs more than doctors. In fact, there are managers behind every OPD, billing counter, and emergency department. That’s why graduates from any stream and healthcare professionals look out for the DU SOL MBA in Hospital Administration Management. The School of Open Learning, University of Delhi runs the distance mode program, so you can pursue the MBA while working. If you want to know whether the DU SOL MBA in Hospital Administration Management is the right fit for you, let us look at this guide to the subjects, eligibility, admission process, and scope of career.</p>
+
+<h3>What Is DU SOL MBA in Hospital Administration Management?</h3>
+<p>DU SOL MBA in Hospital Administration Management is a postgraduate management degree that applies business skills to healthcare settings. Alongside core management papers, you learn how hospitals plan services, handle staff, control costs, and maintain quality. The degree is awarded by the University of Delhi, a name that carries weight with employers. Compared with a full-time MBA, it costs less and lets you keep your job.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Particular</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Programme</strong></td>
+      <td>Master of Business Administration (MBA) in Hospital Administration Management</td>
+    </tr>
+    <tr>
+      <td><strong>University</strong></td>
+      <td>School of Open Learning, University of Delhi (DU SOL)</td>
+    </tr>
+    <tr>
+      <td><strong>Duration</strong></td>
+      <td>2 Years (4 Semesters)</td>
+    </tr>
+    <tr>
+      <td><strong>Mode of Learning</strong></td>
+      <td>Distance Learning / Online with weekend academic counselling</td>
+    </tr>
+    <tr>
+      <td><strong>Approvals &amp; Accreditation</strong></td>
+      <td>UGC-DEB approved, NAAC 'A++' Accredited University, AICTE recognized</td>
+    </tr>
+    <tr>
+      <td><strong>Eligibility</strong></td>
+      <td>Graduation in any discipline (health sciences, arts, commerce, science) with minimum required marks</td>
+    </tr>
+    <tr>
+      <td><strong>Approximate Course Fee</strong></td>
+      <td>₹52,570 per year (plus nominal exam &amp; registration fees)</td>
+    </tr>
+    <tr>
+      <td><strong>Key Competencies</strong></td>
+      <td>Hospital Operations, NABH/JCI Accreditation, Medical Ethics, Health Information Systems &amp; Healthcare Supply Chain</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Why Choose an MBA in Hospital Administration Management?</h3>
+<p>India's healthcare sector keeps growing, and hospitals need people who understand both patient care and business. An MBA in Hospital Administration Management prepares you for exactly that gap. It's useful for nurses, pharmacists, lab technicians, and other healthcare staff who want to move into management. It also works for commerce and arts graduates who want to enter a stable, fast-growing industry:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Advantage</th>
+      <th>What It Delivers For You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Delhi University name</strong></td>
+      <td>Earn a prestigious University of Delhi degree respected by multi-speciality hospital networks and healthcare employers at a modest cost.</td>
+    </tr>
+    <tr>
+      <td><strong>Flexible shift-friendly learning</strong></td>
+      <td>Study material and recorded online lectures are accessible 24/7, making it easy to learn around hospital shift rotations and work schedules.</td>
+    </tr>
+    <tr>
+      <td><strong>A growing healthcare job market</strong></td>
+      <td>Rapid nationwide expansion of private hospital networks, diagnostics chains, and health-tech platforms drives constant executive demand.</td>
+    </tr>
+    <tr>
+      <td><strong>Versatile healthcare career skills</strong></td>
+      <td>Acquired management skills apply seamlessly across hospitals, diagnostic centers, wellness chains, health insurers, TPAs, and consultancies.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Who Should Apply?</h3>
+<p>This programme is structured for professionals and graduates aiming for leadership in the healthcare domain:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Healthcare Practitioners:</strong> Nurses, pharmacists, physiotherapists, doctors, and lab technicians seeking to transition from clinical duties into administrative management.</li>
+  <li><strong>Hospital Administrative Staff:</strong> Personnel currently working in billing, admissions, front desk, and patient coordination aiming for managerial promotions.</li>
+  <li><strong>Graduates from Any Stream:</strong> Ambitious Science, Commerce, and Arts graduates seeking to build a lucrative management career in the resilient healthcare industry.</li>
+  <li><strong>Health-Tech &amp; Insurance Professionals:</strong> Executives in health insurance, TPAs, and pharmaceutical supply chains needing structured healthcare administration credentials.</li>
+</ul>
+
+<h3>DU SOL MBA in Hospital Administration Management Subjects</h3>
+<p>The curriculum spans two years and four semesters. The first year establishes a solid management base, while the second year focuses on specialized healthcare administration:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Key Focus Papers &amp; Modules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semester 1</strong></td>
+      <td>Healthcare Management &amp; Organizational Behaviour, Hospital Planning &amp; Architecture, Health Economics &amp; Policy, Management Accounting</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 2</strong></td>
+      <td>Hospital Operations &amp; Clinical Services Management, Healthcare Quality Management (NABH/JCI), Health Laws &amp; Medical Ethics, Epidemiology &amp; Public Health</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 3</strong></td>
+      <td>Hospital Information Systems &amp; Telemedicine, Healthcare Marketing &amp; Patient Relations, Materials &amp; Supply Chain Management in Hospitals, Human Resource Management in Healthcare</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 4</strong></td>
+      <td>Health Insurance &amp; TPA Operations, Disaster &amp; Emergency Management in Hospitals, Strategic Healthcare Leadership, Capstone Hospital Administration Dissertation / Field Project</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Note: The exact paper list and module names may be updated by the university. Always cross-check with the latest syllabus on the official portal.</em></p>
+
+<h3>Eligibility Criteria</h3>
+<p>Candidates must hold a bachelor's degree in any discipline from a recognized university. While graduates with backgrounds in medicine, nursing, pharmacy, and allied health sciences find this course highly synergistic, graduates from science, commerce, and humanities are equally eligible to apply:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Requirement Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Educational Qualification</strong></td>
+      <td>Bachelor's degree in any discipline (MBBS, BDS, B.Pharm, B.Sc Nursing, B.Sc, B.Com, BA, etc.) from a recognized university.</td>
+    </tr>
+    <tr>
+      <td><strong>Minimum Aggregate Marks</strong></td>
+      <td>Typically 50% aggregate marks in graduation (45% for reserved categories as per government norms).</td>
+    </tr>
+    <tr>
+      <td><strong>Admission Basis</strong></td>
+      <td>Merit-based admission or OPENMAT entrance score as specified in the annual DU SOL postgraduate notification.</td>
+    </tr>
+    <tr>
+      <td><strong>Age Criteria</strong></td>
+      <td>No age limit (No age bar for enrollment).</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Fees and Important Points</h3>
+<p>Fees are paid per year and tend to be much more affordable than private business schools. The approximate fee breakdown is:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Fee Component</th>
+      <th>Approximate Amount</th>
+      <th>Frequency / Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OPEN MAT Entrance Fee</strong></td>
+      <td>₹800 (Open Category) / ₹600 (Reserved Category)</td>
+      <td>One-time upon entrance exam registration (if applicable)</td>
+    </tr>
+    <tr>
+      <td><strong>Registration Fee</strong></td>
+      <td>₹300</td>
+      <td>One-time online registration fee at the time of application</td>
+    </tr>
+    <tr>
+      <td><strong>Annual Course Fee</strong></td>
+      <td>₹52,570 per year</td>
+      <td>Tuition, LMS access, digital library, and study materials</td>
+    </tr>
+    <tr>
+      <td><strong>Examination Fee</strong></td>
+      <td>₹200 per subject</td>
+      <td>Payable per semester prior to term-end examinations</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Note: Fees can vary from year to year. Please check the current fees in the officially published prospectus before applying.</em></p>
+
+<h3>Documents Required</h3>
+<p>Keep scanned digital copies of the following documents ready before applying:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li>Graduation marksheets (all years/semesters) and degree certificate</li>
+  <li>Class 10 and 12 marksheets and passing certificates</li>
+  <li>Recent passport-sized photograph and scanned signature</li>
+  <li>Valid government ID proof (Aadhaar Card, Voter ID, or Passport)</li>
+  <li>Category certificate (SC/ST/OBC/EWS/PwD), if applicable</li>
+</ul>
+
+<h3>How to Apply for DU SOL MBA in Hospital Administration Management</h3>
+<p>The entire application process is conducted smoothly online via the official DU SOL admission portal:</p>
+<ol class="list-decimal pl-6 space-y-2 my-3">
+  <li><strong>Register:</strong> Open the official SOL admission portal at <code>sol.du.ac.in</code> and register with your email and mobile number.</li>
+  <li><strong>Select Specialisation:</strong> Choose the MBA programme and select Hospital Administration Management as your specialisation.</li>
+  <li><strong>Fill Academic Details:</strong> Enter your personal, contact, and graduation marks carefully.</li>
+  <li><strong>Upload Documents:</strong> Upload your scanned photograph, signature, graduation marksheets, and ID proof.</li>
+  <li><strong>Pay Online:</strong> Complete the registration fee payment online via UPI, net banking, or debit/credit card.</li>
+  <li><strong>Submit &amp; Download:</strong> Submit the application form and download the confirmation slip for your records.</li>
+</ol>
+
+<h3>Career Scope After an MBA in Hospital Administration Management</h3>
+<p>Healthcare management jobs exist across hospitals, diagnostic chains, health insurers, medical device manufacturers, and health consultancies:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Career Designation</th>
+      <th>Core Professional Responsibilities</th>
+      <th>Expected Salary Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Hospital Administrator / Manager</strong></td>
+      <td>Supervise day-to-day administrative functions, clinical coordination, patient experience, and department budgets.</td>
+      <td>₹6.5 - 13.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Healthcare Operations Manager</strong></td>
+      <td>Direct OPD/IPD workflows, emergency response, OT scheduling, bed management, and clinical resource allocation.</td>
+      <td>₹6.0 - 12.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Quality &amp; Accreditation Officer</strong></td>
+      <td>Maintain NABH, JCI, and NABL clinical standards, oversee infection control audits, and drive compliance protocols.</td>
+      <td>₹5.8 - 11.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Health Insurance &amp; TPA Manager</strong></td>
+      <td>Manage cashless hospital claims processing, insurer empanelment, billing audits, and regulatory coordination.</td>
+      <td>₹5.5 - 11.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Healthcare Consultant</strong></td>
+      <td>Advise hospital networks, diagnostic chains, and medical startups on operational efficiency, accreditation, and expansion.</td>
+      <td>₹7.0 - 15.0 LPA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Tips to Succeed in a Distance MBA</h3>
+<p>Distance learning rewards discipline and consistency:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Set Fixed Study Hours:</strong> Dedicate 6 to 8 hours each week to review study modules, e-books, and recorded webinars.</li>
+  <li><strong>Submit Assignments on Time:</strong> Complete assignments early to receive faculty feedback and internal assessment scores.</li>
+  <li><strong>Connect Theory to Real Scenarios:</strong> If you work in healthcare, link topics directly to patient flow, staff rostering, or billing delays to build genuine operational mastery.</li>
+</ul>
+
+<h3>Frequently Asked Questions</h3>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Official Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Is DU SOL MBA in Hospital Administration Management a recognised degree?</strong></td>
+      <td>Yes, it is offered by the School of Open Learning, University of Delhi, carrying the university's prestigious name with UGC-DEB approval and NAAC accreditation.</td>
+    </tr>
+    <tr>
+      <td><strong>How long does an MBA in Hospital Administration Management take?</strong></td>
+      <td>The programme is two years, divided into four semesters. Check the official website for maximum permitted completion limits.</td>
+    </tr>
+    <tr>
+      <td><strong>Can I do DU SOL MBA in Hospital Administration Management while working?</strong></td>
+      <td>Yes. The study material is online and you can plan your study time around your job or hospital shift rotations with weekend academic sessions.</td>
+    </tr>
+    <tr>
+      <td><strong>What is the fee for DU SOL MBA in Hospital Administration Management?</strong></td>
+      <td>Roughly ₹52,570 per year, plus a ₹300 registration fee, ₹200 per subject examination fee, and the OPEN MAT fee.</td>
+    </tr>
+    <tr>
+      <td><strong>Who is eligible to apply for this programme?</strong></td>
+      <td>Graduates in any discipline (including MBBS, BDS, B.Pharm, B.Sc Nursing, Science, Commerce, Arts) with minimum qualifying aggregate marks.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Conclusion</h3>
+<p>The DU SOL MBA in Hospital Administration Management offers an affordable, fact-based, and flexible route for working professionals and graduates to earn a sought-after postgraduate qualification. If healthcare management is your future, Delhi University's hospital administration management MBA programme can be a transformative career booster. Review the latest eligibility, get your documents sorted, and apply on the official portal today!</p>`;
+
+const MBA_INTERNATIONAL_TRADE_CONTENT = `<h2>DU SOL MBA in International Trade Management: Fees, Eligibility and Admission</h2>
+<p>Want to build a global career in trade without leaving your job? The DU SOL MBA in International Trade Management could be the right step. Offered by the School of Open Learning, University of Delhi, it is a flexible and affordable postgraduate programme for graduates and working professionals. This guide covers the DU SOL MBA in International Trade Management in detail, including eligibility, fees, curriculum, and career scope.</p>
+
+<h3>MBA in International Trade Management at DU SOL: Overview</h3>
+<p>The programme is an online and distance MBA open to anyone with a bachelor's degree who wants to explore global business. It develops skills in export-import regulations, global marketing, and cross-border operations, helping learners understand how goods and services move across borders.</p>
+<p>This MBA in International Trade Management prepares learners for roles in international business, logistics, and trade compliance. Its flexible structure suits working professionals who cannot attend regular classes. For anyone aiming to succeed in the global marketplace, the MBA in International Trade Management at DU SOL is a practical and flexible choice.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Particular</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Programme</strong></td>
+      <td>Master of Business Administration (MBA) in International Trade Management</td>
+    </tr>
+    <tr>
+      <td><strong>University</strong></td>
+      <td>School of Open Learning, University of Delhi (DU SOL)</td>
+    </tr>
+    <tr>
+      <td><strong>Duration</strong></td>
+      <td>2 to 5 Years (4 Semesters, flexible completion)</td>
+    </tr>
+    <tr>
+      <td><strong>Mode of Learning</strong></td>
+      <td>Distance Learning / Online with weekend academic counselling</td>
+    </tr>
+    <tr>
+      <td><strong>Approvals &amp; Accreditation</strong></td>
+      <td>UGC-DEB approved, NAAC 'A++' Accredited University, AICTE recognized</td>
+    </tr>
+    <tr>
+      <td><strong>Eligibility</strong></td>
+      <td>Bachelor’s degree in any discipline from a recognized university</td>
+    </tr>
+    <tr>
+      <td><strong>Approximate Course Fee</strong></td>
+      <td>₹52,570 per year (plus nominal exam &amp; registration fees)</td>
+    </tr>
+    <tr>
+      <td><strong>Key Competencies</strong></td>
+      <td>EXIM Documentation, Global Logistics, Trade Compliance, Foreign Exchange &amp; Cross-Border E-Commerce</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Why Choose the DU SOL MBA in International Trade Management?</h3>
+<p>The DU SOL MBA in International Trade Management offers several practical advantages:</p>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Advantage</th>
+      <th>What It Delivers For You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Trusted university</strong></td>
+      <td>The degree carries the prestigious Delhi University name, widely respected by multinational corporations, shipping lines, and export councils.</td>
+    </tr>
+    <tr>
+      <td><strong>Global skills</strong></td>
+      <td>You master export-import rules, international customs procedures, global marketing, and cross-border commercial operations.</td>
+    </tr>
+    <tr>
+      <td><strong>Flexible completion time</strong></td>
+      <td>The programme allows between two to five years for completion, giving you the freedom to balance work commitments and exam timelines.</td>
+    </tr>
+    <tr>
+      <td><strong>Open to all graduates</strong></td>
+      <td>Candidates from any discipline (Commerce, Arts, Science, Engineering) can apply to enter the lucrative world of international business.</td>
+    </tr>
+    <tr>
+      <td><strong>Study while working</strong></td>
+      <td>Online digital study resources and weekend academic counselling fit effortlessly around your job.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Who Should Pursue This Programme?</h3>
+<p>This programme is structured for professionals and aspiring managers seeking cross-border career growth:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>Export-Import Professionals:</strong> Executives in export houses, international trading firms, and customs brokerage agencies needing formal management qualifications.</li>
+  <li><strong>Shipping &amp; Logistics Personnel:</strong> Staff in freight forwarding, shipping lines, port operations, and container logistics aiming for managerial roles.</li>
+  <li><strong>Entrepreneurs &amp; Business Owners:</strong> Founders eyeing overseas market expansion, cross-border sourcing, and global distribution.</li>
+  <li><strong>Commerce &amp; General Graduates:</strong> Degree holders seeking high-growth international careers in trade compliance, global banking, and trade finance.</li>
+</ul>
+
+<h3>DU SOL MBA in International Trade Management Duration and Eligibility</h3>
+<p>The programme runs across four semesters with flexible completion spanning two to five years. Candidates must have obtained a bachelor's degree in any stream from a recognised university. Specific minimum percentage criteria may vary each academic session; always refer to the official DU SOL website for active guidelines before applying.</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Requirement Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Educational Qualification</strong></td>
+      <td>Bachelor's degree in any discipline from a recognized university.</td>
+    </tr>
+    <tr>
+      <td><strong>Minimum Percentage</strong></td>
+      <td>Graduates from all streams are eligible; check current year guidelines on the official portal.</td>
+    </tr>
+    <tr>
+      <td><strong>Age Criteria</strong></td>
+      <td>No age limit (No age bar for enrollment).</td>
+    </tr>
+    <tr>
+      <td><strong>Admission Basis</strong></td>
+      <td>Merit-based admission / OPENMAT entrance score as per annual DU SOL guidelines.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Accreditation and Recognition</h3>
+<p>DU SOL is UGC-DEB approved, and the University of Delhi is accredited by NAAC with top-tier distinction and recognized by AICTE. These statutory approvals confirm that the DU SOL MBA in International Trade Management holds authentic academic standing and high corporate credibility worldwide.</p>
+
+<h3>Curriculum and Learning Methodology</h3>
+<p>The curriculum runs across four semesters and combines foundational management principles with specialized international trade subjects:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Key Focus Papers &amp; Modules</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semester 1</strong></td>
+      <td>International Business Environment, Foreign Exchange Management, Global Marketing, EXIM Documentation &amp; Procedures</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 2</strong></td>
+      <td>WTO &amp; Regional Trade Agreements, International Logistics &amp; Supply Chain, Cross-Cultural Management, International Commercial Law</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 3</strong></td>
+      <td>Global Sourcing &amp; Procurement, Export Finance &amp; Risk Hedging, International Trade Compliance &amp; Customs, Research Methodology in Global Trade</td>
+    </tr>
+    <tr>
+      <td><strong>Semester 4</strong></td>
+      <td>Strategic Global Enterprise Leadership, Cross-Border E-Commerce Operations, Global Commodity &amp; Derivatives Trading, Capstone International Trade Dissertation / Project</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Learners benefit from comprehensive resources that make studying manageable alongside a full-time job:</p>
+<ul class="list-disc pl-6 space-y-2 my-3">
+  <li><strong>E-books &amp; Printed Study Material:</strong> High-quality course booklets prepared by experienced international trade educators.</li>
+  <li><strong>Live Interactive Sessions:</strong> Weekend academic counselling and online lectures with industry experts.</li>
+  <li><strong>Projects &amp; Assignments:</strong> Hands-on export case studies, customs duty calculations, and international market research.</li>
+  <li><strong>LMS Portal &amp; Digital Library:</strong> 24/7 access to e-journals, recorded lectures, trade repositories, and reference documents.</li>
+</ul>
+
+<h3>DU SOL MBA in International Trade Management Fee Structure</h3>
+<p>The fee structure of the DU SOL MBA in International Trade Management is remarkably economical:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Fee Component</th>
+      <th>Approximate Amount</th>
+      <th>Frequency / Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OPEN MAT Entrance Fee</strong></td>
+      <td>₹800 (Open Category) / ₹600 (Reserved Category)</td>
+      <td>One-time upon entrance exam registration (if applicable)</td>
+    </tr>
+    <tr>
+      <td><strong>Registration Fee</strong></td>
+      <td>₹300</td>
+      <td>One-time online registration fee at the time of application</td>
+    </tr>
+    <tr>
+      <td><strong>Annual Course Fee</strong></td>
+      <td>₹52,570 per year</td>
+      <td>Tuition, LMS access, digital library, and study materials</td>
+    </tr>
+    <tr>
+      <td><strong>Examination Fee</strong></td>
+      <td>₹200 per subject</td>
+      <td>Payable per semester prior to term-end examinations</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p><em>Note: Fees may change each session, so check the official portal before paying. University fees must be paid only to the university.</em></p>
+
+<h3>Career Scope After the Programme</h3>
+<p>Graduates can take up leadership and analytical roles in multinational corporations, export houses, freight forwarders, shipping companies, and international trade agencies:</p>
+
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Designation</th>
+      <th>Core Professional Responsibilities</th>
+      <th>Expected Salary Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Export-Import (EXIM) Manager</strong></td>
+      <td>Direct international shipping documentation, customs clearance, freight negotiations, and distributor relations.</td>
+      <td>₹6.5 - 13.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Logistics Coordinator / Manager</strong></td>
+      <td>Manage global cargo freight, multi-modal transport lines, port operations, and container tracking.</td>
+      <td>₹5.8 - 11.5 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Trade Compliance Officer</strong></td>
+      <td>Ensure legal adherence to cross-border tariff codes, foreign trade policies, customs duties, and export sanctions.</td>
+      <td>₹6.0 - 12.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>International Marketing Manager</strong></td>
+      <td>Expand brand footprint into foreign territories, lead global channel distribution, and handle overseas client accounts.</td>
+      <td>₹6.5 - 14.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Supply Chain Analyst</strong></td>
+      <td>Optimize cross-border supply networks, reduce turnaround times, and mitigate shipping bottleneck risks.</td>
+      <td>₹5.5 - 11.0 LPA</td>
+    </tr>
+    <tr>
+      <td><strong>Foreign Exchange Specialist</strong></td>
+      <td>Monitor global currency fluctuations, hedge FX exposures, and structure trade credit finance.</td>
+      <td>₹6.0 - 12.5 LPA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>How to Apply for DU SOL MBA in International Trade Management</h3>
+<p>The entire admission process is conducted online via the official DU SOL admission portal:</p>
+<ol class="list-decimal pl-6 space-y-2 my-3">
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Register &amp; Fill Form:</strong> Register with a valid email and mobile number, and enter your personal and academic details.</li>
+  <li><strong>Upload Mandatory Documents:</strong> Upload scanned marksheets, graduation certificates, ID proof, and photographs.</li>
+  <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online via net banking, UPI, or debit/credit card.</li>
+  <li><strong>Check Merit List &amp; Pay Course Fee:</strong> Follow the published merit lists and pay your course fee once admitted to confirm your seat.</li>
+</ol>
+
+<h3>Frequently Asked Questions</h3>
+<div class="overflow-x-auto my-4">
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Official Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What is the duration of the DU SOL MBA in International Trade Management?</strong></td>
+      <td>It has four semesters, and the listing says it can be completed within two to five years.</td>
+    </tr>
+    <tr>
+      <td><strong>Who can apply for the MBA in International Trade Management at DU SOL?</strong></td>
+      <td>Graduates in any discipline from a recognized university.</td>
+    </tr>
+    <tr>
+      <td><strong>What is the fee?</strong></td>
+      <td>Roughly ₹52,570 per year, plus ₹300 registration, ₹200 per subject, and the OPEN MAT fee.</td>
+    </tr>
+    <tr>
+      <td><strong>Is the degree recognized?</strong></td>
+      <td>The listing says UGC-DEB approved. Verify details on the official website.</td>
+    </tr>
+    <tr>
+      <td><strong>How do I get study material?</strong></td>
+      <td>Through printed books and digital resources, including the university's digital library.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Conclusion</h3>
+<p>Thinking of a global career without taking a break from your existing one? Consider the DU SOL MBA in International Trade Management. Choose DU's reputation, UGC-DEB approval, flexible study mode, and focus on trade skills. Whether you plan a career in logistics, compliance, or international trade, DU SOL MBA in International Trade Management is a dependable option. Explore alternatives, verify your qualifications, and avail of free counseling to start your DU SOL MBA in International Trade Management journey today.</p>`;
+
 export const DEFAULT_PROGRAMS: Program[] = [
   // 1. Bachelor of Arts (BA)
   {
@@ -3939,52 +6077,195 @@ export const DEFAULT_PROGRAMS: Program[] = [
     name: "MBA in Hospital Administration Management",
     slug: "mba-hospital-administration",
     type: "mba",
-    degree: "Master of Business Administration (Hospital Administration)",
+    degree: "Master of Business Administration (Hospital Administration Management)",
     duration: "2 Years (4 Semesters)",
     overview:
-      "Healthcare management specialization focusing on clinical operations, healthcare quality standards (NABH/JCI), and hospital logistics.",
+      "Your hospital needs more than doctors. In fact, there are managers behind every OPD, billing counter, and emergency department. That’s why graduates from any stream and healthcare professionals look out for the DU SOL MBA in Hospital Administration Management. The School of Open Learning, University of Delhi runs the distance mode program, so you can pursue the MBA while working. This guide covers the subjects, eligibility, admission process, and scope of career.",
     description:
-      "Preparing hospital directors, healthcare consultants, and medical administration officers for leadership roles across healthcare facilities.",
-    eligibility: "Bachelor's degree with 50% marks. MBBS, BDS, B.Pharm, Nursing, or B.Sc graduates given priority.",
-    admissionProcess: "Merit-based admission as per DU SOL annual registration criteria.",
+      "DU SOL MBA in Hospital Administration Management is a postgraduate management degree that applies business skills to healthcare settings. Alongside core management papers, you learn how hospitals plan services, handle staff, control costs and maintain quality. The degree is awarded by the University of Delhi, combining prestigious brand value with low fees and schedule flexibility.",
+    eligibility:
+      "Usually, you need a bachelor's degree from a recognised university with minimum qualifying marks (typically 50% for open category, 45% for reserved categories). Open to graduates from any stream (MBBS, BDS, B.Pharm, B.Sc Nursing, Science, Commerce, Arts). Selection can be through merit or an entrance score (such as OPENMAT).",
+    admissionProcess:
+      "1. Open the official SOL admission portal at sol.du.ac.in and register. 2. Select MBA in Hospital Administration Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation receipt safe.",
     curriculum: [
-      { semesterOrYear: "Semester 1", subjects: ["Healthcare Management", "Hospital Planning & Architecture", "Medical Ethics & Law", "Health Economics"] },
-      { semesterOrYear: "Semester 2", subjects: ["Clinical Services Management", "Quality in Healthcare", "Hospital Financial Management", "Epidemiology"] },
+      {
+        semesterOrYear: "Semester 1",
+        subjects: [
+          "Healthcare Management & Organizational Behaviour",
+          "Hospital Planning & Architecture",
+          "Health Economics & Policy",
+          "Management Accounting",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 2",
+        subjects: [
+          "Hospital Operations & Clinical Services Management",
+          "Healthcare Quality Management (NABH/JCI)",
+          "Health Laws & Medical Ethics",
+          "Epidemiology & Public Health",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 3",
+        subjects: [
+          "Hospital Information Systems & Telemedicine",
+          "Healthcare Marketing & Patient Relations",
+          "Materials & Supply Chain Management in Hospitals",
+          "Human Resource Management in Healthcare",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 4",
+        subjects: [
+          "Health Insurance & TPA Operations",
+          "Disaster & Emergency Management in Hospitals",
+          "Strategic Healthcare Leadership",
+          "Capstone Hospital Administration Dissertation / Field Project",
+        ],
+      },
     ],
     fees: [
-      { title: "Annual Tuition Fee", amount: "₹52,000", note: "Includes hospital case studies and clinical seminars" },
+      { title: "Course Fee (Annual)", amount: "₹52,570", note: "Annual course fee covering tuition, study material, LMS, and digital library" },
+      { title: "Registration Fee", amount: "₹300", note: "One-time online registration fee at the time of application" },
+      { title: "OPEN MAT Entrance Fee", amount: "₹800 / ₹600", note: "₹800 for Open category, ₹600 for Reserved category" },
+      { title: "Examination Fee", amount: "₹200", note: "Per subject semester exam fee" },
     ],
-    careerOpportunities: ["Hospital Superintendent", "Healthcare Operations Director", "Medical Quality Auditor", "Health Insurance Consultant"],
+    careerOpportunities: [
+      "Hospital Administrator / Manager",
+      "Healthcare Operations Manager",
+      "Quality & Accreditation Officer",
+      "Health Insurance & TPA Manager",
+      "Healthcare Consultant",
+    ],
     featuredImage: "",
+    content: MBA_HOSPITAL_ADMINISTRATION_CONTENT,
+    faqs: [
+      {
+        question: "Is DU SOL MBA in Hospital Administration Management a recognised degree?",
+        answer: "Yes, it is offered by the School of Open Learning, University of Delhi, carrying the university's prestigious name with UGC-DEB approval and NAAC accreditation.",
+      },
+      {
+        question: "How long does an MBA in Hospital Administration Management take?",
+        answer: "The programme is two years, divided into four semesters. Check the official website for maximum permitted completion limits.",
+      },
+      {
+        question: "Can I do DU SOL MBA in Hospital Administration Management while working?",
+        answer: "Yes. The study material is online and you can plan your study time around your job or hospital shift rotations with weekend academic sessions.",
+      },
+      {
+        question: "What is the fee for DU SOL MBA in Hospital Administration Management?",
+        answer: "Roughly ₹52,570 per year, plus a ₹300 registration fee, ₹200 per subject examination fee, and the OPEN MAT fee.",
+      },
+      {
+        question: "Who is eligible to apply for this programme?",
+        answer: "Graduates in any discipline (including MBBS, BDS, B.Pharm, B.Sc Nursing, Science, Commerce, Arts) with minimum qualifying aggregate marks.",
+      },
+    ],
     status: "published",
+    seoTitle: "DU SOL MBA in Hospital Administration Management Guide",
+    seoDescription:
+      "DU SOL MBA in Hospital Administration Managementexplained: eligibility, subjects, career scope and admission steps for this flexible MBA.",
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-10-21T00:00:00.000Z",
+    updatedAt: "2026-10-22T00:00:00.000Z",
   },
   {
     id: "mba-international-trade",
     name: "MBA in International Trade Management",
     slug: "mba-international-trade",
     type: "mba",
-    degree: "Master of Business Administration (International Trade)",
-    duration: "2 Years (4 Semesters)",
+    degree: "Master of Business Administration (International Trade Management)",
+    duration: "2 to 5 Years (4 Semesters)",
     overview:
-      "Global commerce degree covering export-import documentation, global supply chains, international trade law, and foreign exchange.",
+      "Want to build a global career in trade without leaving your job? The DU SOL MBA in International Trade Management could be the right step. Offered by the School of Open Learning, University of Delhi, it is a flexible and affordable postgraduate programme for graduates and working professionals. This guide covers the DU SOL MBA in International Trade Management in detail, including eligibility, fees, curriculum, and career scope.",
     description:
-      "Designed for executives leading multinational enterprises, international logistics, cross-border investments, and global sourcing networks.",
-    eligibility: "Graduation with at least 50% marks from a recognized university.",
-    admissionProcess: "Direct online merit admission through DU SOL.",
+      "The programme is an online and distance MBA open to anyone with a bachelor's degree who wants to explore global business. It develops skills in export-import regulations, global marketing, and cross-border operations, helping learners understand how goods and services move across borders.",
+    eligibility:
+      "Candidates must have obtained a bachelor's degree in any stream from a recognised university. Open to all graduates from any discipline. Check the official DU SOL website for any session-specific percentage updates before applying.",
+    admissionProcess:
+      "1. Visit the official admission portal at sol.du.ac.in. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
     curriculum: [
-      { semesterOrYear: "Semester 1", subjects: ["International Business Environment", "Foreign Exchange Management", "Global Marketing", "EXIM Procedures"] },
-      { semesterOrYear: "Semester 2", subjects: ["WTO & Regional Trade Agreements", "International Logistics", "Cross-Cultural Management", "Global Finance"] },
+      {
+        semesterOrYear: "Semester 1",
+        subjects: [
+          "International Business Environment",
+          "Foreign Exchange Management",
+          "Global Marketing",
+          "EXIM Documentation & Procedures",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 2",
+        subjects: [
+          "WTO & Regional Trade Agreements",
+          "International Logistics & Supply Chain",
+          "Cross-Cultural Management",
+          "International Commercial Law",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 3",
+        subjects: [
+          "Global Sourcing & Procurement",
+          "Export Finance & Risk Hedging",
+          "International Trade Compliance & Customs",
+          "Research Methodology in Global Trade",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 4",
+        subjects: [
+          "Strategic Global Enterprise Leadership",
+          "Cross-Border E-Commerce Operations",
+          "Global Commodity & Derivatives Trading",
+          "Capstone International Trade Dissertation / Project",
+        ],
+      },
     ],
     fees: [
-      { title: "Annual Tuition Fee", amount: "₹48,000", note: "Includes trade analytics access" },
+      { title: "Course Fee (Annual)", amount: "₹52,570", note: "Annual course fee covering tuition, study material, LMS, and digital library" },
+      { title: "Registration Fee", amount: "₹300", note: "One-time online registration fee at the time of application" },
+      { title: "OPEN MAT Entrance Fee", amount: "₹800 / ₹600", note: "₹800 for Open category, ₹600 for Reserved category" },
+      { title: "Examination Fee", amount: "₹200", note: "Per subject semester exam fee" },
     ],
-    careerOpportunities: ["Export-Import Manager", "International Trade Consultant", "Global Logistics Director", "Foreign Exchange Specialist"],
+    careerOpportunities: [
+      "Export-Import (EXIM) Manager",
+      "Logistics Coordinator / Manager",
+      "Trade Compliance Officer",
+      "International Marketing Manager",
+      "Supply Chain Analyst",
+      "Foreign Exchange Specialist",
+    ],
     featuredImage: "",
+    content: MBA_INTERNATIONAL_TRADE_CONTENT,
+    faqs: [
+      {
+        question: "What is the duration of the DU SOL MBA in International Trade Management?",
+        answer: "It has four semesters, and the listing says it can be completed within two to five years.",
+      },
+      {
+        question: "Who can apply for the MBA in International Trade Management at DU SOL?",
+        answer: "Graduates in any discipline from a recognized university.",
+      },
+      {
+        question: "What is the fee?",
+        answer: "Roughly ₹52,570 per year, plus ₹300 registration, ₹200 per subject, and the OPEN MAT fee.",
+      },
+      {
+        question: "Is the degree recognized?",
+        answer: "The listing says UGC-DEB approved. Verify details on the official website.",
+      },
+      {
+        question: "How do I get study material?",
+        answer: "Through printed books and digital resources, including the university's digital library.",
+      },
+    ],
     status: "published",
+    seoTitle: "DU SOL MBA in International Trade Management: Fees",
+    seoDescription:
+      "Explore the DU SOL MBA in International Trade Management: fees, eligibility and admission. A flexible MBA in International Trade Management option.",
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-10-21T00:00:00.000Z",
+    updatedAt: "2026-10-22T00:00:00.000Z",
   },
   {
     id: "mba-rural-management",
@@ -3994,23 +6275,95 @@ export const DEFAULT_PROGRAMS: Program[] = [
     degree: "Master of Business Administration (Rural Management)",
     duration: "2 Years (4 Semesters)",
     overview:
-      "Management degree focused on agricultural supply chains, microfinance, rural banking, cooperative models, and development policy.",
+      "Looking for a fulfilling career in rural development without giving up your job? Your next move could be the DU SOL MBA in Rural Management. Brought to you by the School of Open Learning, University of Delhi, it is an affordable, flexible, postgraduate degree programme for working professionals and graduates.",
     description:
-      "Empowering professionals to spearhead rural economy initiatives, agribusiness operations, and grassroots development ventures.",
-    eligibility: "Bachelor's degree in any discipline with at least 50% marks.",
-    admissionProcess: "Direct online application via DU SOL.",
+      "Looking for a fulfilling career in rural development without giving up your job? Your next move could be the DU SOL MBA in Rural Management. Brought to you by the School of Open Learning, University of Delhi, it is an affordable, flexible, postgraduate degree programme for working professionals and graduates. Here is everything you need to know about DU SOL MBA in Rural Management.\n\nThe program is an online and distance learning degree created to develop the knowledge and skills required to do well in rural development and management. It includes economics, agriculture management, community development and environmentally friendly methods getting students ready for meaningful jobs in rural areas.",
+    eligibility:
+      "Candidates need a bachelor's degree from a recognized university, and there is no age bar. Applicants with relevant work experience in the rural development sector are encouraged to apply, as practical knowledge enriches the learning experience.",
+    admissionProcess:
+      "The entire DU SOL MBA in Rural Management admission process is online via sol.du.ac.in. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
     curriculum: [
-      { semesterOrYear: "Semester 1", subjects: ["Rural Society & Economy", "Agribusiness Supply Chain", "Microfinance & Rural Banking", "Development Communication"] },
-      { semesterOrYear: "Semester 2", subjects: ["Cooperative Management", "Commodity Trading", "Rural Marketing Strategy", "Project Formulation"] },
+      {
+        semesterOrYear: "Semester 1",
+        subjects: [
+          "Rural Society & Economy",
+          "Agribusiness Supply Chain Management",
+          "Microfinance & Rural Banking Institutions",
+          "Development Communication & Extension",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 2",
+        subjects: [
+          "Cooperative Management & Collective Enterprises",
+          "Agricultural Commodity Trading & Pricing",
+          "Rural Marketing Strategy & Consumer Behaviour",
+          "Development Project Formulation & Appraisal",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 3",
+        subjects: [
+          "Sustainable Livelihoods & Natural Resource Management",
+          "Rural Infrastructure & Micro-Enterprise Development",
+          "Public Policy, Panchayati Raj & Rural Governance",
+          "Research Methodology & Rural Fieldwork Practicum",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 4",
+        subjects: [
+          "Agribusiness Entrepreneurship & Incubation",
+          "Corporate Social Responsibility (CSR) & Social Impact",
+          "Strategic Rural Management",
+          "Capstone Rural Dissertation & Major Field Project",
+        ],
+      },
     ],
     fees: [
-      { title: "Annual Tuition Fee", amount: "₹45,000", note: "Includes rural case studies and project supervision" },
+      { title: "Course Fee (Annual)", amount: "₹52,570", note: "Annual course fee covering tuition, study material, LMS, and digital library" },
+      { title: "Registration Fee", amount: "₹300", note: "One-time online registration fee at the time of application" },
+      { title: "OPEN MAT Entrance Fee", amount: "₹800 / ₹600", note: "₹800 for Open category, ₹600 for Reserved category" },
+      { title: "Examination Fee", amount: "₹200", note: "Per subject semester exam fee" },
     ],
-    careerOpportunities: ["Agribusiness Manager", "Microfinance Head", "CSR Project Director", "Rural Development Consultant"],
+    careerOpportunities: [
+      "Rural Development Officer",
+      "Project Coordinator (NGOs / Development Agencies)",
+      "Community Development Manager",
+      "Agribusiness Executive",
+      "Sustainability & CSR Consultant",
+      "Microfinance & Rural Banking Lead",
+    ],
     featuredImage: "",
+    content: MBA_RURAL_MANAGEMENT_CONTENT,
+    faqs: [
+      {
+        question: "What is the duration of the DU SOL MBA in Rural Management?",
+        answer: "It is a two-year programme divided into four semesters of about six months each.",
+      },
+      {
+        question: "Who can apply for the MBA in Rural Management at DU SOL?",
+        answer: "Graduates from a recognized university. There is no age bar, and rural sector experience is encouraged.",
+      },
+      {
+        question: "What is the fee?",
+        answer: "Roughly ₹52,570 per year, plus ₹300 registration, ₹200 per subject, and the OPEN MAT fee.",
+      },
+      {
+        question: "Is the degree recognized?",
+        answer: "The listing says UGC-DEB approved. Verify details on the official website.",
+      },
+      {
+        question: "How do I get study material?",
+        answer: "Through printed books and digital resources, including the university's digital library.",
+      },
+    ],
     status: "published",
+    seoTitle: "DU SOL MBA in Rural Management: Fees & Eligibility",
+    seoDescription:
+      "Explore the DU SOL MBA in Rural Management: fees, eligibility, curriculum and admission. A flexible MBA in Rural Management from Delhi University.",
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-10-21T00:00:00.000Z",
+    updatedAt: "2026-10-22T00:00:00.000Z",
   },
   {
     id: "mba-retail-management",
@@ -4018,51 +6371,195 @@ export const DEFAULT_PROGRAMS: Program[] = [
     slug: "mba-retail-management",
     type: "mba",
     degree: "Master of Business Administration (Retail Management)",
-    duration: "2 Years (4 Semesters)",
+    duration: "2 to 5 Years (4 Semesters)",
     overview:
-      "Modern retail degree addressing omni-channel retail, visual merchandising, store operations, consumer analytics, and supply chain.",
+      "Want to lead in the fast-moving world of retail while continuing your job? The DU SOL MBA in Retail Management is a flexible and affordable postgraduate programme from Delhi University designed for working professionals and graduates.",
     description:
-      "Equipping retail executives to manage hypermarkets, luxury brands, e-commerce platforms, and multi-channel fulfillment operations.",
-    eligibility: "Bachelor's degree with at least 50% marks from a recognized university.",
-    admissionProcess: "Direct online application via DU SOL.",
+      "Want to lead in the fast-moving world of retail while continuing your job? The DU SOL MBA in Retail Management could be the right step. Offered by the School of Open Learning, University of Delhi, it is a flexible and affordable postgraduate programme for graduates and working professionals. This guide covers the DU SOL MBA in Retail Management in detail, including eligibility, fees, curriculum, and career scope.\n\nThe programme is an online, distance MBA for those who are passionate about retail and want to develop into leadership roles. It gives you the ability to build your retail, merchandising and customer skills which are more important than ever as you adapt to ongoing changing customer trends.",
+    eligibility:
+      "Candidates should have a Bachelor's Degree in any subject from a government accredited university. Open to all graduates from any stream. Candidates can complete the degree flexibly between two to five years.",
+    admissionProcess:
+      "The entire DU SOL MBA in Retail Management admission process is online via sol.du.ac.in. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
     curriculum: [
-      { semesterOrYear: "Semester 1", subjects: ["Retail Store Operations", "Consumer Behavior in Retail", "Visual Merchandising", "Retail Logistics"] },
-      { semesterOrYear: "Semester 2", subjects: ["E-Commerce & Omnichannel Retail", "Retail Category Management", "Brand Building", "Retail Analytics"] },
+      {
+        semesterOrYear: "Semester 1",
+        subjects: [
+          "Principles of Retail Management",
+          "Consumer Behaviour in Retail",
+          "Retail Accounting & Financial Control",
+          "Retail Store Operations & Customer Service",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 2",
+        subjects: [
+          "Visual Merchandising & Space Planning",
+          "Retail Category & Inventory Management",
+          "Omnichannel & E-Commerce Operations",
+          "Retail Logistics & Supply Chain Management",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 3",
+        subjects: [
+          "Retail Brand Management",
+          "Customer Experience & Loyalty Programs",
+          "Retail Analytics & Dynamic Pricing",
+          "Research Methodology & Retail Field Study",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 4",
+        subjects: [
+          "Luxury & International Retailing",
+          "Mall & Franchise Operations",
+          "Strategic Retail Leadership",
+          "Capstone Retail Management Dissertation & Project",
+        ],
+      },
     ],
     fees: [
-      { title: "Annual Tuition Fee", amount: "₹46,000", note: "Includes retail simulation case studies" },
+      { title: "Course Fee (Annual)", amount: "₹52,570", note: "Annual course fee covering tuition, study material, LMS, and digital library" },
+      { title: "Registration Fee", amount: "₹300", note: "One-time online registration fee at the time of application" },
+      { title: "OPEN MAT Entrance Fee", amount: "₹800 / ₹600", note: "₹800 for Open category, ₹600 for Reserved category" },
+      { title: "Examination Fee", amount: "₹200", note: "Per subject semester exam fee" },
     ],
-    careerOpportunities: ["Retail Operations Manager", "Visual Merchandising Head", "E-Commerce Category Lead", "Store General Manager"],
+    careerOpportunities: [
+      "Store Manager / Area Manager",
+      "Category Manager",
+      "Merchandise Manager",
+      "E-Commerce Manager",
+      "Brand Manager",
+      "Retail Operations Director",
+    ],
     featuredImage: "",
+    content: MBA_RETAIL_MANAGEMENT_CONTENT,
+    faqs: [
+      {
+        question: "What is the duration of the DU SOL MBA in Retail Management?",
+        answer: "It has four semesters, and the listing says it can be completed within two to five years.",
+      },
+      {
+        question: "Who can apply for the MBA in Retail Management at DU SOL?",
+        answer: "Graduates in any discipline from a recognized university.",
+      },
+      {
+        question: "What is the fee?",
+        answer: "Roughly ₹52,570 per year, plus ₹300 registration, ₹200 per subject, and the OPEN MAT fee.",
+      },
+      {
+        question: "Is the degree recognized?",
+        answer: "The listing says UGC-DEB approved. Verify details on the official website.",
+      },
+      {
+        question: "How do I get study material?",
+        answer: "Through printed books and digital resources, including the university's digital library.",
+      },
+    ],
     status: "published",
+    seoTitle: "DU SOL MBA in Retail Management: Fees & Eligibility",
+    seoDescription:
+      "Explore the DU SOL MBA in Retail Management: fees, eligibility, curriculum and admission. A flexible MBA in Retail Management from Delhi University.",
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-10-21T00:00:00.000Z",
+    updatedAt: "2026-10-22T00:00:00.000Z",
   },
   {
     id: "mba-business-management",
     name: "MBA in Business Management",
     slug: "mba-business-management",
     type: "mba",
-    degree: "Master of Business Administration (General Management)",
+    degree: "Master of Business Administration (Business Management)",
     duration: "2 Years (4 Semesters)",
     overview:
-      "Versatile general management specialization developing corporate governance, corporate financial strategy, leadership, and operational scale.",
+      "Want to lead teams and manage businesses without leaving your job? The DU SOL MBA in Business Management could be the right step. Offered by the School of Open Learning, University of Delhi, it is a flexible and affordable postgraduate programme for graduates and working professionals. This guide covers the DU SOL MBA in Business Management in detail, including eligibility, fees, curriculum, and career scope.",
     description:
-      "Preparing enterprise leaders and entrepreneurs with cross-functional mastery across strategy, finance, HR, and marketing.",
-    eligibility: "Graduation with at least 50% marks from a recognized university.",
-    admissionProcess: "Direct online application via DU SOL.",
+      "An online and distance learning MBA for working professionals and individuals seeking to acquire a high-quality management qualification without visiting campus, covering core concepts including finance, marketing, human resources, operations, and leadership.",
+    eligibility:
+      "Candidates normally require a bachelor's degree of minimum 50% marks (relaxation to 45% for reserved categories as per government norms) in any discipline and a valid OPENMAT score (distance education entrance conducted by DU SOL).",
+    admissionProcess:
+      "1. Visit the official admission portal at sol.du.ac.in. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
     curriculum: [
-      { semesterOrYear: "Semester 1", subjects: ["Strategic Leadership", "Corporate Governance", "Managerial Decision Making", "Business Economics"] },
-      { semesterOrYear: "Semester 2", subjects: ["Advanced Financial Analysis", "Global Business Strategies", "Innovation & Change Management", "Corporate Law"] },
+      {
+        semesterOrYear: "Semester 1",
+        subjects: [
+          "Management Principles & Organizational Behaviour",
+          "Managerial Economics",
+          "Financial Accounting & Reporting",
+          "Marketing Management",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 2",
+        subjects: [
+          "Corporate Finance",
+          "Human Resource Management",
+          "Operations & Supply Chain Management",
+          "Business Research Methods",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 3",
+        subjects: [
+          "Strategic Management & Business Policy",
+          "Digital Business & E-Commerce",
+          "International Business Environment",
+          "Enterprise Leadership & Change Management",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 4",
+        subjects: [
+          "Corporate Governance & Business Ethics",
+          "Entrepreneurship & Innovation",
+          "Cross-Functional Strategic Management",
+          "Capstone Business Management Dissertation / Major Project",
+        ],
+      },
     ],
     fees: [
-      { title: "Annual Tuition Fee", amount: "₹48,000", note: "Comprehensive management tuition" },
+      { title: "Course Fee (Annual)", amount: "₹52,570", note: "Annual course fee covering tuition, study material, LMS, and digital library" },
+      { title: "Registration Fee", amount: "₹300", note: "One-time online registration fee at the time of application" },
+      { title: "OPEN MAT Entrance Fee", amount: "₹800 / ₹600", note: "₹800 for Open category, ₹600 for Reserved category" },
+      { title: "Examination Fee", amount: "₹200", note: "Per subject semester exam fee" },
     ],
-    careerOpportunities: ["General Manager", "Corporate Strategy Consultant", "Chief Operating Officer", "Business Unit Head"],
+    careerOpportunities: [
+      "Business Manager",
+      "Operations Manager",
+      "Marketing Manager",
+      "HR Manager",
+      "Finance Executive / Manager",
+      "Business Development Manager",
+    ],
     featuredImage: "",
+    content: MBA_BUSINESS_MANAGEMENT_CONTENT,
+    faqs: [
+      {
+        question: "What is the duration of the DU SOL MBA in Business Management?",
+        answer: "It is a two-year programme divided into four semesters.",
+      },
+      {
+        question: "Who can apply for the MBA in Business Management at DU SOL?",
+        answer: "Graduates in any discipline with 50% marks (45% for reserved categories) and a valid OPENMAT score.",
+      },
+      {
+        question: "What is the fee?",
+        answer: "Roughly ₹52,570 per year, plus ₹300 registration, ₹200 per subject, and the OPEN MAT fee.",
+      },
+      {
+        question: "Is the degree recognized?",
+        answer: "The listing says UGC-DEB approved. Verify details on the official website.",
+      },
+      {
+        question: "How do I get study material?",
+        answer: "Through printed books and digital resources, including the university's digital library.",
+      },
+    ],
     status: "published",
+    seoTitle: "DU SOL MBA in Business Management: Fees & Eligibility",
+    seoDescription:
+      "Explore the DU SOL MBA in Business Management: fees, eligibility, curriculum and admission. A flexible MBA in Business Management from Delhi University.",
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-10-21T00:00:00.000Z",
+    updatedAt: "2026-10-22T00:00:00.000Z",
   },
   {
     id: "mba-project-management",
@@ -4072,49 +6569,192 @@ export const DEFAULT_PROGRAMS: Program[] = [
     degree: "Master of Business Administration (Project Management)",
     duration: "2 Years (4 Semesters)",
     overview:
-      "Specialized program aligned with PMI methodologies covering Agile, Scrum, risk mitigation, resource scheduling, and project procurement.",
+      "Want to lead projects and teams without leaving your job? The DU SOL MBA in Project Management could be the right step. Offered by the School of Open Learning, University of Delhi, it is a flexible and affordable postgraduate programme for graduates and working professionals. This guide covers the DU SOL MBA in Project Management in detail, including eligibility, fees, curriculum, and career scope.",
     description:
-      "Developing certified project directors and program managers for infrastructure, IT, manufacturing, and consultancy organizations.",
-    eligibility: "Graduation in any discipline with at least 50% aggregate marks.",
-    admissionProcess: "Direct online application via DU SOL.",
+      "A distance learning online MBA focusing on core project skills, providing a comprehensive understanding of project planning, execution, and evaluation. You will learn how to manage time and risk, lead teams, and complete projects to time and cost in real-world scenarios.",
+    eligibility:
+      "Candidates need a bachelor's degree in any discipline with a minimum of 50% marks (relaxation for reserved categories as per government norms) and a valid OPENMAT entrance exam score conducted by DU SOL.",
+    admissionProcess:
+      "1. Visit the official admission portal at sol.du.ac.in. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
     curriculum: [
-      { semesterOrYear: "Semester 1", subjects: ["Project Initiation & Scope", "Project Scheduling & Costing", "Agile & Scrum Frameworks", "Contract & Procurement"] },
-      { semesterOrYear: "Semester 2", subjects: ["Project Risk Management", "Quality & Compliance", "Program Leadership", "Capstone Project Simulation"] },
+      {
+        semesterOrYear: "Semester 1",
+        subjects: [
+          "Principles of Management & Organizational Behaviour",
+          "Managerial Economics",
+          "Project Planning & Scope Definition",
+          "Business Communication",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 2",
+        subjects: [
+          "Project Scheduling & Cost Management",
+          "Risk Analysis & Mitigation",
+          "Agile & Scrum Methodologies",
+          "Procurement & Contract Management",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 3",
+        subjects: [
+          "Project Quality & Compliance",
+          "Resource Management & Team Leadership",
+          "Advanced Project Analytics & MS Project",
+          "Research Methodology",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 4",
+        subjects: [
+          "Strategic Program & Portfolio Management",
+          "International Project Management",
+          "Project Ethics & Governance",
+          "Capstone Project Management Dissertation / Live Simulation",
+        ],
+      },
     ],
     fees: [
-      { title: "Annual Tuition Fee", amount: "₹48,500", note: "Includes project simulation licenses" },
+      { title: "Course Fee (Annual)", amount: "₹52,570", note: "Annual course fee covering tuition, study material, LMS, and digital library" },
+      { title: "Registration Fee", amount: "₹300", note: "One-time online registration fee at the time of application" },
+      { title: "OPEN MAT Entrance Fee", amount: "₹800 / ₹600", note: "₹800 for Open category, ₹600 for Reserved category" },
+      { title: "Examination Fee", amount: "₹200", note: "Per subject semester exam fee" },
     ],
-    careerOpportunities: ["Project Management Officer (PMO)", "Senior Scrum Master", "Agile Transformation Lead", "Infrastructure Project Director"],
+    careerOpportunities: [
+      "Project Manager",
+      "Programme Manager",
+      "Project Analyst",
+      "Operations Manager",
+      "Delivery Lead",
+      "Scrum Master / Agile Transformation Lead",
+    ],
     featuredImage: "",
+    content: MBA_PROJECT_MANAGEMENT_CONTENT,
+    faqs: [
+      {
+        question: "What is the duration of the DU SOL MBA in Project Management?",
+        answer: "It is a two-year programme divided into four semesters.",
+      },
+      {
+        question: "Who can apply for the MBA in Project Management at DU SOL?",
+        answer: "Graduates in any discipline with at least 50% marks who clear the OPENMAT exam.",
+      },
+      {
+        question: "What is the fee?",
+        answer: "Roughly ₹52,570 per year, plus ₹300 registration, ₹200 per subject, and the OPEN MAT fee.",
+      },
+      {
+        question: "Is the degree recognized?",
+        answer: "The listing says UGC-DEB approved. Verify details on the official website.",
+      },
+      {
+        question: "How do I get study material?",
+        answer: "Through printed books and digital resources, including the university's digital library.",
+      },
+    ],
     status: "published",
+    seoTitle: "DU SOL MBA in Project Management: Fees & Eligibility",
+    seoDescription:
+      "Explore the DU SOL MBA in Project Management: fees, eligibility, curriculum and admission. A flexible MBA in Project Management from Delhi University.",
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-10-21T00:00:00.000Z",
+    updatedAt: "2026-10-22T00:00:00.000Z",
   },
   {
     id: "mba-marketing-management",
     name: "MBA in Marketing Management",
     slug: "mba-marketing-management",
     type: "mba",
-    degree: "Master of Business Administration (Marketing)",
+    degree: "Master of Business Administration (Marketing Management)",
     duration: "2 Years (4 Semesters)",
     overview:
-      "Top-tier marketing specialization covering brand management, digital growth marketing, consumer psychology, pricing strategies, and PR.",
+      "Marketing is one of those domains where experience often speaks louder than theoretical knowledge, making the majority of working professionals consider pursuing an MBA in Marketing Management. The School of Open Learning at the University of Delhi offers a two-year, four-semester distance learning programme that empowers aspirants to continue their career while studying. This guide covers syllabus, eligibility, admission process, and career prospects.",
     description:
-      "Building high-impact marketing directors, brand managers, and performance growth leaders for modern consumer and B2B enterprises.",
-    eligibility: "Bachelor's degree with at least 50% aggregate marks from a recognized university.",
-    admissionProcess: "Direct online application via DU SOL.",
+      "DU SOL MBA in Marketing Management is a postgraduate management programme with marketing as the chosen specialisation. You first study core management subjects, then move into marketing-focused papers in the later semesters. The degree comes from the University of Delhi, combining prestigious brand value with low fees and schedule flexibility.",
+    eligibility:
+      "Generally, candidates require a bachelor's degree from a recognised university with minimum satisfactory marks (typically 50% aggregate marks, 45% for reserved categories). Selection criteria such as merit or an entrance score (OPENMAT) may vary for different admission cycles.",
+    admissionProcess:
+      "1. Open the official SOL admission portal at sol.du.ac.in and register. 2. Select MBA in Marketing Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation safe.",
     curriculum: [
-      { semesterOrYear: "Semester 1", subjects: ["Strategic Brand Management", "Consumer Psychology & Insights", "Digital Marketing & Growth", "Integrated Marketing Communications"] },
-      { semesterOrYear: "Semester 2", subjects: ["Pricing & Distribution Strategy", "International Marketing", "Marketing Analytics", "Customer Relationship Management"] },
+      {
+        semesterOrYear: "Semester 1",
+        subjects: [
+          "Marketing Management",
+          "Management Principles & Organizational Behaviour",
+          "Managerial Economics",
+          "Management Accounting",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 2",
+        subjects: [
+          "Human Resource Management",
+          "Production and Operations Management",
+          "Financial Management",
+          "Business Research Methods",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 3",
+        subjects: [
+          "Marketing Research",
+          "Advertising Management",
+          "Services Marketing",
+          "Brand Management",
+        ],
+      },
+      {
+        semesterOrYear: "Semester 4",
+        subjects: [
+          "Digital Marketing",
+          "Sales Force Management",
+          "International Marketing",
+          "Strategic Marketing Capstone Dissertation / Major Project",
+        ],
+      },
     ],
     fees: [
-      { title: "Annual Tuition Fee", amount: "₹48,000", note: "Includes digital marketing tools access" },
+      { title: "Course Fee (Annual)", amount: "₹52,570", note: "Annual course fee covering tuition, study material, LMS, and digital library" },
+      { title: "Registration Fee", amount: "₹300", note: "One-time online registration fee at the time of application" },
+      { title: "OPEN MAT Entrance Fee", amount: "₹800 / ₹600", note: "₹800 for Open category, ₹600 for Reserved category" },
+      { title: "Examination Fee", amount: "₹200", note: "Per subject semester exam fee" },
     ],
-    careerOpportunities: ["Chief Marketing Officer", "Senior Brand Strategist", "Performance Marketing Director", "Product Marketing Lead"],
+    careerOpportunities: [
+      "Marketing Manager or Executive",
+      "Brand Manager",
+      "Digital Marketing Manager",
+      "Sales and Business Development Manager",
+      "Market Research Analyst",
+    ],
     featuredImage: "",
+    content: MBA_MARKETING_MANAGEMENT_CONTENT,
+    faqs: [
+      {
+        question: "Is DU SOL MBA in Marketing Management a recognised degree?",
+        answer: "Yes, it is offered by the School of Open Learning, University of Delhi, carrying the prestigious DU name with UGC-DEB entitlement and NAAC accreditation.",
+      },
+      {
+        question: "How long does an MBA in Marketing Management take?",
+        answer: "The programme is two years, divided into four semesters. Check the official site for flexible completion limits.",
+      },
+      {
+        question: "Can I do DU SOL MBA in Marketing Management while working?",
+        answer: "Yes. The study material is online and you can plan your study time around your job with weekend counselling sessions.",
+      },
+      {
+        question: "What is the fee for DU SOL MBA in Marketing Management?",
+        answer: "Roughly ₹52,570 per year, plus a ₹300 registration fee, ₹200 per subject examination fee, and the OPEN MAT fee.",
+      },
+      {
+        question: "What documents are required to apply?",
+        answer: "Graduation marksheets, Class 10 and 12 certificates, photo, signature, ID proof (Aadhaar), and category certificate if applicable.",
+      },
+    ],
     status: "published",
+    seoTitle: "DU SOL MBA in Marketing Management: Syllabus & Admission",
+    seoDescription:
+      "Explore DU SOL MBA in Marketing Management: syllabus, eligibility, career scope and how to apply for this flexible MBA in Marketing Management.",
     createdAt: "2026-01-01T00:00:00.000Z",
-    updatedAt: "2026-10-21T00:00:00.000Z",
+    updatedAt: "2026-10-22T00:00:00.000Z",
   },
 ];
 
@@ -4158,6 +6798,55 @@ const ACRONYM_MAP: Record<string, string> = {
   "online-mba-analytics": "mba-business-analytics",
   "mba-ba": "mba-business-analytics",
   "mba-in-business-analytics": "mba-business-analytics",
+  "mba-rural-management": "mba-rural-management",
+  "distance-mba-rural-management": "mba-rural-management",
+  "online-mba-rural-management": "mba-rural-management",
+  "mba-in-rural-management": "mba-rural-management",
+  "rural-management": "mba-rural-management",
+  "mba-retail-management": "mba-retail-management",
+  "distance-mba-retail-management": "mba-retail-management",
+  "online-mba-retail-management": "mba-retail-management",
+  "mba-in-retail-management": "mba-retail-management",
+  "retail-management": "mba-retail-management",
+  "mba-business-management": "mba-business-management",
+  "distance-mba-business-management": "mba-business-management",
+  "online-mba-business-management": "mba-business-management",
+  "mba-in-business-management": "mba-business-management",
+  "business-management": "mba-business-management",
+  "mba-project-management": "mba-project-management",
+  "distance-mba-project-management": "mba-project-management",
+  "online-mba-project-management": "mba-project-management",
+  "mba-in-project-management": "mba-project-management",
+  "project-management": "mba-project-management",
+  "mba-marketing-management": "mba-marketing-management",
+  "distance-mba-marketing-management": "mba-marketing-management",
+  "online-mba-marketing-management": "mba-marketing-management",
+  "mba-in-marketing-management": "mba-marketing-management",
+  "marketing-management": "mba-marketing-management",
+  "mba-marketing": "mba-marketing-management",
+  "distance-mba-marketing": "mba-marketing-management",
+  "mba-hospital-administration": "mba-hospital-administration",
+  "distance-mba-hospital-administration": "mba-hospital-administration",
+  "online-mba-hospital-administration": "mba-hospital-administration",
+  "mba-in-hospital-administration": "mba-hospital-administration",
+  "hospital-administration": "mba-hospital-administration",
+  "mba-hospital-administration-management": "mba-hospital-administration",
+  "distance-mba-hospital-administration-management": "mba-hospital-administration",
+  "online-mba-hospital-administration-management": "mba-hospital-administration",
+  "mba-in-hospital-administration-management": "mba-hospital-administration",
+  "hospital-administration-management": "mba-hospital-administration",
+  "dusol-mba-in-hospital-administration-management": "mba-hospital-administration",
+  "mba-international-trade": "mba-international-trade",
+  "distance-mba-international-trade": "mba-international-trade",
+  "online-mba-international-trade": "mba-international-trade",
+  "mba-in-international-trade": "mba-international-trade",
+  "international-trade": "mba-international-trade",
+  "mba-international-trade-management": "mba-international-trade",
+  "distance-mba-international-trade-management": "mba-international-trade",
+  "online-mba-international-trade-management": "mba-international-trade",
+  "mba-in-international-trade-management": "mba-international-trade",
+  "international-trade-management": "mba-international-trade",
+  "dusol-mba-in-international-trade-management": "mba-international-trade",
 };
 
 export function getDefaultPrograms(type?: "ug" | "pg" | "mba"): Program[] {
