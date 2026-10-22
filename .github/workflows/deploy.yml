@@ -9,6 +9,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Prepare firebase-key.json
+        env:
+          FIREBASE_KEY: ${{ secrets.FIREBASE_KEY_JSON }}
+        run: |
+          if [ -n "$FIREBASE_KEY" ]; then
+            B64=$(printf '%s' "$FIREBASE_KEY" | base64 -w 0)
+            echo "FIREBASE_KEY_B64=$B64" >> $GITHUB_ENV
+          else
+            echo "FIREBASE_KEY_B64=" >> $GITHUB_ENV
+          fi
+
       - name: Deploy to Server via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -33,10 +44,8 @@ jobs:
             git reset --hard origin/main
             
             # 3. Sync firebase-key.json from GitHub Secrets if provided
-            if [ -n '${{ secrets.FIREBASE_KEY_JSON }}' ]; then
-              cat << 'EOF' > firebase-key.json
-${{ secrets.FIREBASE_KEY_JSON }}
-EOF
+            if [ -n '${{ env.FIREBASE_KEY_B64 }}' ]; then
+              echo '${{ env.FIREBASE_KEY_B64 }}' | base64 -d > firebase-key.json
               echo "🔑 firebase-key.json synced from GitHub Secrets."
             fi
             
@@ -44,7 +53,7 @@ EOF
             npm install
             npm run build
             
-            # 4. Strictly reload/restart ONLY the existing 'dusol-app' process
+            # 5. Strictly reload/restart ONLY the existing 'dusol-app' process
             # (No new process creation to prevent port conflicts)
             if pm2 describe dusol-app > /dev/null 2>&1; then
               echo "🔄 Restarting existing 'dusol-app' PM2 process..."
@@ -54,7 +63,7 @@ EOF
               exit 1
             fi
             
-            # 5. Verify process status
+            # 6. Verify process status
             pm2 status dusol-app
             pm2 save
             
