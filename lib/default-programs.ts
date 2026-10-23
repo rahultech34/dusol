@@ -190,7 +190,7 @@ const BA_CONTENT = `<h2>BA from DU SOL: Distance Education Course, Fees and Admi
   </tbody>
 </table>
 </div>
-<p><em>These amounts are approximate. Verify current fees at sol.du.ac.in before paying.</em></p>
+<p><em>These amounts are approximate. Verify current fees on the official university portal before paying.</em></p>
 
 <h3>Career Scope after BA Distance Education</h3>
 <ul>
@@ -287,7 +287,7 @@ const BBA_CONTENT = `<h2>BBA from DU SOL: Distance Education Course Details</h2>
 <p>Semester examinations are conducted at designated centres, and you must appear in person.</p>
 
 <h3>BBA from DU SOL Fee Structure</h3>
-<p><em>Fees are indicative and may be revised, so confirm the current amount on sol.du.ac.in before applying.</em></p>
+<p><em>Fees are indicative and may be revised, so confirm the current amount on the official university portal before applying.</em></p>
 <div class="overflow-x-auto my-4">
 <table>
   <thead>
@@ -392,7 +392,7 @@ const BMS_CONTENT = `<h2>BMS from DU SOL: Distance Education Course Details</h2>
 <p>Dedicated faculty and a learner-friendly approach help you manage work and studies together.</p>
 
 <h3>BMS from DU SOL Fee Structure</h3>
-<p><em>Fees are indicative and may be revised, so confirm the current amount on sol.du.ac.in before applying.</em></p>
+<p><em>Fees are indicative and may be revised, so confirm the current amount on the official university portal before applying.</em></p>
 <div class="overflow-x-auto my-4">
 <table>
   <thead>
@@ -601,7 +601,7 @@ const BCOM_CONTENT = `<h2>BCom from DU SOL: Distance Education Course, Fees and 
   </tbody>
 </table>
 </div>
-<p><em>These amounts are approximate. Verify current fees at sol.du.ac.in before paying.</em></p>
+<p><em>These amounts are approximate. Verify current fees on the official university portal before paying.</em></p>
 
 <h3>Career Scope after BCom Distance Education</h3>
 <div class="overflow-x-auto my-4">
@@ -747,7 +747,7 @@ const BLIS_CONTENT = `<h2>BLIS from DU SOL: Admission 2026, Eligibility, Fees &a
 <h3>BLIS from DU SOL Admission Process 2026</h3>
 <p>DU SOL admission for BLISc is fully online. Follow these steps to register:</p>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to sol.du.ac.in and open the Library and Information Science admission link.</li>
+  <li><strong>Visit the official portal:</strong> Go to official university portal and open the Library and Information Science admission link.</li>
   <li><strong>Register:</strong> Create your account with a valid email ID and mobile number.</li>
   <li><strong>Fill in the form:</strong> Enter personal and academic details carefully.</li>
   <li><strong>Upload documents:</strong> Add your photograph, signature, graduation marksheet and category certificate, if applicable.</li>
@@ -785,7 +785,7 @@ const BLIS_CONTENT = `<h2>BLIS from DU SOL: Admission 2026, Eligibility, Fees &a
   </tbody>
 </table>
 </div>
-<p><em>Fees are revised periodically. Confirm the exact amount in the current official prospectus on sol.du.ac.in before paying.</em></p>
+<p><em>Fees are revised periodically. Confirm the exact amount in the current official prospectus on the official university portal before paying.</em></p>
 
 <h3>BLIS from DU SOL Syllabus</h3>
 <p>The BLISc syllabus combines rigorous theoretical knowledge with practical library cataloguing and automation exercises:</p>
@@ -1071,7 +1071,7 @@ const MA_CONTENT = `<h2>MA from DU SOL: Course Details, Fees, Eligibility and Ad
   </tbody>
 </table>
 </div>
-<p><em>Fees can change each session, so check the official portal at sol.du.ac.in for current figures before paying. University fees must be paid only to the university.</em></p>
+<p><em>Fees can change each session, so check the official portal on the official university portal for current figures before paying. University fees must be paid only to the university.</em></p>
 
 <h3>Career Scope After an MA from DU SOL</h3>
 <div class="overflow-x-auto my-4">
@@ -1109,7 +1109,7 @@ const MA_CONTENT = `<h2>MA from DU SOL: Course Details, Fees, Eligibility and Ad
 
 <h3>How to Apply for DU SOL MA Admission</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official DU SOL admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official DU SOL admission portal on the official university portal.</li>
   <li><strong>Register:</strong> Fill in the online registration form with your active email ID and phone number.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, ID proof, photograph, and signature.</li>
   <li><strong>Pay fee online:</strong> Pay the registration fee through the secure payment gateway.</li>
@@ -1330,7 +1330,7 @@ const MBA_CONTENT = `<h2>MBA from DU SOL: Fees, Eligibility, Specializations and
   </tbody>
 </table>
 </div>
-<p><em>Fees are subject to periodic university revisions. Confirm the current figures on the official portal at sol.du.ac.in before paying.</em></p>
+<p><em>Fees are subject to periodic university revisions. Confirm the current figures on the official portal on the official university portal before paying.</em></p>
 
 <h3>Career Scope After the Programme</h3>
 <p>An MBA from DU SOL prepares you for diverse executive, consulting, and managerial appointments across top sectors:</p>
@@ -1369,7 +1369,7 @@ const MBA_CONTENT = `<h2>MBA from DU SOL: Fees, Eligibility, Specializations and
 
 <h3>How to Apply for MBA from DU SOL</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official university portal.</li>
   <li><strong>Register:</strong> Fill in the online registration form with your email ID and mobile number.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photograph, and signature.</li>
   <li><strong>Pay application fee:</strong> Submit the ₹500 application fee through the online payment gateway.</li>
@@ -1550,7 +1550,7 @@ const MCOM_CONTENT = `<h2>MCom from DU SOL: Fees, Eligibility, Syllabus and Admi
   </tbody>
 </table>
 </div>
-<p><em>Fees may change each session, so check the official portal at sol.du.ac.in before paying. University fees must be paid only to the university.</em></p>
+<p><em>Fees may change each session, so check the official portal on the official university portal before paying. University fees must be paid only to the university.</em></p>
 
 <h3>Career Scope After the Programme</h3>
 <div class="overflow-x-auto my-4">
@@ -1588,7 +1588,7 @@ const MCOM_CONTENT = `<h2>MCom from DU SOL: Fees, Eligibility, Syllabus and Admi
 
 <h3>How to Apply for MCom from DU SOL</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official university portal.</li>
   <li><strong>Register:</strong> Fill in the online registration form with your email ID and mobile number.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photograph, and signature.</li>
   <li><strong>Pay fee online:</strong> Submit the application fee through the online payment gateway.</li>
@@ -1797,7 +1797,7 @@ const MLIS_CONTENT = `<h2>MLIS from DU SOL: Fees, Eligibility, Syllabus and Admi
   </tbody>
 </table>
 </div>
-<p><em>Fees may change each session, so check the official portal at sol.du.ac.in before paying. University fees must be paid only to the university.</em></p>
+<p><em>Fees may change each session, so check the official portal on the official university portal before paying. University fees must be paid only to the university.</em></p>
 
 <h3>Career Scope After the Programme</h3>
 <p>Graduates can work in prestigious academic, governmental, and private information institutions:</p>
@@ -1836,7 +1836,7 @@ const MLIS_CONTENT = `<h2>MLIS from DU SOL: Fees, Eligibility, Syllabus and Admi
 
 <h3>How to Apply for MLIS from DU SOL</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official university portal.</li>
   <li><strong>Register:</strong> Fill in the online registration form with your email ID and mobile number.</li>
   <li><strong>Upload documents:</strong> Attach BLISc marksheets, certificates, ID proof, photograph, and signature.</li>
   <li><strong>Pay fee online:</strong> Submit the application fee through the online payment gateway.</li>
@@ -2092,7 +2092,7 @@ const MJMC_CONTENT = `<h2>MJMC from DU SOL: Fees, Eligibility, Syllabus and Admi
 
 <h3>How to Apply</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official university portal.</li>
   <li><strong>Register online:</strong> Create your profile with your email ID and mobile number.</li>
   <li><strong>Fill application form:</strong> Enter personal, academic, and graduation details carefully.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photograph, and signature.</li>
@@ -2386,7 +2386,7 @@ const BTECH_CONTENT = `<h2>BTech from DU SOL: Fees, Eligibility, Duration and Ad
 
 <h3>How to Apply</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official university portal.</li>
   <li><strong>Register online:</strong> Create an applicant account with your valid email ID and mobile number.</li>
   <li><strong>Fill application form:</strong> Choose your branch and entry route (Direct or Lateral), then enter academic details.</li>
   <li><strong>Upload documents:</strong> Attach 10th, 12th / Diploma marksheets, ID proof, photo, and signature.</li>
@@ -2649,7 +2649,7 @@ const MBA_IT_CONTENT = `<h2>DU SOL MBA in Information Technology: Fees, Eligibil
 
 <h3>How to Apply</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official university portal.</li>
   <li><strong>Register online:</strong> Create an account using your active email address and mobile number.</li>
   <li><strong>Fill application form:</strong> Select MBA (Information Technology) and fill in your academic and professional profile.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photograph, and signature.</li>
@@ -2911,7 +2911,7 @@ const MBA_ANALYTICS_CONTENT = `<h2>DU SOL MBA in Business Analytics: Fees, Eligi
 
 <h3>How to Apply</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official university portal.</li>
   <li><strong>Register online:</strong> Create your applicant profile using your email ID and mobile number.</li>
   <li><strong>Fill application form:</strong> Select MBA (Business Analytics) and complete your academic details.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photo, and signature.</li>
@@ -3217,7 +3217,7 @@ const MBA_RURAL_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Rural Management: Fees, 
 <h3>How to Apply for DU SOL MBA in Rural Management</h3>
 <p>The entire DU SOL MBA in Rural Management admission process is handled online, allowing you to apply comfortably from any location:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at the official university portal.</li>
   <li><strong>Register Online:</strong> Create your applicant profile with a valid email ID and mobile number, and fill in the online application form.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload scanned copies of graduation marksheets, certificates, government ID proof, and passport-size photographs.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online using net banking, UPI, debit, or credit card.</li>
@@ -3525,7 +3525,7 @@ const MBA_RETAIL_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Retail Management: Fees
 <h3>How to Apply for DU SOL MBA in Retail Management</h3>
 <p>The entire DU SOL MBA in Retail Management admission process is online, so you can apply from anywhere without visiting the campus:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Go to the official admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Go to the official admission portal at the official university portal.</li>
   <li><strong>Register &amp; Fill Form:</strong> Register with your primary email and phone number, and fill in your academic details.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload clear scanned copies of marksheets, certificates, and ID proof.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the initial registration fee payment online.</li>
@@ -3833,7 +3833,7 @@ const MBA_BUSINESS_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Business Management: 
 <h3>How to Apply for DU SOL MBA in Business Management</h3>
 <p>The entire DU SOL MBA in Business Management admission process is handled online, allowing you to apply comfortably from any location:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at the official university portal.</li>
   <li><strong>Register &amp; Fill Form:</strong> Register with a valid email and mobile number, and enter your personal and academic details.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload scanned marksheets, graduation certificates, ID proof, and photographs.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online via net banking, UPI, or debit/credit card.</li>
@@ -4141,7 +4141,7 @@ const MBA_PROJECT_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Project Management: Fe
 <h3>How to Apply for DU SOL MBA in Project Management</h3>
 <p>The entire DU SOL MBA in Project Management admission process is online, so you can apply from anywhere:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at the official university portal.</li>
   <li><strong>Register &amp; Fill Form:</strong> Register with a valid email and mobile number, and enter your personal and academic details.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload scanned marksheets, graduation certificates, ID proof, and photographs.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online via net banking, UPI, or debit/credit card.</li>
@@ -4393,7 +4393,7 @@ const MBA_MARKETING_MANAGEMENT_CONTENT = `<h2>DU SOL MBA in Marketing Management
 <h3>How to Apply for DU SOL MBA in Marketing Management</h3>
 <p>The entire admission process is conducted online via the official DU SOL portal:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Register:</strong> Open the official SOL admission portal at <code>sol.du.ac.in</code> and register with your email and mobile number.</li>
+  <li><strong>Register:</strong> Open the official SOL admission portal at the official university portal and register with your email and mobile number.</li>
   <li><strong>Select Specialisation:</strong> Choose the Master of Business Administration (MBA) programme and select Marketing Management.</li>
   <li><strong>Enter Details:</strong> Fill in your personal, academic, and contact details accurately.</li>
   <li><strong>Upload Documents:</strong> Upload your photograph, signature, graduation marksheets, and ID proof.</li>
@@ -4697,7 +4697,7 @@ const MBA_HOSPITAL_ADMINISTRATION_CONTENT = `<h2>DU SOL MBA in Hospital Administ
 <h3>How to Apply for DU SOL MBA in Hospital Administration Management</h3>
 <p>The entire application process is conducted smoothly online via the official DU SOL admission portal:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Register:</strong> Open the official SOL admission portal at <code>sol.du.ac.in</code> and register with your email and mobile number.</li>
+  <li><strong>Register:</strong> Open the official SOL admission portal at the official university portal and register with your email and mobile number.</li>
   <li><strong>Select Specialisation:</strong> Choose the MBA programme and select Hospital Administration Management as your specialisation.</li>
   <li><strong>Fill Academic Details:</strong> Enter your personal, contact, and graduation marks carefully.</li>
   <li><strong>Upload Documents:</strong> Upload your scanned photograph, signature, graduation marksheets, and ID proof.</li>
@@ -5051,7 +5051,7 @@ const MBA_INTERNATIONAL_TRADE_CONTENT = `<h2>DU SOL MBA in International Trade M
 <h3>How to Apply for DU SOL MBA in International Trade Management</h3>
 <p>The entire admission process is conducted online via the official DU SOL admission portal:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at the official university portal.</li>
   <li><strong>Register &amp; Fill Form:</strong> Register with a valid email and mobile number, and enter your personal and academic details.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload scanned marksheets, graduation certificates, ID proof, and photographs.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online via net banking, UPI, or debit/credit card.</li>
@@ -5213,7 +5213,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Class 12 pass from a recognized board with a language and Mathematics or Applied Mathematics. Minimum aggregate of approximately 60%, with relaxation for reserved categories (OBC, EWS, and PwBD).",
     admissionProcess:
-      "Direct online merit-based admission depending on Class 12 marks and online application on the official DU SOL website. No entrance exam required.",
+      "Direct online merit-based admission depending on Class 12 marks and online application the official DU SOL website. No entrance exam required.",
     curriculum: [
       { semesterOrYear: "Semester 1", subjects: ["Principles of Marketing", "Fundamentals of Management", "Business Communication", "Environmental Studies"] },
       { semesterOrYear: "Semester 2", subjects: ["Organizational Behavior", "Business Statistics", "Financial Accounting", "Language Elective"] },
@@ -5360,7 +5360,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Bachelor’s degree in any discipline (Arts, Science, Commerce, Engineering) from a recognised university. No upper age limit.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register, fill personal and educational details, upload graduation marksheet and ID, pay fees online, and download admission confirmation.",
+      "Direct online admission via the official university portal. Register, fill personal and educational details, upload graduation marksheet and ID, pay fees online, and download admission confirmation.",
     curriculum: [
       { semesterOrYear: "Semester 1", subjects: ["Foundations of Library and Information Science", "Knowledge Organisation: Classification Theory & Practice (DDC)", "Library Management & Administration", "Information Sources and Services"] },
       { semesterOrYear: "Semester 2", subjects: ["Knowledge Organisation: Cataloguing Theory & Practice (AACR-2)", "Information and Communication Technology (ICT) in Libraries", "Digital Library & Information Retrieval", "Research Methods & Statistical Techniques"] },
@@ -5422,7 +5422,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Direct Entry: 10+2 passed from a recognized board, preferably with Physics, Chemistry, and Mathematics (PCM). Lateral Entry: 3-Year Engineering Diploma from a recognized State Technical Board / AICTE-approved institution. Merit-based admission.",
     admissionProcess:
-      "Direct online application via sol.du.ac.in. Register online, select specialization and entry route (Direct or Lateral), upload 10+2 / Diploma marksheets and ID proof, pay the registration fee, verify documents on the merit list, and confirm admission by paying the course fee.",
+      "Direct online application via the official university portal. Register online, select specialization and entry route (Direct or Lateral), upload 10+2 / Diploma marksheets and ID proof, pay the registration fee, verify documents on the merit list, and confirm admission by paying the course fee.",
     curriculum: [
       {
         semesterOrYear: "Semester 1 & 2 (Foundation)",
@@ -5526,7 +5526,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Bachelor's degree in any stream from a recognized university with minimum 50% marks (45% for reserved categories). Merit-based admission.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register online, upload graduation marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
+      "Direct online admission via the official university portal. Register online, upload graduation marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
     curriculum: [
       { semesterOrYear: "Semester 1", subjects: ["Organizational Behavior", "Managerial Economics", "Financial Reporting & Analysis", "Marketing Management", "Quantitative Techniques"] },
       { semesterOrYear: "Semester 2", subjects: ["Corporate Finance", "Human Resource Management", "Operations & Supply Chain Management", "Strategic Management", "Business Law"] },
@@ -5593,7 +5593,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Bachelor's degree in commerce (B.Com / B.Com Hons / BBA or allied field) from a recognized university with minimum required aggregate marks.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register online, upload graduation marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
+      "Direct online admission via the official university portal. Register online, upload graduation marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
     curriculum: [
       { semesterOrYear: "Semester 1", subjects: ["Business Environment & Policy", "Advanced Managerial Accounting", "Corporate Governance", "Quantitative Techniques for Business"] },
       { semesterOrYear: "Semester 2", subjects: ["International Business", "Financial Management", "Marketing Management", "Advanced Corporate Accounting"] },
@@ -5660,7 +5660,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Bachelor's degree from a recognized university with at least 50% marks (45% for SC/ST/PwBD). Admission is merit-based with or without CUET-PG.",
     admissionProcess:
-      "Online registration on sol.du.ac.in. Upload graduation marksheets and ID proof, pay the application fee online, check the merit list, and complete annual fee payment.",
+      "Online registration the official university portal. Upload graduation marksheets and ID proof, pay the application fee online, check the merit list, and complete annual fee payment.",
     curriculum: [
       { semesterOrYear: "Semester 1", subjects: ["Discipline Core Paper I", "Discipline Core Paper II", "Research Methodology & Sources", "Elective Subject"] },
       { semesterOrYear: "Semester 2", subjects: ["Discipline Core Paper III", "Discipline Core Paper IV", "Philosophical / Theoretical Approaches", "Interdisciplinary Elective"] },
@@ -5723,7 +5723,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "BLISc degree from a recognized university. Minimum 50% marks for General category, 45% for OBC/EWS/PwBD, and passing marks for SC/ST candidates. Merit-based admission.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register online, upload BLISc marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
+      "Direct online admission via the official university portal. Register online, upload BLISc marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
     curriculum: [
       { semesterOrYear: "Semester 1", subjects: ["Information Sources, Systems & Services", "Information & Communication Technology (ICT) Applications in Libraries", "Management of Library & Information Centres", "Research Methodology & Quantitative Techniques"] },
       { semesterOrYear: "Semester 2", subjects: ["Digital Library Architecture & Retrieval", "Knowledge Organization & Metadata Standards", "Advanced Information Processing Practical", "Dissertation / Project Work"] },
@@ -5788,7 +5788,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Bachelor's degree in any discipline from a recognized and accredited university. No upper age limit. Admission is merit-based depending on graduation performance.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register on the portal, fill the application form, upload marksheets and ID proof, pay the registration fee, check the merit list, and confirm admission by paying the annual course fee.",
+      "Direct online admission via the official university portal. Register on the portal, fill the application form, upload marksheets and ID proof, pay the registration fee, check the merit list, and confirm admission by paying the annual course fee.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -5888,7 +5888,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Bachelor's degree in any discipline from a recognized university. Candidates from any stream (Engineering, Science, Commerce, Arts) can apply. Some admissions may require an entrance exam (OPEN MAT) or work experience. Merit-based admission.",
     admissionProcess:
-      "Online admission via sol.du.ac.in. Register on the portal, fill the application form, upload marksheets and ID proof, pay the registration fee, check the merit list, and confirm admission by paying the course fee.",
+      "Online admission via the official university portal. Register on the portal, fill the application form, upload marksheets and ID proof, pay the registration fee, check the merit list, and confirm admission by paying the course fee.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -5986,7 +5986,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Bachelor’s degree in any discipline from a recognized university with a minimum of 50% aggregate marks for unreserved categories and 45% for reserved categories. Proficiency or background in Mathematics or Statistics is preferred. Merit-based admission.",
     admissionProcess:
-      "Online admission via sol.du.ac.in. Register on the online portal, fill in the application form, upload graduation marksheets and ID proof, pay the registration fee, verify selection on the merit list, and confirm admission by paying the course fee.",
+      "Online admission via the official university portal. Register on the online portal, fill in the application form, upload graduation marksheets and ID proof, pay the registration fee, verify selection the merit list, and confirm admission by paying the course fee.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -6086,7 +6086,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Usually, you need a bachelor's degree from a recognised university with minimum qualifying marks (typically 50% for open category, 45% for reserved categories). Open to graduates from any stream (MBBS, BDS, B.Pharm, B.Sc Nursing, Science, Commerce, Arts). Selection can be through merit or an entrance score (such as OPENMAT).",
     admissionProcess:
-      "1. Open the official SOL admission portal at sol.du.ac.in and register. 2. Select MBA in Hospital Administration Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation receipt safe.",
+      "1. Open the official SOL admission portal on the official university portal and register. 2. Select MBA in Hospital Administration Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation receipt safe.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -6183,7 +6183,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Candidates must have obtained a bachelor's degree in any stream from a recognised university. Open to all graduates from any discipline. Check the official DU SOL website for any session-specific percentage updates before applying.",
     admissionProcess:
-      "1. Visit the official admission portal at sol.du.ac.in. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
+      "1. Visit the official admission portal on the official university portal. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -6281,7 +6281,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Candidates need a bachelor's degree from a recognized university, and there is no age bar. Applicants with relevant work experience in the rural development sector are encouraged to apply, as practical knowledge enriches the learning experience.",
     admissionProcess:
-      "The entire DU SOL MBA in Rural Management admission process is online via sol.du.ac.in. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
+      "The entire DU SOL MBA in Rural Management admission process is online via the official university portal. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -6379,7 +6379,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Candidates should have a Bachelor's Degree in any subject from a government accredited university. Open to all graduates from any stream. Candidates can complete the degree flexibly between two to five years.",
     admissionProcess:
-      "The entire DU SOL MBA in Retail Management admission process is online via sol.du.ac.in. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
+      "The entire DU SOL MBA in Retail Management admission process is online via the official university portal. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -6477,7 +6477,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Candidates normally require a bachelor's degree of minimum 50% marks (relaxation to 45% for reserved categories as per government norms) in any discipline and a valid OPENMAT score (distance education entrance conducted by DU SOL).",
     admissionProcess:
-      "1. Visit the official admission portal at sol.du.ac.in. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
+      "1. Visit the official admission portal on the official university portal. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -6575,7 +6575,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Candidates need a bachelor's degree in any discipline with a minimum of 50% marks (relaxation for reserved categories as per government norms) and a valid OPENMAT entrance exam score conducted by DU SOL.",
     admissionProcess:
-      "1. Visit the official admission portal at sol.du.ac.in. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
+      "1. Visit the official admission portal on the official university portal. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -6673,7 +6673,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
     eligibility:
       "Generally, candidates require a bachelor's degree from a recognised university with minimum satisfactory marks (typically 50% aggregate marks, 45% for reserved categories). Selection criteria such as merit or an entrance score (OPENMAT) may vary for different admission cycles.",
     admissionProcess:
-      "1. Open the official SOL admission portal at sol.du.ac.in and register. 2. Select MBA in Marketing Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation safe.",
+      "1. Open the official SOL admission portal on the official university portal and register. 2. Select MBA in Marketing Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation safe.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",
@@ -6759,7 +6759,7 @@ export const DEFAULT_PROGRAMS: Program[] = [
 ];
 
 // Alias map for quick lookup
-const ACRONYM_MAP: Record<string, string> = {
+export const ACRONYM_MAP: Record<string, string> = {
   ba: "bachelor-of-arts",
   "distance-ba": "bachelor-of-arts",
   bba: "bachelor-of-business-administration",
@@ -6890,11 +6890,6 @@ export function getDefaultProgramBySlug(
     return p.slug === strippedMapped || p.id === strippedMapped;
   });
   if (found) return found;
-
-  // 4. Fallback search across any type if type was specified but not found
-  if (type) {
-    return getDefaultProgramBySlug(undefined, slug);
-  }
 
   return null;
 }

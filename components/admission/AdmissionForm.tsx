@@ -40,7 +40,7 @@ const INDIAN_STATES = [
 ];
 
 export function AdmissionForm({
-  formTitle = "Apply for DU SOL Admission 2026",
+  formTitle = "Apply for DU SOL Admission 2026-27",
   formSubtitle = "Direct Admission Without CUET · Free Expert Counseling",
   source = "WS",
   sourceName = "WS",
@@ -162,6 +162,9 @@ export function AdmissionForm({
         <h3 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight leading-snug">
           {formTitle}
         </h3>
+        {formSubtitle && (
+          <p className="text-xs text-slate-500 mt-0.5">{formSubtitle}</p>
+        )}
       </div>
 
       {error && (

@@ -77,14 +77,60 @@ export async function GET(request: Request) {
         : (serverCache?.data.mba || MBA_SPECIALIZATIONS);
 
     // Map Student Zone or fallback to defaults
-    const student: CourseItem[] =
-      szList.length > 0
-        ? szList.map((item) => ({
+    const STUDENT_ZONE_NAV_NAMES: Record<string, string> = {
+      admission: "DU SOL Admission 2026-27",
+      "du-sol-admission-2026": "DU SOL Admission 2026-27",
+      "courses-fees": "DU SOL Courses & Fees",
+      "hall-ticket": "DU SOL Hall Ticket",
+      "study-material": "DU SOL Study Material",
+      result: "DU SOL Result",
+      "library-portal": "DU SOL Library Portal",
+      "assignment-status": "DU SOL Assignment Status",
+      "alternative-universities": "DU SOL Alternative Universities",
+    };
+
+    let student: CourseItem[] = [];
+
+    if (szList.length > 0) {
+      const seenHrefs = new Set<string>();
+
+      // 1. Ensure DU SOL Admission (/student-zone/admission) is ALWAYS the first item
+      student.push({
+        id: "admission",
+        name: "DU SOL Admission 2026-27",
+        href: "/student-zone/admission",
+      });
+      seenHrefs.add("/student-zone/admission");
+      seenHrefs.add("/student-zone/du-sol-admission-2026");
+
+      // 2. Add other student zone items with clean titles, avoiding duplicates
+      for (const item of szList) {
+        if (
+          item.slug === "admission" ||
+          item.slug === "du-sol-admission-2026" ||
+          item.id === "admission"
+        ) {
+          continue;
+        }
+
+        const href = `/student-zone/${item.slug}`;
+        if (!seenHrefs.has(href)) {
+          seenHrefs.add(href);
+          const navName =
+            STUDENT_ZONE_NAV_NAMES[item.slug] ||
+            STUDENT_ZONE_NAV_NAMES[item.id] ||
+            (item.title.includes(":") ? item.title.split(":")[0].trim() : item.title);
+
+          student.push({
             id: item.id || item.slug,
-            name: item.title,
-            href: `/student-zone/${item.slug}`,
-          }))
-        : (serverCache?.data.student || STUDENT_ZONE_ITEMS);
+            name: navName,
+            href,
+          });
+        }
+      }
+    } else {
+      student = serverCache?.data.student || STUDENT_ZONE_ITEMS;
+    }
 
     const data = { bachelor, master, mba, student };
     serverCache = {

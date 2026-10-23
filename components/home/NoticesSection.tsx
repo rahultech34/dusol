@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Bell, ExternalLink, Sparkles, ChevronRight, FileText } from "lucide-react";
+import Link from "next/link";
+import { Bell, ArrowRight, FileText } from "lucide-react";
 import { HomePageNotice } from "@/lib/home-page-types";
 
 interface NoticesSectionProps {
@@ -27,11 +28,9 @@ export function NoticesSection({ notices = [] }: NoticesSectionProps) {
         {/* Notices Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
           {notices.map((notice, idx) => (
-            <a
+            <Link
               key={notice.id || idx}
-              href={notice.link || "https://web.sol.du.ac.in"}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/student-zone"
               className="group p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#652a7c]/40 hover:shadow-md transition-all flex items-start justify-between gap-3"
             >
               <div className="flex items-start gap-3 flex-1 min-w-0">
@@ -46,7 +45,7 @@ export function NoticesSection({ notices = [] }: NoticesSectionProps) {
                       </span>
                     )}
                     <span className="text-[11px] text-slate-400 font-medium">
-                      Official DU SOL
+                      Student Zone Updates
                     </span>
                   </div>
                   <h3 className="text-xs sm:text-sm font-semibold text-slate-900 group-hover:text-[#652a7c] transition-colors leading-snug line-clamp-2">
@@ -55,10 +54,10 @@ export function NoticesSection({ notices = [] }: NoticesSectionProps) {
                 </div>
               </div>
 
-              <span className="shrink-0 text-slate-300 group-hover:text-[#652a7c] transition-colors mt-2">
-                <ExternalLink className="w-4 h-4" />
+              <span className="shrink-0 text-slate-300 group-hover:text-[#652a7c] group-hover:translate-x-0.5 transition-all mt-2">
+                <ArrowRight className="w-4 h-4" />
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

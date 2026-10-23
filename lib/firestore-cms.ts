@@ -2,7 +2,12 @@ import { getDb } from "./firebase-admin";
 import type { Query, QueryDocumentSnapshot } from "firebase-admin/firestore";
 import { Blog, Program, Category, MediaItem, StudentZoneItem, DashboardStats, Lead } from "./types";
 import { HomePageContent } from "./home-page-types";
-import { getDefaultPrograms, getDefaultProgramBySlug, getDefaultProgramById } from "./default-programs";
+import {
+  getDefaultPrograms,
+  getDefaultProgramBySlug,
+  getDefaultProgramById,
+  ACRONYM_MAP,
+} from "./default-programs";
 import slugify from "slugify";
 async function ensureDynamic() {
   // standard dynamic lifecycle
@@ -245,6 +250,112 @@ function getProgramCollectionName(type: "ug" | "pg" | "mba"): string {
   return "mbaSpecializations";
 }
 
+function docToProgram(docId: string, data: any, type: "ug" | "pg" | "mba"): Program {
+  return {
+    id: docId,
+    name: data.name || "",
+    slug: data.slug || docId,
+    type,
+    degree: data.degree || "",
+    duration: data.duration || "",
+    overview: data.overview || "",
+    description: data.description || "",
+    eligibility: data.eligibility || "",
+    admissionProcess: data.admissionProcess || "",
+    curriculum: Array.isArray(data.curriculum) ? data.curriculum : [],
+    fees: Array.isArray(data.fees) ? data.fees : [],
+    careerOpportunities: Array.isArray(data.careerOpportunities) ? data.careerOpportunities : [],
+    featuredImage: data.featuredImage || "",
+    content: data.content || "",
+    faqs: Array.isArray(data.faqs) ? data.faqs : [],
+    status: data.status || "published",
+    seoTitle: data.seoTitle,
+    seoDescription: data.seoDescription,
+    createdAt: data.createdAt || new Date().toISOString(),
+    updatedAt: data.updatedAt || new Date().toISOString(),
+  };
+}
+
+export function getCandidateSlugs(slug: string): string[] {
+  if (!slug) return [];
+  const clean = slug.toLowerCase().trim();
+  const set = new Set<string>();
+
+  set.add(clean);
+
+  // 1. Acronym map match
+  const mapped = ACRONYM_MAP[clean];
+  if (mapped) set.add(mapped);
+
+  // 2. Stripped prefixes (distance-, online-, mba-)
+  const stripped = clean.replace(/^(distance-|online-|mba-)/, "");
+  if (stripped && stripped !== clean) {
+    set.add(stripped);
+    const strippedMapped = ACRONYM_MAP[stripped];
+    if (strippedMapped) set.add(strippedMapped);
+  }
+
+  // 3. Prefixes
+  set.add(`distance-${clean}`);
+  set.add(`mba-${clean}`);
+  if (stripped) {
+    set.add(`distance-${stripped}`);
+    set.add(`mba-${stripped}`);
+  }
+
+  // 4. Reverse lookup from ACRONYM_MAP
+  for (const [key, target] of Object.entries(ACRONYM_MAP)) {
+    if (target === clean || target === stripped) {
+      set.add(key);
+      set.add(target);
+    }
+  }
+
+  return Array.from(set).filter(Boolean);
+}
+
+// Low-level DB query helper: ALWAYS 1ST PRIORITY TO DB
+export async function getProgramFromDb(
+  type: "ug" | "pg" | "mba",
+  slugOrId: string,
+  allowDraft = false
+): Promise<Program | null> {
+  const db = getDb();
+  if (!db || !slugOrId) return null;
+  const collName = getProgramCollectionName(type);
+  const candidates = getCandidateSlugs(slugOrId);
+
+  try {
+    // 1. Check direct doc IDs in DB for all candidates
+    for (const candidate of candidates) {
+      const doc = await db.collection(collName).doc(candidate).get();
+      if (doc.exists) {
+        const data = doc.data()!;
+        if (allowDraft || data.status === "published") {
+          return docToProgram(doc.id, data, type);
+        }
+      }
+    }
+
+    // 2. Query where slug in candidates (batch of up to 30)
+    const chunk = candidates.slice(0, 30);
+    const snapshot = await db.collection(collName).where("slug", "in", chunk).limit(5).get();
+    if (!snapshot.empty) {
+      for (const doc of snapshot.docs) {
+        const data = doc.data();
+        if (allowDraft || data.status === "published") {
+          return docToProgram(doc.id, data, type);
+        }
+      }
+    }
+
+    return null;
+  } catch (error) {
+    console.error(`[getProgramFromDb] Error querying ${type} for "${slugOrId}":`, error);
+    return null;
+  }
+}
+
 export async function getAllPrograms(type: "ug" | "pg" | "mba", onlyPublished = false): Promise<Program[]> {
   await ensureDynamic();
   const db = getDb();
@@ -259,40 +370,27 @@ export async function getAllPrograms(type: "ug" | "pg" | "mba", onlyPublished = 
       query = query.where("status", "==", "published");
     }
     const snapshot = await query.get();
-    if (snapshot.empty) {
-      return getDefaultPrograms(type);
-    }
-    const programs: Program[] = [];
+
+    const dbPrograms: Program[] = [];
+    const dbSlugs = new Set<string>();
 
     snapshot.forEach((doc: QueryDocumentSnapshot) => {
       const data = doc.data();
-      programs.push({
-        id: doc.id,
-        name: data.name || "",
-        slug: data.slug || doc.id,
-        type,
-        degree: data.degree || "",
-        duration: data.duration || "",
-        overview: data.overview || "",
-        description: data.description || "",
-        eligibility: data.eligibility || "",
-        admissionProcess: data.admissionProcess || "",
-        curriculum: Array.isArray(data.curriculum) ? data.curriculum : [],
-        fees: Array.isArray(data.fees) ? data.fees : [],
-        careerOpportunities: Array.isArray(data.careerOpportunities) ? data.careerOpportunities : [],
-        featuredImage: data.featuredImage || "",
-        content: data.content || "",
-        faqs: Array.isArray(data.faqs) ? data.faqs : [],
-        status: data.status || "published",
-        seoTitle: data.seoTitle,
-        seoDescription: data.seoDescription,
-        createdAt: data.createdAt || new Date().toISOString(),
-        updatedAt: data.updatedAt || new Date().toISOString(),
-      });
+      const p = docToProgram(doc.id, data, type);
+      dbPrograms.push(p);
+      dbSlugs.add(p.slug.toLowerCase());
+      dbSlugs.add(p.id.toLowerCase());
     });
 
-    programs.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-    return programs;
+    // Fallback: If any default program is not yet in the DB, append it so nothing is missing
+    const defaults = getDefaultPrograms(type);
+    const missingDefaults = defaults.filter(
+      (d) => !dbSlugs.has(d.slug.toLowerCase()) && !dbSlugs.has(d.id.toLowerCase())
+    );
+
+    const merged = [...dbPrograms, ...missingDefaults];
+    merged.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    return merged;
   } catch (error) {
     handleFirestoreError(`getAllPrograms (${type})`, error);
     return getDefaultPrograms(type);
@@ -307,112 +405,56 @@ export async function getProgramById(type: "ug" | "pg" | "mba", id: string): Pro
 
   try {
     const doc = await db.collection(collName).doc(id).get();
-    if (!doc.exists) {
-      return getDefaultProgramById(id) || getDefaultProgramBySlug(type, id);
+    if (doc.exists) {
+      return docToProgram(doc.id, doc.data()!, type);
     }
-    const data = doc.data()!;
-    return {
-      id: doc.id,
-      name: data.name || "",
-      slug: data.slug || doc.id,
-      type,
-      degree: data.degree || "",
-      duration: data.duration || "",
-      overview: data.overview || "",
-      description: data.description || "",
-      eligibility: data.eligibility || "",
-      admissionProcess: data.admissionProcess || "",
-      curriculum: Array.isArray(data.curriculum) ? data.curriculum : [],
-      fees: Array.isArray(data.fees) ? data.fees : [],
-      careerOpportunities: Array.isArray(data.careerOpportunities) ? data.careerOpportunities : [],
-      featuredImage: data.featuredImage || "",
-      content: data.content || "",
-      faqs: Array.isArray(data.faqs) ? data.faqs : [],
-      status: data.status || "published",
-      seoTitle: data.seoTitle,
-      seoDescription: data.seoDescription,
-      createdAt: data.createdAt || new Date().toISOString(),
-      updatedAt: data.updatedAt || new Date().toISOString(),
-    };
+    // Also try candidate slugs/aliases in DB before falling back to default
+    const dbProgram = await getProgramFromDb(type, id, true);
+    if (dbProgram) return dbProgram;
+
+    return getDefaultProgramById(id) || getDefaultProgramBySlug(type, id);
   } catch (error) {
     console.error(`[getProgramById] Error for ${type}:`, error);
     return getDefaultProgramById(id) || getDefaultProgramBySlug(type, id);
   }
 }
 
+// FIRST PRIORITY: Always query Firestore Database first. Fallback to default files only if not found in DB.
 export async function getProgramBySlug(type: "ug" | "pg" | "mba", slug: string, allowDraft = false): Promise<Program | null> {
   await ensureDynamic();
-  const db = getDb();
-  if (!db) {
-    return getDefaultProgramBySlug(type, slug);
+
+  // 1. FIRST PRIORITY: Query DB
+  const dbProgram = await getProgramFromDb(type, slug, allowDraft);
+  if (dbProgram) {
+    return dbProgram;
   }
-  const collName = getProgramCollectionName(type);
 
-  try {
-    const snapshot = await db.collection(collName).where("slug", "==", slug).limit(1).get();
-    if (snapshot.empty) {
-      const byId = await db.collection(collName).doc(slug).get();
-      if (!byId.exists) {
-        return getDefaultProgramBySlug(type, slug);
-      }
-      const data = byId.data()!;
-      if (!allowDraft && data.status !== "published") return null;
-      return {
-        id: byId.id,
-        name: data.name || "",
-        slug: data.slug || byId.id,
-        type,
-        degree: data.degree || "",
-        duration: data.duration || "",
-        overview: data.overview || "",
-        description: data.description || "",
-        eligibility: data.eligibility || "",
-        admissionProcess: data.admissionProcess || "",
-        curriculum: Array.isArray(data.curriculum) ? data.curriculum : [],
-        fees: Array.isArray(data.fees) ? data.fees : [],
-        careerOpportunities: Array.isArray(data.careerOpportunities) ? data.careerOpportunities : [],
-        featuredImage: data.featuredImage || "",
-        content: data.content || "",
-        faqs: Array.isArray(data.faqs) ? data.faqs : [],
-        status: data.status || "published",
-        seoTitle: data.seoTitle,
-        seoDescription: data.seoDescription,
-        createdAt: data.createdAt || new Date().toISOString(),
-        updatedAt: data.updatedAt || new Date().toISOString(),
-      };
-    }
+  // 2. SECOND PRIORITY (Fallback): Default files if not found in DB
+  return getDefaultProgramBySlug(type, slug);
+}
 
-    const doc = snapshot.docs[0];
-    const data = doc.data();
-    if (!allowDraft && data.status !== "published") return null;
+// Unified multi-collection lookup across MBA, PG, and UG with DB AS 1ST PRIORITY
+export async function findProgramAnyType(slug: string, allowDraft = false): Promise<Program | null> {
+  await ensureDynamic();
 
-    return {
-      id: doc.id,
-      name: data.name || "",
-      slug: data.slug || doc.id,
-      type,
-      degree: data.degree || "",
-      duration: data.duration || "",
-      overview: data.overview || "",
-      description: data.description || "",
-      eligibility: data.eligibility || "",
-      admissionProcess: data.admissionProcess || "",
-      curriculum: Array.isArray(data.curriculum) ? data.curriculum : [],
-      fees: Array.isArray(data.fees) ? data.fees : [],
-      careerOpportunities: Array.isArray(data.careerOpportunities) ? data.careerOpportunities : [],
-      featuredImage: data.featuredImage || "",
-      content: data.content || "",
-      faqs: Array.isArray(data.faqs) ? data.faqs : [],
-      status: data.status || "published",
-      seoTitle: data.seoTitle,
-      seoDescription: data.seoDescription,
-      createdAt: data.createdAt || new Date().toISOString(),
-      updatedAt: data.updatedAt || new Date().toISOString(),
-    };
-  } catch (error) {
-    console.error(`[getProgramBySlug] Error for ${type}:`, error);
-    return getDefaultProgramBySlug(type, slug);
-  }
+  // 1. FIRST PRIORITY: Check Firestore DB across all 3 collections
+  let program = await getProgramFromDb("mba", slug, allowDraft);
+  if (program) return program;
+
+  program = await getProgramFromDb("pg", slug, allowDraft);
+  if (program) return program;
+
+  program = await getProgramFromDb("ug", slug, allowDraft);
+  if (program) return program;
+
+  // 2. SECOND PRIORITY (Fallback): Check default files across types
+  program =
+    getDefaultProgramBySlug("mba", slug) ||
+    getDefaultProgramBySlug("pg", slug) ||
+    getDefaultProgramBySlug("ug", slug) ||
+    getDefaultProgramBySlug(undefined, slug);
+
+  return program || null;
 }
 
 export async function saveProgram(

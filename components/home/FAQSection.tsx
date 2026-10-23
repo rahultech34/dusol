@@ -32,7 +32,7 @@ export function FAQSection({ data }: FAQSectionProps) {
     {
       id: "faq-4",
       question: "When does the DU SOL application process start?",
-      answer: "Applications for DU SOL admissions typically commence in June. Keep an eye on Edukyu and the official DU SOL website (https://sol.du.ac.in/) for the latest updates.",
+      answer: "Applications for DU SOL admissions typically commence in June. Keep an eye on Edukyu and official admission notices for the latest updates.",
     },
     {
       id: "faq-5",

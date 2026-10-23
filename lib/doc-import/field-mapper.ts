@@ -359,8 +359,8 @@ export function mapParsedDocumentToSection(
 
     if (quickSteps.length === 0) {
       quickSteps.push(
-        "Visit the official DU SOL student portal (sol.du.ac.in).",
-        "Log in using your DU SOL Roll Number and Barcode / Date of Birth.",
+        "Visit the official university student portal.",
+        "Log in using your Roll Number and Barcode / Date of Birth.",
         "Navigate to the designated service section from your student dashboard."
       );
     }
@@ -377,12 +377,11 @@ export function mapParsedDocumentToSection(
       sourceLabel: "Full Structured Guide HTML",
     };
 
-    // Find official portal link
-    const solLink = doc.links.find((l) => l.url.includes("sol.du.ac.in"))?.url || "https://sol.du.ac.in";
+    // Official portal link
     fields.externalLink = {
-      value: solLink,
-      confidence: solLink !== "https://sol.du.ac.in" ? "high" : "medium",
-      sourceLabel: "Detected Official University Link",
+      value: "",
+      confidence: "low",
+      sourceLabel: "Official University Link",
     };
 
     // Find any download link

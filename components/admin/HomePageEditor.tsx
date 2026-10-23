@@ -165,7 +165,7 @@ export function HomePageEditor({ initialContent }: HomePageEditorProps) {
         {
           id: `notice-${Date.now()}`,
           title: "New Official Notification Title",
-          link: "https://web.sol.du.ac.in",
+          link: "/student-zone",
           isNew: true,
         },
         ...prev.notices,
@@ -676,7 +676,7 @@ export function HomePageEditor({ initialContent }: HomePageEditorProps) {
               <div>
                 <h3 className="text-base font-bold text-slate-900">3. Latest News (DU SOL Notices)</h3>
                 <p className="text-xs text-slate-500">
-                  10 official notices linking directly to DU SOL official website (web.sol.du.ac.in).
+                  10 official student zone notifications and updates.
                 </p>
               </div>
               <button
@@ -737,7 +737,7 @@ export function HomePageEditor({ initialContent }: HomePageEditorProps) {
                       type="text"
                       value={notice.link}
                       onChange={(e) => updateNotice(idx, "link", e.target.value)}
-                      placeholder="https://web.sol.du.ac.in"
+                      placeholder="/student-zone"
                       className="flex-1 px-3 py-1 rounded-lg border border-slate-200 text-xs text-sky-700 bg-white focus:outline-none focus:border-[#652a7c]"
                     />
                     <a

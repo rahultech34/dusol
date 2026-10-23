@@ -6,7 +6,7 @@ import { useAdmissionModal } from "./AdmissionModalContext";
 import { AdmissionForm } from "./AdmissionForm";
 
 export function AdmissionModal() {
-  const { isOpen, closeModal } = useAdmissionModal();
+  const { isOpen, closeModal, defaultCourse } = useAdmissionModal();
 
   // Close on Escape key press
   useEffect(() => {
@@ -48,7 +48,7 @@ export function AdmissionModal() {
         {/* Floating Close Button */}
         <button
           onClick={closeModal}
-          className="absolute -top-3.5 -right-3.5 sm:-top-4 sm:-right-4 z-20 w-9 h-9 rounded-full bg-white text-slate-700 hover:text-black shadow-lg hover:shadow-xl border border-slate-200 flex items-center justify-center transition-transform hover:scale-105 active:scale-95"
+          className="absolute -top-3.5 -right-3.5 sm:-top-4 sm:-right-4 z-20 w-9 h-9 rounded-full bg-white text-slate-700 hover:text-black shadow-lg hover:shadow-xl border border-slate-200 flex items-center justify-center transition-transform hover:scale-105 active:scale-95 cursor-pointer"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -56,9 +56,10 @@ export function AdmissionModal() {
 
         {/* Modal Form */}
         <AdmissionForm
-          formTitle="Apply for DU SOL Admission 2026"
+          formTitle={defaultCourse ? `Apply for ${defaultCourse}` : "Apply for DU SOL Admission 2026-27"}
           formSubtitle="Official University Counseling · Free Guidance & Syllabus"
-          source="modal_popup"
+          defaultCourse={defaultCourse}
+          source="auto_modal_popup"
           onSuccess={closeModal}
         />
       </div>

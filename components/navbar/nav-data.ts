@@ -39,14 +39,14 @@ export const MBA_SPECIALIZATIONS: CourseItem[] = [
 ];
 
 export const STUDENT_ZONE_ITEMS: CourseItem[] = [
-  { id: "sz-adm", name: "DUSOL Admission", href: "/student-zone/admission" },
-  { id: "sz-fees", name: "DUSOL Courses Fees", href: "/student-zone/courses-fees" },
-  { id: "sz-hall", name: "DUSOL Hall Ticket", href: "/student-zone/hall-ticket" },
+  { id: "sz-adm", name: "DU SOL Admission 2026-27", href: "/student-zone/admission" },
+  { id: "sz-fees", name: "DU SOL Courses & Fees", href: "/student-zone/courses-fees" },
+  { id: "sz-hall", name: "DU SOL Hall Ticket", href: "/student-zone/hall-ticket" },
   { id: "sz-study", name: "DU SOL Study Material", href: "/student-zone/study-material" },
-  { id: "sz-result", name: "DUSOL Result", href: "/student-zone/result" },
+  { id: "sz-result", name: "DU SOL Result", href: "/student-zone/result" },
   { id: "sz-library", name: "DU SOL Library Portal", href: "/student-zone/library-portal" },
   { id: "sz-assign", name: "DU SOL Assignment Status", href: "/student-zone/assignment-status" },
-  { id: "sz-alt-uni", name: "DUSOL Alternative Universities", href: "/student-zone/alternative-universities" },
+  { id: "sz-alt-uni", name: "DU SOL Alternative Universities", href: "/student-zone/alternative-universities" },
 ];
 
 export const NAV_LINKS: NavCategory[] = [

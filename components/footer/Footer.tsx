@@ -318,7 +318,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[11px] leading-relaxed text-slate-400 text-justify sm:text-left">
             <strong className="text-slate-300 font-semibold">Important Disclaimer: </strong>
-            This web portal is an independent academic counseling and information service operated in partnership with Edukyu to assist prospective students with admissions, curriculum details, and academic guidance. &quot;University of Delhi&quot; and &quot;DU SOL&quot; are registered university entities. All formal enrollments, registration IDs, examinations, and official fee receipts are directly administered through the official Delhi University SOL website at sol.du.ac.in.{" "}
+            This web portal is an independent academic counseling and information service operated in partnership with Edukyu to assist prospective students with admissions, curriculum details, and academic guidance. &quot;University of Delhi&quot; and &quot;DU SOL&quot; are registered university entities. All formal enrollments, registration IDs, examinations, and official fee receipts are directly administered through the official Delhi University SOL portal.{" "}
             <Link
               href="/disclaimer"
               className="text-purple-400 hover:text-purple-300 font-semibold underline inline-flex items-center gap-0.5 ml-1 transition-colors"

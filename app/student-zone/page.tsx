@@ -48,16 +48,14 @@ export default async function StudentZoneIndexPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a
-              href="https://sol.du.ac.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#652a7c] hover:bg-[#521f66] active:bg-[#431754] text-white text-xs sm:text-sm font-bold transition-all shadow-lg shadow-[#652a7c]/20"
+            <Link
+              href="/student-zone/admission"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 active:bg-amber-500 text-slate-950 text-xs sm:text-sm font-extrabold transition-all shadow-lg shadow-amber-400/20"
             >
-              <Globe className="w-4 h-4" />
-              <span>Official sol.du.ac.in Portal</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+              <LifeBuoy className="w-4 h-4 text-slate-950" />
+              <span>DU SOL Admission 2026-27</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -176,15 +174,13 @@ export default async function StudentZoneIndexPage() {
             </div>
           </div>
 
-          <a
-            href="https://sol.du.ac.in"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/student-zone/admission"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shrink-0 transition-colors"
           >
-            <span>Visit University Portal</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+            <span>View Admission Guide</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
       </section>
     </main>

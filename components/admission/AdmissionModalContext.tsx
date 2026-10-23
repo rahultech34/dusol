@@ -1,39 +1,107 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import {
+  BACHELOR_PROGRAMS,
+  MASTER_PROGRAMS,
+  MBA_SPECIALIZATIONS,
+} from "@/components/navbar/nav-data";
 
 interface AdmissionModalContextType {
   isOpen: boolean;
-  openModal: () => void;
+  openModal: (courseOrEvent?: string | React.MouseEvent) => void;
   closeModal: () => void;
+  defaultCourse: string;
 }
 
 const AdmissionModalContext = createContext<AdmissionModalContextType | undefined>(undefined);
 
+// Helper to determine the course name from the current route/URL
+function getCourseFromPathname(pathname: string): string {
+  if (!pathname) return "";
+  const allPrograms = [
+    ...BACHELOR_PROGRAMS,
+    ...MASTER_PROGRAMS,
+    ...MBA_SPECIALIZATIONS,
+  ];
+
+  // 1. Direct href match
+  const directMatch = allPrograms.find((p) => p.href === pathname);
+  if (directMatch) return directMatch.name;
+
+  // 2. Slug-based match (e.g., /courses/bcom, /ug-programs/bcom, etc.)
+  const slug = pathname.split("/").filter(Boolean).pop() || "";
+  if (!slug) return "";
+
+  const cleanSlug = slug.replace(/^(distance-|mba-)/, "");
+  const slugMatch = allPrograms.find((p) => {
+    const pHrefSlug = p.href.split("/").filter(Boolean).pop() || "";
+    const cleanPHrefSlug = pHrefSlug.replace(/^(distance-|mba-)/, "");
+    return pHrefSlug === slug || cleanPHrefSlug === cleanSlug;
+  });
+
+  return slugMatch ? slugMatch.name : "";
+}
+
 export function AdmissionModalProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [defaultCourse, setDefaultCourse] = useState("");
+  const pathname = usePathname();
 
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  // Keep track of pages where the popup has already been triggered or explicitly handled in this view
+  const triggeredPagesRef = useRef<Set<string>>(new Set());
 
-  // Auto popup after 1 hour (3600000 ms) of opening the site
+  const openModal = (courseOrEvent?: string | React.MouseEvent) => {
+    if (typeof courseOrEvent === "string" && courseOrEvent.trim()) {
+      setDefaultCourse(courseOrEvent.trim());
+    } else {
+      const pageCourse = getCourseFromPathname(pathname || "");
+      if (pageCourse) {
+        setDefaultCourse(pageCourse);
+      }
+    }
+    setIsOpen(true);
+    if (pathname) {
+      triggeredPagesRef.current.add(pathname);
+    }
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    if (pathname) {
+      triggeredPagesRef.current.add(pathname);
+    }
+  };
+
+  // Auto popup form on pages after 10 seconds (10,000 ms)
   useEffect(() => {
-    // Check if the popup has already been shown in this session
-    const hasShownPopup = sessionStorage.getItem("dusol_popup_shown");
-    if (hasShownPopup) return;
+    // Exclude admin and internal API routes
+    if (!pathname || pathname.startsWith("/admin") || pathname.startsWith("/api")) {
+      return;
+    }
 
-    const ONE_HOUR_MS = 60 * 60 * 1000;
+    // If modal already triggered or handled on this page view, do not set another timer
+    if (triggeredPagesRef.current.has(pathname)) {
+      return;
+    }
 
     const timer = setTimeout(() => {
-      setIsOpen(true);
-      sessionStorage.setItem("dusol_popup_shown", "true");
-    }, ONE_HOUR_MS);
+      if (!triggeredPagesRef.current.has(pathname)) {
+        triggeredPagesRef.current.add(pathname);
+        const pageCourse = getCourseFromPathname(pathname);
+        if (pageCourse) {
+          setDefaultCourse(pageCourse);
+        }
+        setIsOpen(true);
+      }
+    }, 10000); // 10 seconds
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [pathname]);
 
   return (
-    <AdmissionModalContext.Provider value={{ isOpen, openModal, closeModal }}>
+    <AdmissionModalContext.Provider value={{ isOpen, openModal, closeModal, defaultCourse }}>
       {children}
     </AdmissionModalContext.Provider>
   );
@@ -46,3 +114,4 @@ export function useAdmissionModal() {
   }
   return context;
 }
+

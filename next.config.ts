@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // @ts-ignore
+    agentUpgrade: "security",
+  },
   serverExternalPackages: [
     "firebase-admin",
     "@google-cloud/firestore",
@@ -25,6 +29,25 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+  async redirects() {
+    return [
+      {
+        source: "/admission",
+        destination: "/student-zone/admission",
+        permanent: true,
+      },
+      {
+        source: "/du-sol-admission",
+        destination: "/student-zone/admission",
+        permanent: true,
+      },
+      {
+        source: "/du-sol-admission-2026",
+        destination: "/student-zone/admission",
+        permanent: true,
+      },
+    ];
   },
 };
 

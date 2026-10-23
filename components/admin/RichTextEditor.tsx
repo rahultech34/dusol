@@ -205,7 +205,7 @@ export function RichTextEditor({
   };
 
   const handleInsertLink = () => {
-    const url = prompt("Enter URL link (e.g. https://sol.du.ac.in):", "https://");
+    const url = prompt("Enter URL link (e.g. https://example.com):", "https://");
     if (url && url !== "https://") {
       execCmd("createLink", url);
     }
