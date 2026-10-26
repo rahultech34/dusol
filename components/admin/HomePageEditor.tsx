@@ -415,7 +415,7 @@ export function HomePageEditor({ initialContent }: HomePageEditorProps) {
     >
       <div className="space-y-6">
         {/* Floating Top Bar with Actions */}
-        <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-4 sticky top-2 z-20">
+        <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-4 sticky top-18 z-20">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-[#652a7c]/10 text-[#652a7c] flex items-center justify-center font-bold">
               <Globe className="w-5 h-5" />

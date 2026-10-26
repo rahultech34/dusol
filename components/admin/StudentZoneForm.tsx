@@ -152,7 +152,7 @@ export function StudentZoneForm({ initialData, isEdit = false }: StudentZoneForm
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* Top Action Bar */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs sticky top-4 z-20">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs sticky top-18 z-20">
         <div className="flex items-center gap-3">
           <Link
             href="/admin/student-zone"

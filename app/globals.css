@@ -206,13 +206,22 @@ body {
 .editor-content table,
 .prose-content table {
   width: 100% !important;
+  max-width: 100% !important;
   border-collapse: separate !important;
   border-spacing: 0 !important;
   margin: 1.5rem 0 !important;
-  font-size: 0.925rem !important;
+  font-size: 0.9rem !important;
   border: 1px solid #cbd5e1 !important;
-  border-radius: 0.875rem !important;
+  border-radius: 0.75rem !important;
   overflow: hidden !important;
+  background-color: #ffffff !important;
+  table-layout: auto !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+
+.editor-content table thead,
+.prose-content table thead {
+  background-color: #f1f5f9 !important;
 }
 
 .editor-content th,
@@ -220,10 +229,15 @@ body {
   background-color: #f8fafc !important;
   border-bottom: 2px solid #cbd5e1 !important;
   border-right: 1px solid #e2e8f0 !important;
-  padding: 0.85rem 1.15rem !important;
+  padding: 0.85rem 1rem !important;
   text-align: left !important;
   font-weight: 700 !important;
   color: #0f172a !important;
+  white-space: nowrap !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  vertical-align: middle !important;
+  letter-spacing: 0.015em !important;
 }
 
 .editor-content th:last-child,
@@ -235,9 +249,13 @@ body {
 .prose-content td {
   border-bottom: 1px solid #e2e8f0 !important;
   border-right: 1px solid #e2e8f0 !important;
-  padding: 0.85rem 1.15rem !important;
+  padding: 0.85rem 1rem !important;
   color: #334155 !important;
   background-color: #ffffff !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  vertical-align: middle !important;
+  line-height: 1.6 !important;
 }
 
 .editor-content td:last-child,
@@ -245,12 +263,100 @@ body {
   border-right: none !important;
 }
 
+/* Paragraphs & divs inside table cells should never have bulky margins */
+.editor-content td p,
+.editor-content th p,
+.editor-content td div,
+.editor-content th div,
+.prose-content td p,
+.prose-content th p,
+.prose-content td div,
+.prose-content th div {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: inherit !important;
+}
+
+/* Ensure First Column / Serial Numbers (e.g. No., S.No, 1, 2, 8, 9, 10, 11, 12) never break onto multiple lines */
+.editor-content .col-number,
+.prose-content .col-number,
+.editor-content th:first-child,
+.editor-content td:first-child,
+.prose-content th:first-child,
+.prose-content td:first-child {
+  width: 72px !important;
+  min-width: 72px !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.editor-content .col-number *,
+.prose-content .col-number *,
+.editor-content th:first-child *,
+.editor-content td:first-child *,
+.prose-content th:first-child *,
+.prose-content td:first-child * {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  text-align: center !important;
+  display: inline-block !important;
+  width: auto !important;
+  min-width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* If table has no <th>, treat first row as header */
+.editor-content table:not(:has(th)) tr:first-child td,
+.prose-content table:not(:has(th)) tr:first-child td {
+  background-color: #f8fafc !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+  white-space: nowrap !important;
+}
+
 .editor-content tr:last-child td,
 .prose-content tr:last-child td {
   border-bottom: none !important;
 }
 
+.editor-content tr:nth-child(even) td,
+.prose-content tr:nth-child(even) td {
+  background-color: #fcfdfe !important;
+}
+
 .editor-content tr:hover td,
 .prose-content tr:hover td {
-  background-color: #fbfcfe !important;
+  background-color: #f8fafc !important;
+}
+
+/* Outer corner rounding on table cells */
+.editor-content table tr:first-child th:first-child,
+.editor-content table tr:first-child td:first-child,
+.prose-content table tr:first-child th:first-child,
+.prose-content table tr:first-child td:first-child {
+  border-top-left-radius: 0.75rem !important;
+}
+
+.editor-content table tr:first-child th:last-child,
+.editor-content table tr:first-child td:last-child,
+.prose-content table tr:first-child th:last-child,
+.prose-content table tr:first-child td:last-child {
+  border-top-right-radius: 0.75rem !important;
+}
+
+.editor-content table tr:last-child td:first-child,
+.prose-content table tr:last-child td:first-child {
+  border-bottom-left-radius: 0.75rem !important;
+}
+
+.editor-content table tr:last-child td:last-child,
+.prose-content table tr:last-child td:last-child {
+  border-bottom-right-radius: 0.75rem !important;
 }

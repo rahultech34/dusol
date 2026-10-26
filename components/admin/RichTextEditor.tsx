@@ -34,7 +34,7 @@ interface RichTextEditorProps {
   placeholder?: string;
 }
 
-// Cleans messy clipboard HTML from Microsoft Word, Google Docs, or web pastes
+// Cleans messy clipboard HTML from Microsoft Word, Google Docs, Excel, or web pastes
 function cleanPastedHtml(html: string): string {
   if (!html) return "";
   try {
@@ -45,12 +45,16 @@ function cleanPastedHtml(html: string): string {
     const removeElements = doc.querySelectorAll("script, style, meta, link, xml");
     removeElements.forEach((el) => el.remove());
 
+    // Remove colgroups and cols that have hardcoded pixel/pt widths that squish columns
+    const colgroups = doc.querySelectorAll("colgroup, col");
+    colgroups.forEach((el) => el.remove());
+
     const cleanNode = (node: Node) => {
       if (node.nodeType === Node.ELEMENT_NODE) {
         const el = node as HTMLElement;
         const tagName = el.tagName.toLowerCase();
 
-        // Strip non-standard Word & Google Docs attributes
+        // Strip non-standard Word & Google Docs attributes and fixed dimensions
         const attrsToRemove: string[] = [];
         for (let i = 0; i < el.attributes.length; i++) {
           const attr = el.attributes[i];
@@ -60,18 +64,39 @@ function cleanPastedHtml(html: string): string {
             name.startsWith("xml:") ||
             name === "paraid" ||
             name === "paraeid" ||
+            name === "width" ||
+            name === "height" ||
+            name === "cellspacing" ||
+            name === "cellpadding" ||
+            name === "border" ||
+            name === "valign" ||
+            name === "bgcolor" ||
             (name === "class" &&
               (attr.value.includes("SCXW") ||
                 attr.value.includes("OutlineElement") ||
                 attr.value.includes("Paragraph") ||
                 attr.value.includes("TextRun") ||
                 attr.value.includes("NormalTextRun") ||
+                attr.value.includes("Mso") ||
                 attr.value.includes("EOP")))
           ) {
             attrsToRemove.push(attr.name);
           }
         }
         attrsToRemove.forEach((a) => el.removeAttribute(a));
+
+        // For tables, rows, cells: strip hardcoded width/height inline styles
+        if (["table", "thead", "tbody", "tfoot", "tr", "th", "td"].includes(tagName)) {
+          if (el.style.width) el.style.removeProperty("width");
+          if (el.style.minWidth) el.style.removeProperty("min-width");
+          if (el.style.maxWidth) el.style.removeProperty("max-width");
+          if (el.style.height) el.style.removeProperty("height");
+          if (el.style.fontFamily) el.style.removeProperty("font-family");
+          if (el.style.lineHeight) el.style.removeProperty("line-height");
+          if (el.style.whiteSpace) el.style.removeProperty("white-space");
+          if (el.style.wordBreak) el.style.removeProperty("word-break");
+          if (!el.getAttribute("style")) el.removeAttribute("style");
+        }
 
         // Clean children first
         Array.from(el.childNodes).forEach(cleanNode);
@@ -90,10 +115,118 @@ function cleanPastedHtml(html: string): string {
     };
 
     Array.from(doc.body.childNodes).forEach(cleanNode);
+
+    // If pasted table has no <thead> but has rows, convert first row cells to <th>
+    const tables = doc.querySelectorAll("table");
+    tables.forEach((tbl) => {
+      const firstRow = tbl.querySelector("tr");
+      if (firstRow && !tbl.querySelector("thead")) {
+        const thead = doc.createElement("thead");
+        const tds = firstRow.querySelectorAll("td");
+        if (tds.length > 0) {
+          tds.forEach((td) => {
+            const th = doc.createElement("th");
+            th.innerHTML = td.innerHTML;
+            td.replaceWith(th);
+          });
+        }
+        thead.appendChild(firstRow);
+        tbl.insertBefore(thead, tbl.firstChild);
+      }
+    });
+
     return doc.body.innerHTML;
   } catch (err) {
     return html;
   }
+}
+
+// Sanitizes tables in DOM: cleans fixed width constraints, fixes split numbers like 1<br>0, and properly aligns number columns
+function sanitizeEditorTables(container: HTMLElement | null) {
+  if (!container) return;
+  const tables = container.querySelectorAll("table");
+  if (tables.length === 0) return;
+
+  tables.forEach((tbl) => {
+    // 1. Remove colgroup/col with fixed narrow widths
+    tbl.querySelectorAll("colgroup, col").forEach((col) => col.remove());
+
+    // 2. Remove fixed width attributes
+    tbl.removeAttribute("width");
+    tbl.removeAttribute("border");
+    tbl.removeAttribute("cellspacing");
+    tbl.removeAttribute("cellpadding");
+    (tbl as HTMLElement).style.removeProperty("width");
+    (tbl as HTMLElement).style.removeProperty("table-layout");
+
+    // 3. Inspect rows
+    const rows = Array.from(tbl.querySelectorAll("tr"));
+    const firstRow = rows[0];
+    const firstHeader = firstRow?.children[0];
+    const headerText = (firstHeader?.textContent || "").trim().toLowerCase();
+
+    const isIndexCol =
+      headerText === "no." ||
+      headerText === "no" ||
+      headerText === "s.no." ||
+      headerText === "s.no" ||
+      headerText === "sr. no." ||
+      headerText === "sr no" ||
+      headerText === "#" ||
+      headerText === "sl. no." ||
+      headerText === "sl no";
+
+    rows.forEach((row, rowIdx) => {
+      const firstCell = row.children[0] as HTMLElement | undefined;
+      if (firstCell) {
+        // Fix any split numbers like "1<br>0", "1<br/>0", "1\n0"
+        let inner = firstCell.innerHTML;
+        if (/(\d+)\s*<br\s*\/?>\s*(\d+)/i.test(inner)) {
+          inner = inner.replace(/(\d+)\s*<br\s*\/?>\s*(\d+)/gi, "$1$2");
+          firstCell.innerHTML = inner;
+        }
+
+        const text = (firstCell.textContent || "").trim();
+        const isNumCell = (rowIdx > 0 && /^\d{1,4}\.?$/.test(text)) || isIndexCol;
+
+        if (isNumCell) {
+          firstCell.classList.add("col-number");
+          firstCell.style.width = "72px";
+          firstCell.style.minWidth = "72px";
+          firstCell.style.textAlign = "center";
+          firstCell.style.whiteSpace = "nowrap";
+          firstCell.style.paddingLeft = "8px";
+          firstCell.style.paddingRight = "8px";
+        }
+      }
+
+      // Clean all cells in row
+      Array.from(row.children).forEach((cell) => {
+        const htmlCell = cell as HTMLElement;
+        htmlCell.removeAttribute("width");
+        htmlCell.removeAttribute("height");
+        htmlCell.removeAttribute("valign");
+        htmlCell.removeAttribute("align");
+        if (!htmlCell.classList.contains("col-number")) {
+          if (htmlCell.style.width) htmlCell.style.removeProperty("width");
+          if (htmlCell.style.minWidth) htmlCell.style.removeProperty("min-width");
+        }
+        if (htmlCell.style.maxWidth) htmlCell.style.removeProperty("max-width");
+        if (htmlCell.style.height) htmlCell.style.removeProperty("height");
+        if (htmlCell.style.wordBreak) htmlCell.style.removeProperty("word-break");
+
+        // Clean paragraphs inside cell
+        htmlCell.querySelectorAll("p, div, span").forEach((child) => {
+          const htmlChild = child as HTMLElement;
+          if (htmlChild.style.width) htmlChild.style.removeProperty("width");
+          if (htmlChild.style.wordBreak) htmlChild.style.removeProperty("word-break");
+          if (htmlChild.style.whiteSpace) htmlChild.style.removeProperty("white-space");
+          htmlChild.style.margin = "0";
+          htmlChild.style.padding = "0";
+        });
+      });
+    });
+  });
 }
 
 export function RichTextEditor({
@@ -106,12 +239,13 @@ export function RichTextEditor({
   const editorRef = useRef<HTMLDivElement | null>(null);
   const isInternalUpdate = useRef(false);
 
-  // Sync initial and external changes to Visual Editor
+  // Sync initial and external changes to Visual Editor and sanitize tables
   useEffect(() => {
     if (editorRef.current && !isInternalUpdate.current) {
       if (editorRef.current.innerHTML !== (value || "")) {
         editorRef.current.innerHTML = value || "";
       }
+      sanitizeEditorTables(editorRef.current);
     }
     isInternalUpdate.current = false;
   }, [value, activeTab]);
@@ -201,6 +335,7 @@ export function RichTextEditor({
     }
 
     document.execCommand("insertHTML", false, cleanContent);
+    sanitizeEditorTables(editorRef.current);
     handleEditorInput();
   };
 
@@ -220,24 +355,29 @@ export function RichTextEditor({
 
   const handleInsertTable = () => {
     const tableHtml = `
-      <table class="w-full my-4 border-collapse border border-slate-300">
+      <table>
         <thead>
-          <tr class="bg-slate-100">
-            <th class="border border-slate-300 p-2 text-left font-bold">Header 1</th>
-            <th class="border border-slate-300 p-2 text-left font-bold">Header 2</th>
-            <th class="border border-slate-300 p-2 text-left font-bold">Header 3</th>
+          <tr>
+            <th>No.</th>
+            <th>Undergraduate Course</th>
+            <th>Stream</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="border border-slate-300 p-2">Item 1</td>
-            <td class="border border-slate-300 p-2">Details</td>
-            <td class="border border-slate-300 p-2">Details</td>
+            <td>1</td>
+            <td>BA Programme with Computer Applications</td>
+            <td>Arts and Computer Applications</td>
           </tr>
           <tr>
-            <td class="border border-slate-300 p-2">Item 2</td>
-            <td class="border border-slate-300 p-2">Details</td>
-            <td class="border border-slate-300 p-2">Details</td>
+            <td>2</td>
+            <td>BA Programme with Economics</td>
+            <td>Arts and Economics</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>BA Programme with Education</td>
+            <td>Arts and Education</td>
           </tr>
         </tbody>
       </table><p><br></p>
@@ -245,10 +385,44 @@ export function RichTextEditor({
     execCmd("insertHTML", tableHtml);
   };
 
+  const handleAddTableRow = () => {
+    if (activeTab !== "visual") return;
+    const sel = window.getSelection();
+    if (!sel || !sel.anchorNode) {
+      handleInsertTable();
+      return;
+    }
+    let node: Node | null = sel.anchorNode;
+    let table: HTMLTableElement | null = null;
+    let tr: HTMLTableRowElement | null = null;
+
+    while (node && node !== editorRef.current) {
+      if (node.nodeName === "TR") tr = node as HTMLTableRowElement;
+      if (node.nodeName === "TABLE") {
+        table = node as HTMLTableElement;
+        break;
+      }
+      node = node.parentNode;
+    }
+
+    if (table) {
+      const colCount = table.rows[0]?.cells.length || 3;
+      const targetIndex = tr ? tr.rowIndex + 1 : -1;
+      const newRow = table.insertRow(targetIndex);
+      for (let i = 0; i < colCount; i++) {
+        const cell = newRow.insertCell(i);
+        cell.innerHTML = i === 0 ? `${table.rows.length - 1}` : "Details";
+      }
+      handleEditorInput();
+    } else {
+      handleInsertTable();
+    }
+  };
+
   return (
-    <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs focus-within:border-[#652a7c] focus-within:ring-2 focus-within:ring-[#652a7c]/10 transition-all">
-      {/* Editor Main Toolbar */}
-      <div className="bg-slate-50/95 px-3 py-2 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2 select-none sticky top-0 z-20">
+    <div className="relative border border-slate-200 rounded-2xl bg-white shadow-xs focus-within:border-[#652a7c] focus-within:ring-2 focus-within:ring-[#652a7c]/10 transition-all">
+      {/* Editor Main Toolbar: Sticky at top-16 right below the AdminHeader (64px) */}
+      <div className="bg-slate-50/95 backdrop-blur-md px-3 py-2 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2 select-none sticky top-16 z-20 rounded-t-2xl shadow-xs">
         {/* Formatting Actions */}
         <div className="flex flex-wrap items-center gap-1">
           {/* History */}
@@ -507,17 +681,43 @@ export function RichTextEditor({
           >
             <ImageIcon className="w-4 h-4" />
           </button>
-          <button
-            type="button"
-            onMouseDown={(e) => {
-              e.preventDefault();
-              handleInsertTable();
-            }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
-            title="Insert Table"
-          >
-            <TableIcon className="w-4 h-4" />
-          </button>
+          {/* Table Insertion & Row Management */}
+          <div className="inline-flex items-center rounded-lg border border-slate-200 bg-white overflow-hidden shadow-2xs">
+            <button
+              type="button"
+              onMouseDown={(e) => {
+                e.preventDefault();
+                handleInsertTable();
+              }}
+              className="p-1.5 text-slate-700 hover:text-[#652a7c] hover:bg-slate-100 transition-colors flex items-center gap-1 cursor-pointer"
+              title="Insert Table (3 Columns)"
+            >
+              <TableIcon className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
+              onMouseDown={(e) => {
+                e.preventDefault();
+                handleAddTableRow();
+              }}
+              className="px-1.5 py-1 text-[11px] font-bold text-slate-600 hover:text-[#652a7c] hover:bg-slate-100 border-l border-slate-200 transition-colors cursor-pointer"
+              title="Add New Row to Current Table"
+            >
+              +Row
+            </button>
+            <button
+              type="button"
+              onMouseDown={(e) => {
+                e.preventDefault();
+                sanitizeEditorTables(editorRef.current);
+                handleEditorInput();
+              }}
+              className="px-2 py-1 text-[10px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border-l border-purple-200 transition-colors cursor-pointer"
+              title="Fix and Auto-Format Table Column Widths & Numbers"
+            >
+              Fix Table
+            </button>
+          </div>
           <button
             type="button"
             onMouseDown={(e) => {
@@ -595,13 +795,10 @@ export function RichTextEditor({
           suppressContentEditableWarning
           onInput={handleEditorInput}
           onPaste={handlePaste}
-          className={`editor-content p-6 sm:p-8 min-h-[420px] outline-none text-slate-800 leading-relaxed text-sm sm:text-base focus:outline-none bg-white ${
+          className={`editor-content p-6 sm:p-8 min-h-[420px] outline-none text-slate-800 leading-relaxed text-sm sm:text-base focus:outline-none bg-white overflow-x-auto ${
             activeTab === "visual" ? "block" : "hidden"
           }`}
           data-placeholder={placeholder}
-          style={{
-            wordBreak: "break-word",
-          }}
         />
 
         {/* 2. HTML SOURCE CODE MODE */}
@@ -617,7 +814,7 @@ export function RichTextEditor({
 
         {/* 3. FINAL USER PREVIEW MODE */}
         {activeTab === "preview" && (
-          <div className="prose-content p-6 sm:p-8 min-h-[420px] text-sm sm:text-base leading-relaxed bg-white">
+          <div className="prose-content p-6 sm:p-8 min-h-[420px] text-sm sm:text-base leading-relaxed bg-white overflow-x-auto">
             {value ? (
               <div dangerouslySetInnerHTML={{ __html: value }} />
             ) : (
@@ -628,10 +825,10 @@ export function RichTextEditor({
       </div>
 
       {/* Visual Mode Tip Helper */}
-      <div className="px-4 py-2 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+      <div className="px-4 py-2 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 rounded-b-2xl">
         <span>
           {activeTab === "visual" &&
-            "✏️ Visual Editor: Select any text and click H1, H2, H3, Bold, Lists, or Tables. Changes appear instantly."}
+            "✏️ Visual Editor: Sticky toolbar stays fixed as you scroll. Select text or click +Row to expand tables."}
           {activeTab === "code" && "💻 HTML Code Mode: View or edit underlying HTML tags directly."}
           {activeTab === "preview" && "👁️ Preview Mode: Exact replica of how readers will see this post."}
         </span>
