@@ -64,12 +64,24 @@ export default async function PublicBlogsPage() {
                           src={blog.featuredImage}
                           alt={blog.title}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          unoptimized={blog.featuredImage.startsWith("http")}
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                     ) : (
-                      <div className="aspect-video w-full bg-linear-to-tr from-purple-100 via-indigo-50 to-amber-50 flex items-center justify-center text-[#652a7c]">
-                        <BookOpen className="w-10 h-10 opacity-40" />
+                      <div className="relative aspect-video w-full overflow-hidden bg-gradient-to-tr from-[#652a7c] via-purple-900 to-indigo-950 flex flex-col justify-between p-5 text-white">
+                        <div className="flex items-center justify-between">
+                          <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/10 text-amber-300 border border-white/20">
+                            {blog.category || "DU SOL Guide"}
+                          </span>
+                          <BookOpen className="w-5 h-5 text-purple-300 opacity-80" />
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold text-purple-200 line-clamp-2">
+                            {blog.title}
+                          </p>
+                        </div>
                       </div>
                     )}
 

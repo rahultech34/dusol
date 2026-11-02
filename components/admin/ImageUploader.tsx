@@ -76,6 +76,8 @@ export function ImageUploader({
               src={value}
               alt="Uploaded image preview"
               fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              unoptimized={value.startsWith("http")}
               className="object-cover"
             />
           </div>

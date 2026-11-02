@@ -204,17 +204,19 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
               </div>
 
               {/* Featured Image */}
-              {blog.featuredImage && (
+              {blog.featuredImage ? (
                 <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-100 relative aspect-video w-full">
                   <Image
                     src={blog.featuredImage}
                     alt={blog.title}
                     fill
                     priority
+                    sizes="(max-width: 1024px) 100vw, 800px"
+                    unoptimized={blog.featuredImage.startsWith("http")}
                     className="object-cover"
                   />
                 </div>
-              )}
+              ) : null}
 
               {/* Excerpt Callout Box */}
               {blog.excerpt && (
