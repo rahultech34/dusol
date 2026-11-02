@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
 
     const publicUrl = `/uploads/${uniqueFileName}`;
 
-    // Store media metadata in Firestore
+    // Store media metadata in Firestore (with base64 backup for files <= 800KB)
     const db = getDb();
     if (db) {
       await db.collection("media").doc(uniqueFileName).set({
@@ -63,6 +63,7 @@ export async function POST(request: NextRequest) {
         url: publicUrl,
         size: file.size,
         type: file.type,
+        ...(buffer.length <= 800 * 1024 ? { base64: buffer.toString("base64") } : {}),
         uploadedBy: admin.email,
         createdAt: new Date().toISOString(),
       });

@@ -177,6 +177,8 @@ export default function AdminMediaPage() {
                       src={item.url}
                       alt={item.name || "Media file"}
                       fill
+                      unoptimized
+                      sizes="(max-width: 768px) 50vw, 20vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-200"
                     />
                   </div>
