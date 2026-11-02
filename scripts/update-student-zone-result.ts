@@ -45,7 +45,7 @@ export const resultHtmlContent = `<h2>DU SOL Result: How to Check, Download and 
       </tr>
       <tr class="bg-slate-50/50">
         <td class="p-3 border border-slate-200 font-semibold">Official Result Portals</td>
-        <td class="p-3 border border-slate-200"><a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a> / <a href="https://durslt.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">durslt.du.ac.in</a></td>
+        <td class="p-3 border border-slate-200"><span>official university portal</span> / <a href="https://durslt.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">durslt.du.ac.in</a></td>
       </tr>
     </tbody>
   </table>
@@ -57,7 +57,7 @@ export const resultHtmlContent = `<h2>DU SOL Result: How to Check, Download and 
 <h3>How to Check DU SOL Result Online</h3>
 <p>Follow these 6 simple steps to check and download your digital scorecard:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li>Visit the official SOL result portal (<a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a> or the Samarth examination portal).</li>
+  <li>Visit the official SOL result portal (<span>official university portal</span> or the Samarth examination portal).</li>
   <li>Navigate to the <strong>Examination</strong> or <strong>Marksheet / Result</strong> section.</li>
   <li>Select your College Name as <em>"School of Open Learning"</em> (or <em>"School of Open Learning - Male / Female"</em> if categorized).</li>
   <li>Enter your Examination Roll Number, Session, and Date of Birth as recorded on your admit card.</li>
@@ -129,7 +129,7 @@ export const resultHtmlContent = `<h2>DU SOL Result: How to Check, Download and 
 <ul class="list-disc pl-6 space-y-2 my-3">
   <li>Keep your examination roll number, admit card, and student portal credentials securely documented.</li>
   <li>Never share confidential student login passwords on unverified third-party websites or telegram bots claiming early result leaks.</li>
-  <li>Always monitor authentic updates exclusively on the official domain: <a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a>.</li>
+  <li>Always monitor authentic updates exclusively on the official domain: <span>official university portal</span>.</li>
   <li>Begin your preparation for the next semester right away without waiting for marksheet issuance.</li>
 </ul>
 
@@ -162,9 +162,9 @@ async function updateResult() {
     summary: "Check your DU SOL Result online, understand DU SOL Result Status and learn what to do next with this simple School of Open Learning result guide.",
     content: resultHtmlContent,
     category: "Examination Result",
-    externalLink: "https://sol.du.ac.in",
+    externalLink: "",
     quickSteps: [
-      "Open the official DU SOL result portal (sol.du.ac.in or durslt.du.ac.in).",
+      "Open the official DU SOL result portal (official university portal or durslt.du.ac.in).",
       "Select 'School of Open Learning' as your college name.",
       "Enter your Examination Roll Number and Date of Birth exactly as on your admit card.",
       "Solve the security captcha and click 'Print Score Card'.",

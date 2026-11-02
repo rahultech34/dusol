@@ -41,7 +41,7 @@ export const duSolAdmission2026Content = `<h2>DU SOL Admission 2026: Last Date, 
     </tr>
     <tr>
       <td><strong>Mode of Application</strong></td>
-      <td>100% Online via official portal (<code>sol.du.ac.in</code>)</td>
+      <td>100% Online via official portal (the official portal)</td>
     </tr>
     <tr>
       <td><strong>Approvals &amp; Accreditation</strong></td>
@@ -60,7 +60,7 @@ export const duSolAdmission2026Content = `<h2>DU SOL Admission 2026: Last Date, 
 </div>
 
 <h3>Final Date for DU SOL Admission 2026</h3>
-<p>According to the official listing, the last date for all programmes is <strong>31 October 2026</strong>. With the deadline approaching rapidly, students are strongly advised not to wait until the final hours. Keep your academic documents, scanned certificates, and payment cards ready to complete your online application smoothly. The university conducts course admissions across two cycles annually (January and July sessions), and all applications must be submitted strictly online via the official DU SOL admission portal at <code>sol.du.ac.in</code>. Note that official deadlines may be extended by university notification; always confirm active announcements on the official website.</p>
+<p>According to the official listing, the last date for all programmes is <strong>31 October 2026</strong>. With the deadline approaching rapidly, students are strongly advised not to wait until the final hours. Keep your academic documents, scanned certificates, and payment cards ready to complete your online application smoothly. The university conducts course admissions across two cycles annually (January and July sessions), and all applications must be submitted strictly online via the official DU SOL admission portal at the official portal. Note that official deadlines may be extended by university notification; always confirm active announcements on the official website.</p>
 
 <h3>Reasons to Pick DU SOL</h3>
 <p>The School of Open Learning caters to students and working executives who require academic flexibility without compromising on prestige. Here is why DU SOL is the top choice for distance education:</p>
@@ -151,12 +151,12 @@ export const duSolAdmission2026Content = `<h2>DU SOL Admission 2026: Last Date, 
   </tbody>
 </table>
 </div>
-<p><em>Important Note: Fees are subject to official revision and must be paid exclusively through the official university payment gateway on <code>sol.du.ac.in</code>. Never transfer money to unauthorized third-party accounts.</em></p>
+<p><em>Important Note: Fees are subject to official revision and must be paid exclusively through the official university payment gateway on the official portal. Never transfer money to unauthorized third-party accounts.</em></p>
 
 <h3>How to Apply for DU SOL Admission 2026</h3>
 <p>Follow these 5 verified steps to complete your online registration smoothly:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Step 1 — Portal Registration:</strong> Go to the official DU SOL admission portal at <code>sol.du.ac.in</code> and click on <strong>DU SOL New Registration</strong>.</li>
+  <li><strong>Step 1 — Portal Registration:</strong> Go to the official DU SOL admission portal at the official portal and click on <strong>DU SOL New Registration</strong>.</li>
   <li><strong>Step 2 — Personal &amp; Academic Details:</strong> Fill in your name, contact information, email, and 10th/12th/Graduation marks exactly as recorded on your certificates.</li>
   <li><strong>Step 3 — Select Programme:</strong> Choose your desired degree course and specialisation, then upload scanned copies of all required documents.</li>
   <li><strong>Step 4 — Review &amp; Submit:</strong> Carefully preview your complete application form to ensure zero errors before submitting.</li>
@@ -229,11 +229,11 @@ export const duSolAdmission2026Content = `<h2>DU SOL Admission 2026: Last Date, 
   <tbody>
     <tr>
       <td><strong>When is the final date for DU SOL Admission 2026?</strong></td>
-      <td>The date listed for all programmes is <strong>31 October 2026</strong>. Candidates should check the official web page at <code>sol.du.ac.in</code> for any date extensions.</td>
+      <td>The date listed for all programmes is <strong>31 October 2026</strong>. Candidates should check the official web page at the official portal for any date extensions.</td>
     </tr>
     <tr>
       <td><strong>How to Apply for DU SOL Admission?</strong></td>
-      <td>Register through the official portal at <code>sol.du.ac.in</code>, fill in the application form, upload required documents, and pay the fee online to confirm admission.</td>
+      <td>Register through the official portal at the official portal, fill in the application form, upload required documents, and pay the fee online to confirm admission.</td>
     </tr>
     <tr>
       <td><strong>What is the eligibility for DU SOL Admission?</strong></td>
@@ -260,9 +260,9 @@ async function uploadAdmissionGuide() {
     summary: "Check DU SOL Admission 2026 details: last date, eligibility, fees and how to apply online for UG and PG programmes at Delhi University SOL.",
     content: duSolAdmission2026Content,
     category: "Admissions 2026",
-    externalLink: "https://sol.du.ac.in",
+    externalLink: "",
     quickSteps: [
-      "Go to the official website of DU SOL (sol.du.ac.in) and click on DU SOL Registration.",
+      "Go to the official website of DU SOL (official portal) and click on DU SOL Registration.",
       "Provide all necessary information on the application form.",
       "Choose your programme and attach the required documents.",
       "Review the form thoroughly and submit it.",

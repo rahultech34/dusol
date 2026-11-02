@@ -72,7 +72,7 @@ const blisContent = `<h2>BLIS from DU SOL: Admission 2026, Eligibility, Fees &am
 <h3>BLIS from DU SOL Admission Process 2026</h3>
 <p>DU SOL admission for BLISc is fully online. Follow these steps to register:</p>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to sol.du.ac.in and open the Library and Information Science admission link.</li>
+  <li><strong>Visit the official portal:</strong> Go to official university portal and open the Library and Information Science admission link.</li>
   <li><strong>Register:</strong> Create your account with a valid email ID and mobile number.</li>
   <li><strong>Fill in the form:</strong> Enter personal and academic details carefully.</li>
   <li><strong>Upload documents:</strong> Add your photograph, signature, graduation marksheet and category certificate, if applicable.</li>
@@ -110,7 +110,7 @@ const blisContent = `<h2>BLIS from DU SOL: Admission 2026, Eligibility, Fees &am
   </tbody>
 </table>
 </div>
-<p><em>Fees are revised periodically. Confirm the exact amount in the current official prospectus on sol.du.ac.in before paying.</em></p>
+<p><em>Fees are revised periodically. Confirm the exact amount in the current official prospectus on the official portal before paying.</em></p>
 
 <h3>BLIS from DU SOL Syllabus</h3>
 <p>The BLISc syllabus combines rigorous theoretical knowledge with practical library cataloguing and automation exercises:</p>
@@ -276,7 +276,7 @@ async function updateBLIS() {
     eligibility:
       "Bachelor’s degree in any discipline (Arts, Science, Commerce, Engineering) from a recognised university. No upper age limit.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register, fill personal and educational details, upload graduation marksheet and ID, pay fees online, and download admission confirmation.",
+      "Direct online admission via the official portal. Register, fill personal and educational details, upload graduation marksheet and ID, pay fees online, and download admission confirmation.",
     content: blisContent,
     faqs: blisFaqs,
     fees: blisFees,

@@ -45,7 +45,7 @@ export const libraryHtmlContent = `<h2>DU SOL Library: Access, Services and How 
       </tr>
       <tr class="bg-slate-50/50">
         <td class="p-3 border border-slate-200 font-semibold">Digital Access Portal</td>
-        <td class="p-3 border border-slate-200"><a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a> / DULS Network</td>
+        <td class="p-3 border border-slate-200"><span>official university portal</span> / DULS Network</td>
       </tr>
     </tbody>
   </table>
@@ -80,7 +80,7 @@ export const libraryHtmlContent = `<h2>DU SOL Library: Access, Services and How 
 
 <h3>How to Access DU SOL Library Portal</h3>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li>Visit the official SOL website (<a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a>) or navigate to the dedicated library section.</li>
+  <li>Visit the official SOL website (<span>official university portal</span>) or navigate to the dedicated library section.</li>
   <li>Locate the <strong>Library Portal / E-Resources / Web OPAC</strong> navigation link.</li>
   <li>Sign in or register your account using your official SOL Roll Number, barcode, and registered date of birth.</li>
   <li>Search the catalogue by Title, Author, Keyword, ISBN, or Subject Paper Code.</li>
@@ -168,9 +168,9 @@ async function updateLibrary() {
     summary: "Explore DU SOL Library services, learn how to use the DU SOL Library Portal and make the most of books and digital resources as an SOL student.",
     content: libraryHtmlContent,
     category: "Library Services",
-    externalLink: "https://sol.du.ac.in",
+    externalLink: "",
     quickSteps: [
-      "Visit the official SOL website (sol.du.ac.in) and navigate to the Library / E-Resources portal.",
+      "Visit the official SOL website (official portal) and navigate to the Library / E-Resources portal.",
       "Carry your active DU SOL Student ID Card and fee receipt for reading room access.",
       "Search the online Web OPAC catalogue by subject, author, title, or paper code.",
       "Access digital e-books, research journals, and previous question papers online.",

@@ -228,7 +228,7 @@ export const mbaItContent = `<h2>DU SOL MBA in Information Technology: Fees, Eli
 
 <h3>How to Apply</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official portal.</li>
   <li><strong>Register online:</strong> Create an account using your active email address and mobile number.</li>
   <li><strong>Fill application form:</strong> Select MBA (Information Technology) and fill in your academic and professional profile.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photograph, and signature.</li>
@@ -321,7 +321,7 @@ async function updateMBAIT() {
     eligibility:
       "Bachelor's degree in any discipline from a recognized university. Candidates from any stream (Engineering, Science, Commerce, Arts) can apply. Some admissions may require an entrance exam (OPEN MAT) or work experience. Merit-based admission.",
     admissionProcess:
-      "Online admission via sol.du.ac.in. Register on the portal, fill the application form, upload marksheets and ID proof, pay the registration fee, check the merit list, and confirm admission by paying the course fee.",
+      "Online admission via the official portal. Register on the portal, fill the application form, upload marksheets and ID proof, pay the registration fee, check the merit list, and confirm admission by paying the course fee.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

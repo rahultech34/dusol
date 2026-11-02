@@ -45,7 +45,7 @@ const bmsContent = `<h2>BMS from DU SOL: Distance Education Course Details</h2>
 <p>Dedicated faculty and a learner-friendly approach help you manage work and studies together.</p>
 
 <h3>BMS from DU SOL Fee Structure</h3>
-<p><em>Fees are indicative and may be revised, so confirm the current amount on sol.du.ac.in before applying.</em></p>
+<p><em>Fees are indicative and may be revised, so confirm the current amount on the official portal before applying.</em></p>
 <div class="overflow-x-auto my-4">
 <table>
   <thead>

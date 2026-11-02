@@ -149,7 +149,7 @@ const bcomContent = `<h2>BCom from DU SOL: Distance Education Course, Fees and A
   </tbody>
 </table>
 </div>
-<p><em>These amounts are approximate. Verify current fees at sol.du.ac.in before paying.</em></p>
+<p><em>These amounts are approximate. Verify current fees on the official portal before paying.</em></p>
 
 <h3>Career Scope after BCom Distance Education</h3>
 <div class="overflow-x-auto my-4">

@@ -172,7 +172,7 @@ const maContent = `<h2>MA from DU SOL: Course Details, Fees, Eligibility and Adm
   </tbody>
 </table>
 </div>
-<p><em>Fees can change each session, so check the official portal at sol.du.ac.in for current figures before paying. University fees must be paid only to the university.</em></p>
+<p><em>Fees can change each session, so check the official portal on the official portal for current figures before paying. University fees must be paid only to the university.</em></p>
 
 <h3>Career Scope After an MA from DU SOL</h3>
 <div class="overflow-x-auto my-4">
@@ -210,7 +210,7 @@ const maContent = `<h2>MA from DU SOL: Course Details, Fees, Eligibility and Adm
 
 <h3>How to Apply for DU SOL MA Admission</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official DU SOL admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official DU SOL admission portal on the official portal.</li>
   <li><strong>Register:</strong> Fill in the online registration form with your active email ID and phone number.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, ID proof, photograph, and signature.</li>
   <li><strong>Pay fee online:</strong> Pay the registration fee through the secure payment gateway.</li>
@@ -292,7 +292,7 @@ async function updateMA() {
     eligibility:
       "Bachelor's degree from a recognized university with at least 50% marks (45% for SC/ST/PwBD). Admission is merit-based with or without CUET-PG.",
     admissionProcess:
-      "Online registration on sol.du.ac.in. Upload graduation marksheets and ID proof, pay the application fee online, check the merit list, and complete annual fee payment.",
+      "Online registration on the official portal. Upload graduation marksheets and ID proof, pay the application fee online, check the merit list, and complete annual fee payment.",
     content: maContent,
     faqs: maFaqs,
     fees: maFees,

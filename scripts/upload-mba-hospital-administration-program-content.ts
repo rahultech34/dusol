@@ -219,7 +219,7 @@ export const mbaHospitalAdministrationContent = `<h2>DU SOL MBA in Hospital Admi
 <h3>How to Apply for DU SOL MBA in Hospital Administration Management</h3>
 <p>The entire application process is conducted smoothly online via the official DU SOL admission portal:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Register:</strong> Open the official SOL admission portal at <code>sol.du.ac.in</code> and register with your email and mobile number.</li>
+  <li><strong>Register:</strong> Open the official SOL admission portal at the official portal and register with your email and mobile number.</li>
   <li><strong>Select Specialisation:</strong> Choose the MBA programme and select Hospital Administration Management as your specialisation.</li>
   <li><strong>Fill Academic Details:</strong> Enter your personal, contact, and graduation marks carefully.</li>
   <li><strong>Upload Documents:</strong> Upload your scanned photograph, signature, graduation marksheets, and ID proof.</li>
@@ -361,7 +361,7 @@ async function updateMBAHospitalAdministration() {
     eligibility:
       "Usually, you need a bachelor's degree from a recognised university with minimum qualifying marks (typically 50% for open category, 45% for reserved categories). Open to graduates from any stream (MBBS, BDS, B.Pharm, B.Sc Nursing, Science, Commerce, Arts). Selection can be through merit or an entrance score (such as OPENMAT).",
     admissionProcess:
-      "The entire DU SOL MBA in Hospital Administration Management admission process is online: 1. Open the official SOL admission portal at sol.du.ac.in and register. 2. Select MBA in Hospital Administration Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation receipt safe.",
+      "The entire DU SOL MBA in Hospital Administration Management admission process is online: 1. Open the official SOL admission portal on the official portal and register. 2. Select MBA in Hospital Administration Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation receipt safe.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

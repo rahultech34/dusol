@@ -80,8 +80,53 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
   const relatedBlogs = allBlogs.filter((b) => b.id !== blog.id).slice(0, 3);
   const readingTime = calculateReadingTime(blog.content);
 
+  // Prepare JSON-LD Schema (use custom admin schema or auto-generated default)
+  let schemaContent = "";
+  if (blog.schemaMarkup && blog.schemaMarkup.trim()) {
+    schemaContent = blog.schemaMarkup
+      .replace(/<script[^>]*>/gi, "")
+      .replace(/<\/script>/gi, "")
+      .trim();
+  } else {
+    const defaultSchema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `https://dusol.edukyu.com/blogs/${blog.slug}`,
+      },
+      headline: blog.title,
+      description: blog.seoDescription || blog.excerpt || "DU SOL Admission and Academic Guide",
+      ...(blog.featuredImage ? { image: [blog.featuredImage] } : {}),
+      author: {
+        "@type": "Person",
+        name: blog.author || "DU SOL Admissions Team",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "School of Open Learning, University of Delhi",
+        logo: {
+          "@type": "ImageObject",
+          "url": "https://edukyu.com/Resources/Images/Edukyu_Logo.jpeg",
+        },
+      },
+      datePublished: blog.publishedAt || blog.createdAt,
+      dateModified: blog.updatedAt || blog.publishedAt || blog.createdAt,
+      ...(blog.category ? { articleSection: blog.category } : {}),
+      ...(blog.seoKeywords ? { keywords: blog.seoKeywords } : {}),
+    };
+    schemaContent = JSON.stringify(defaultSchema);
+  }
+
   return (
     <main className="min-h-screen bg-slate-50 flex flex-col">
+      {/* Dynamic Schema.org JSON-LD Structured Data */}
+      {schemaContent && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: schemaContent }}
+        />
+      )}
       {/* Draft/Preview Mode Banner */}
       {blog.status === "draft" && (
         <div className="bg-amber-400 text-slate-950 px-4 py-2 text-center text-xs font-bold tracking-wide">

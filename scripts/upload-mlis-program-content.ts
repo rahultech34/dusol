@@ -176,7 +176,7 @@ const mlisContent = `<h2>MLIS from DU SOL: Fees, Eligibility, Syllabus and Admis
   </tbody>
 </table>
 </div>
-<p><em>Fees may change each session, so check the official portal at sol.du.ac.in before paying. University fees must be paid only to the university.</em></p>
+<p><em>Fees may change each session, so check the official portal on the official portal before paying. University fees must be paid only to the university.</em></p>
 
 <h3>Career Scope After the Programme</h3>
 <p>Graduates can work in prestigious academic, governmental, and private information institutions:</p>
@@ -215,7 +215,7 @@ const mlisContent = `<h2>MLIS from DU SOL: Fees, Eligibility, Syllabus and Admis
 
 <h3>How to Apply for MLIS from DU SOL</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official portal.</li>
   <li><strong>Register:</strong> Fill in the online registration form with your email ID and mobile number.</li>
   <li><strong>Upload documents:</strong> Attach BLISc marksheets, certificates, ID proof, photograph, and signature.</li>
   <li><strong>Pay fee online:</strong> Submit the application fee through the online payment gateway.</li>
@@ -305,7 +305,7 @@ async function updateMLIS() {
     eligibility:
       "BLISc degree from a recognized university. Minimum 50% marks for General category, 45% for OBC/EWS/PwBD, and passing marks for SC/ST candidates. Merit-based admission.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register online, upload BLISc marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
+      "Direct online admission via the official portal. Register online, upload BLISc marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
     content: mlisContent,
     faqs: mlisFaqs,
     fees: mlisFees,

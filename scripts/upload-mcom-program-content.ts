@@ -148,7 +148,7 @@ const mcomContent = `<h2>MCom from DU SOL: Fees, Eligibility, Syllabus and Admis
   </tbody>
 </table>
 </div>
-<p><em>Fees may change each session, so check the official portal at sol.du.ac.in before paying. University fees must be paid only to the university.</em></p>
+<p><em>Fees may change each session, so check the official portal on the official portal before paying. University fees must be paid only to the university.</em></p>
 
 <h3>Career Scope After the Programme</h3>
 <div class="overflow-x-auto my-4">
@@ -186,7 +186,7 @@ const mcomContent = `<h2>MCom from DU SOL: Fees, Eligibility, Syllabus and Admis
 
 <h3>How to Apply for MCom from DU SOL</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official portal.</li>
   <li><strong>Register:</strong> Fill in the online registration form with your email ID and mobile number.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photograph, and signature.</li>
   <li><strong>Pay fee online:</strong> Submit the application fee through the online payment gateway.</li>
@@ -276,7 +276,7 @@ async function updateMCom() {
     eligibility:
       "Bachelor's degree in commerce (B.Com / B.Com Hons / BBA or allied field) from a recognized university with minimum required aggregate marks.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register online, upload graduation marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
+      "Direct online admission via the official portal. Register online, upload graduation marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
     content: mcomContent,
     faqs: mcomFaqs,
     fees: mcomFees,

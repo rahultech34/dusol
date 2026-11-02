@@ -41,7 +41,7 @@ export const admissionHtmlContent = `<h2>DU SOL Admission 2026: Last Date, Eligi
       </tr>
       <tr>
         <td class="p-3 border border-slate-200 font-semibold">Application Mode</td>
-        <td class="p-3 border border-slate-200">100% Online via <code>sol.du.ac.in</code></td>
+        <td class="p-3 border border-slate-200">100% Online via the official portal</td>
       </tr>
       <tr class="bg-slate-50/50">
         <td class="p-3 border border-slate-200 font-semibold">Undergraduate Fee Range</td>
@@ -57,14 +57,14 @@ export const admissionHtmlContent = `<h2>DU SOL Admission 2026: Last Date, Eligi
       </tr>
       <tr>
         <td class="p-3 border border-slate-200 font-semibold">Official Website</td>
-        <td class="p-3 border border-slate-200"><a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a></td>
+        <td class="p-3 border border-slate-200"><span>official university portal</span></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <h3>Final Date for DU SOL Admission 2026</h3>
-<p>According to the listing, the last date for all programmes is <strong>31 October 2026</strong>. This is just a few days away, so better not wait for the last moment and keep your documents ready to complete your application as early as possible. The university conducts an intake of courses twice, in the January and July sessions, and applications are submitted online via <a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] underline font-bold">sol.du.ac.in</a>. However, the last date can be extended or changed, so always check on the official website.</p>
+<p>According to the listing, the last date for all programmes is <strong>31 October 2026</strong>. This is just a few days away, so better not wait for the last moment and keep your documents ready to complete your application as early as possible. The university conducts an intake of courses twice, in the January and July sessions, and applications are submitted online via <span>official university portal</span>. However, the last date can be extended or changed, so always check on the official website.</p>
 
 <h3>Reasons to Pick DU SOL:</h3>
 <p>The School of Open Learning caters to students and working professionals who require flexibility. Several students opt for DU SOL Admission due to the flexibility it provides along with the prestige of the name. Here is why:</p>
@@ -128,17 +128,17 @@ export const admissionHtmlContent = `<h2>DU SOL Admission 2026: Last Date, Eligi
       <tr>
         <td class="p-3 border border-slate-200 font-semibold">Undergraduate (UG) Courses</td>
         <td class="p-3 border border-slate-200">₹7,000 – ₹12,000</td>
-        <td class="p-3 border border-slate-200">Official DU SOL Portal (sol.du.ac.in)</td>
+        <td class="p-3 border border-slate-200">Official DU SOL Portal (official portal)</td>
       </tr>
       <tr class="bg-slate-50/50">
         <td class="p-3 border border-slate-200 font-semibold">Postgraduate (PG) Courses</td>
         <td class="p-3 border border-slate-200">₹10,000 – ₹55,000</td>
-        <td class="p-3 border border-slate-200">Official DU SOL Portal (sol.du.ac.in)</td>
+        <td class="p-3 border border-slate-200">Official DU SOL Portal (official portal)</td>
       </tr>
       <tr>
         <td class="p-3 border border-slate-200 font-semibold">MBA Specialisations</td>
         <td class="p-3 border border-slate-200">Top of Range (~₹52,570)</td>
-        <td class="p-3 border border-slate-200">Official DU SOL Portal (sol.du.ac.in)</td>
+        <td class="p-3 border border-slate-200">Official DU SOL Portal (official portal)</td>
       </tr>
     </tbody>
   </table>
@@ -233,7 +233,7 @@ async function updateStudentZoneAdmission() {
     summary: "Check DU SOL Admission 2026 details: last date, eligibility, fees and how to apply online for UG and PG programmes at Delhi University SOL.",
     content: admissionHtmlContent,
     category: "Admissions 2026",
-    externalLink: "https://sol.du.ac.in",
+    externalLink: "",
     quickSteps: [
       "Go to the official website of DU SOL and click on DU SOL Registration for the new registration.",
       "Provide all necessary information on the application form.",

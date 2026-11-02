@@ -270,7 +270,7 @@ export const mbaInternationalTradeContent = `<h2>DU SOL MBA in International Tra
 <h3>How to Apply for DU SOL MBA in International Trade Management</h3>
 <p>The entire admission process is conducted online via the official DU SOL admission portal:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at the official portal.</li>
   <li><strong>Register &amp; Fill Form:</strong> Register with a valid email and mobile number, and enter your personal and academic details.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload scanned marksheets, graduation certificates, ID proof, and photographs.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online via net banking, UPI, or debit/credit card.</li>
@@ -361,7 +361,7 @@ async function updateMBAInternationalTrade() {
     eligibility:
       "Candidates must have obtained a bachelor's degree in any stream from a recognised university. Open to all graduates from any discipline. Check the official DU SOL website for any session-specific percentage updates before applying.",
     admissionProcess:
-      "The entire DU SOL MBA in International Trade Management admission process is online: 1. Visit the official admission portal at sol.du.ac.in. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
+      "The entire DU SOL MBA in International Trade Management admission process is online: 1. Visit the official admission portal on the official portal. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

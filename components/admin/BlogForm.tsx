@@ -13,6 +13,9 @@ import {
   Tag,
   User,
   Folder,
+  Code2,
+  FileCode,
+  Trash2,
 } from "lucide-react";
 import Link from "next/link";
 import { RichTextEditor } from "./RichTextEditor";
@@ -42,10 +45,99 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
   const [seoTitle, setSeoTitle] = useState(initialData?.seoTitle || "");
   const [seoDescription, setSeoDescription] = useState(initialData?.seoDescription || "");
   const [seoKeywords, setSeoKeywords] = useState(initialData?.seoKeywords || "");
+  const [schemaMarkup, setSchemaMarkup] = useState(
+    initialData?.schemaMarkup || (initialData as any)?.schema || ""
+  );
 
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+
+  const getSchemaValidation = () => {
+    if (!schemaMarkup || !schemaMarkup.trim()) return { empty: true, valid: true, error: null };
+    try {
+      const cleanJson = schemaMarkup
+        .replace(/<script[^>]*>/gi, "")
+        .replace(/<\/script>/gi, "")
+        .trim();
+      JSON.parse(cleanJson);
+      return { empty: false, valid: true, error: null };
+    } catch (err: any) {
+      return { empty: false, valid: false, error: err.message || "Invalid JSON syntax" };
+    }
+  };
+
+  const handleGenerateArticleSchema = () => {
+    const canonicalSlug = slug || slugifyHelper(title) || "article";
+    const generated = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://dusol.edukyu.com/blogs/${canonicalSlug}`,
+      },
+      "headline": title || "Article Headline",
+      "description": seoDescription || excerpt || "Comprehensive guide and update from DU SOL.",
+      ...(featuredImage ? { image: [featuredImage] } : {}),
+      "author": {
+        "@type": "Person",
+        "name": author || "DU SOL Admissions Team",
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "School of Open Learning, University of Delhi",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://edukyu.com/Resources/Images/Edukyu_Logo.jpeg",
+        },
+      },
+      "datePublished": initialData?.publishedAt || new Date().toISOString(),
+      "dateModified": new Date().toISOString(),
+      ...(category ? { articleSection: category } : {}),
+      ...(seoKeywords ? { keywords: seoKeywords } : {}),
+    };
+    setSchemaMarkup(JSON.stringify(generated, null, 2));
+  };
+
+  const handleInsertFaqSchema = () => {
+    const faqTemplate = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the admission procedure for DU SOL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Admissions are conducted online through the official portal. Candidates register, select their course, upload necessary documents, and submit their semester fees.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Are degrees from DU SOL recognized by UGC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, degrees awarded by DU SOL are approved by UGC-DEB and hold equivalent recognition to regular Delhi University programs.",
+          },
+        },
+      ],
+    };
+    setSchemaMarkup(JSON.stringify(faqTemplate, null, 2));
+  };
+
+  const handleFormatSchema = () => {
+    if (!schemaMarkup.trim()) return;
+    try {
+      const cleanJson = schemaMarkup
+        .replace(/<script[^>]*>/gi, "")
+        .replace(/<\/script>/gi, "")
+        .trim();
+      const parsed = JSON.parse(cleanJson);
+      setSchemaMarkup(JSON.stringify(parsed, null, 2));
+    } catch {
+      // Keep as-is if invalid
+    }
+  };
 
   const handleTitleChange = (newTitle: string) => {
     setTitle(newTitle);
@@ -89,6 +181,7 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
       seoTitle: seoTitle || title,
       seoDescription: seoDescription || excerpt,
       seoKeywords,
+      schemaMarkup,
       publishedAt: status === "published" ? initialData?.publishedAt || new Date().toISOString() : undefined,
     };
 
@@ -119,6 +212,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
       setSaving(false);
     }
   };
+
+  const schemaValidation = getSchemaValidation();
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
@@ -284,6 +379,117 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 placeholder="du sol admission, distance ba, distance bcom, eligibility 2026"
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-900"
               />
+            </div>
+          </div>
+
+          {/* Schema & Structured Data Box */}
+          <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+              <div className="flex items-center gap-2">
+                <Code2 className="w-4 h-4 text-[#652a7c]" />
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900">Schema Markup & Structured Data</h3>
+                  <p className="text-[11px] text-slate-500">JSON-LD schema for Google rich search results & Knowledge Graph</p>
+                </div>
+              </div>
+
+              {/* Status Badge */}
+              <div className="flex items-center gap-2">
+                {schemaValidation.empty ? (
+                  <span className="text-[11px] font-medium text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">
+                    Auto-Default Active
+                  </span>
+                ) : schemaValidation.valid ? (
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                    Valid JSON-LD
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2.5 py-1 rounded-full">
+                    <AlertCircle className="w-3 h-3 text-rose-600" />
+                    Invalid JSON
+                  </span>
+                )}
+              </div>
+            </div>
+
+            {/* Quick Action Buttons */}
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                type="button"
+                onClick={handleGenerateArticleSchema}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-50 hover:bg-purple-100 text-[#652a7c] text-xs font-bold transition-colors cursor-pointer border border-purple-200/70"
+                title="Generate standard BlogPosting/Article schema using current title, excerpt, and author"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Generate Article Schema</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={handleInsertFaqSchema}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-colors cursor-pointer border border-slate-200"
+                title="Insert FAQPage schema template"
+              >
+                <FileCode className="w-3.5 h-3.5" />
+                <span>Insert FAQ Schema</span>
+              </button>
+
+              {schemaMarkup.trim() && (
+                <>
+                  <button
+                    type="button"
+                    onClick={handleFormatSchema}
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-600 text-xs font-medium transition-colors cursor-pointer border border-slate-200"
+                    title="Format and prettify JSON indentation"
+                  >
+                    <span>Format JSON</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setSchemaMarkup("")}
+                    className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-rose-600 hover:bg-rose-50 text-xs font-medium transition-colors cursor-pointer"
+                    title="Clear custom schema"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                    <span>Clear</span>
+                  </button>
+                </>
+              )}
+            </div>
+
+            {/* Textarea */}
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="text-[11px] font-bold text-slate-600 uppercase tracking-wider">
+                  JSON-LD Code (<code className="lowercase">&lt;script type="application/ld+json"&gt;</code>)
+                </label>
+                <span className="text-[11px] text-slate-400">
+                  {schemaMarkup.length > 0 ? `${schemaMarkup.length} characters` : "Leave empty to use automatic default"}
+                </span>
+              </div>
+              <textarea
+                rows={9}
+                value={schemaMarkup}
+                onChange={(e) => setSchemaMarkup(e.target.value)}
+                placeholder={`{\n  "@context": "https://schema.org",\n  "@type": "BlogPosting",\n  "headline": "${title || "Article Headline"}",\n  "author": {\n    "@type": "Person",\n    "name": "${author || "DU SOL Admissions Team"}"\n  }\n}`}
+                className={`w-full px-4 py-3 rounded-xl border font-mono text-xs leading-relaxed outline-none transition-all ${
+                  schemaValidation.empty
+                    ? "border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 text-slate-800 bg-slate-50/50"
+                    : schemaValidation.valid
+                    ? "border-emerald-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10 text-slate-900 bg-emerald-50/20"
+                    : "border-rose-300 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/10 text-slate-900 bg-rose-50/20"
+                }`}
+              />
+              {!schemaValidation.valid && schemaValidation.error && (
+                <p className="text-[11px] text-rose-600 mt-1 font-mono">
+                  {schemaValidation.error}
+                </p>
+              )}
+              <p className="text-[11px] text-slate-400 mt-1.5">
+                Tip: Paste either raw JSON or a complete <code className="text-slate-600">&lt;script type="application/ld+json"&gt;</code> snippet. Google accepts Article, FAQPage, HowTo, BreadcrumbList, and more.
+              </p>
             </div>
           </div>
         </div>

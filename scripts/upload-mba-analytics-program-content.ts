@@ -227,7 +227,7 @@ export const mbaAnalyticsContent = `<h2>DU SOL MBA in Business Analytics: Fees, 
 
 <h3>How to Apply</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official portal.</li>
   <li><strong>Register online:</strong> Create your applicant profile using your email ID and mobile number.</li>
   <li><strong>Fill application form:</strong> Select MBA (Business Analytics) and complete your academic details.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photo, and signature.</li>
@@ -322,7 +322,7 @@ async function updateMBAAnalytics() {
     eligibility:
       "Bachelor’s degree in any discipline from a recognized university with a minimum of 50% aggregate marks for unreserved categories and 45% for reserved categories. Proficiency or background in Mathematics or Statistics is preferred. Merit-based admission.",
     admissionProcess:
-      "Online admission via sol.du.ac.in. Register on the online portal, fill in the application form, upload graduation marksheets and ID proof, pay the registration fee, verify selection on the merit list, and confirm admission by paying the course fee.",
+      "Online admission via the official portal. Register on the online portal, fill in the application form, upload graduation marksheets and ID proof, pay the registration fee, verify selection on the merit list, and confirm admission by paying the course fee.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

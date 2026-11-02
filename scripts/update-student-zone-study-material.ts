@@ -45,7 +45,7 @@ export const studyMaterialHtmlContent = `<h2>DU SOL Study Material: Where to Fin
       </tr>
       <tr class="bg-slate-50/50">
         <td class="p-3 border border-slate-200 font-semibold">Official Download Portal</td>
-        <td class="p-3 border border-slate-200"><a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a></td>
+        <td class="p-3 border border-slate-200"><span>official university portal</span></td>
       </tr>
     </tbody>
   </table>
@@ -78,7 +78,7 @@ export const studyMaterialHtmlContent = `<h2>DU SOL Study Material: Where to Fin
 <h3>How to Download DU SOL Study Material</h3>
 <p>Follow these quick steps to download your study material directly from the official portal:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li>Visit the official SOL website of the University of Delhi (<a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a>).</li>
+  <li>Visit the official SOL website of the University of Delhi (<span>official university portal</span>).</li>
   <li>Open the <strong>Study Material</strong> or <strong>e-Content (CBCS / UGCF)</strong> section on the homepage.</li>
   <li>Choose your degree programme (Undergraduate or Postgraduate) and select your course.</li>
   <li>Select your specific semester or academic year and the desired paper/subject.</li>
@@ -137,7 +137,7 @@ export const studyMaterialHtmlContent = `<h2>DU SOL Study Material: Where to Fin
   </div>
   <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
     <h4 class="font-bold text-slate-900 mb-1">Where can I find DU SOL Resources like past papers?</h4>
-    <p class="text-slate-700">Visit the examination and e-content archive on sol.du.ac.in, or consult university library portals and peer study networks for past question papers.</p>
+    <p class="text-slate-700">Visit the examination and e-content archive on the official portal, or consult university library portals and peer study networks for past question papers.</p>
   </div>
   <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
     <h4 class="font-bold text-slate-900 mb-1">Can I study only from the DU SOL Study Material?</h4>
@@ -154,9 +154,9 @@ async function updateStudyMaterial() {
     summary: "Find and download DU SOL Study Material, explore DU SOL Resources and learn simple ways to prepare for your School of Open Learning exams.",
     content: studyMaterialHtmlContent,
     category: "Study Material",
-    externalLink: "https://sol.du.ac.in",
+    externalLink: "",
     quickSteps: [
-      "Visit the official SOL website (sol.du.ac.in) and click on the Study Material / e-Content section.",
+      "Visit the official SOL website (official portal) and click on the Study Material / e-Content section.",
       "Select your degree level (Undergraduate or Postgraduate) and pick your course.",
       "Choose your semester / academic year and corresponding paper code.",
       "Download unit-wise or full book PDFs to your computer or mobile device.",

@@ -45,7 +45,7 @@ export const hallTicketHtmlContent = `<h2>DU SOL Hall Ticket: How to Download, D
       </tr>
       <tr class="bg-slate-50/50">
         <td class="p-3 border border-slate-200 font-semibold">Official Download Portal</td>
-        <td class="p-3 border border-slate-200"><a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a></td>
+        <td class="p-3 border border-slate-200"><span>official university portal</span></td>
       </tr>
     </tbody>
   </table>
@@ -80,7 +80,7 @@ export const hallTicketHtmlContent = `<h2>DU SOL Hall Ticket: How to Download, D
 <h3>How to Download DU SOL Hall Ticket</h3>
 <p>Follow these simple steps to download your admit card online:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li>Visit the official SOL website of the University of Delhi (<a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a>).</li>
+  <li>Visit the official SOL website of the University of Delhi (<span>official university portal</span>).</li>
   <li>Open the examination or admit card / hall ticket section on the homepage or student dashboard.</li>
   <li>Log in with the details asked, such as your SOL roll number, student name, and date of birth.</li>
   <li>Select your course and active semester or academic year.</li>
@@ -137,7 +137,7 @@ export const hallTicketHtmlContent = `<h2>DU SOL Hall Ticket: How to Download, D
 <div class="space-y-4 my-6">
   <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
     <h4 class="font-bold text-slate-900 mb-1">When is the DU SOL Hall Ticket released?</h4>
-    <p class="text-slate-700">It usually comes out a few days or weeks before the exams commence (typically 7 to 10 days in advance). Always watch the official notifications on sol.du.ac.in.</p>
+    <p class="text-slate-700">It usually comes out a few days or weeks before the exams commence (typically 7 to 10 days in advance). Always watch the official notifications on the official portal.</p>
   </div>
   <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
     <h4 class="font-bold text-slate-900 mb-1">Can I take the exam without the DU SOL Hall Ticket?</h4>
@@ -162,9 +162,9 @@ async function updateHallTicket() {
     summary: "Learn how to download the DU SOL Hall Ticket, check details, fix errors and prepare for exam day with this simple Delhi University SOL Hall Ticket guide.",
     content: hallTicketHtmlContent,
     category: "Hall Ticket",
-    externalLink: "https://sol.du.ac.in",
+    externalLink: "",
     quickSteps: [
-      "Visit the official SOL website (sol.du.ac.in) and navigate to the Examination / Hall Ticket portal.",
+      "Visit the official SOL website (official portal) and navigate to the Examination / Hall Ticket portal.",
       "Enter your DU SOL Roll Number, Date of Birth, and registered Student Name.",
       "Select your degree course and semester or annual examination cycle.",
       "Carefully check your subject list, examination dates, and allocated exam centre.",

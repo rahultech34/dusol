@@ -271,7 +271,7 @@ export const mbaRuralManagementContent = `<h2>DU SOL MBA in Rural Management: Fe
 <h3>How to Apply for DU SOL MBA in Rural Management</h3>
 <p>The entire DU SOL MBA in Rural Management admission process is handled online, allowing you to apply comfortably from any location:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at the official portal.</li>
   <li><strong>Register Online:</strong> Create your applicant profile with a valid email ID and mobile number, and fill in the online application form.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload scanned copies of graduation marksheets, certificates, government ID proof, and passport-size photographs.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online using net banking, UPI, debit, or credit card.</li>
@@ -362,7 +362,7 @@ async function updateMBARuralManagement() {
     eligibility:
       "Candidates need a bachelor's degree from a recognized university, and there is no age bar. Applicants with relevant work experience in the rural development sector are encouraged to apply, as practical knowledge enriches the learning experience.",
     admissionProcess:
-      "The entire DU SOL MBA in Rural Management admission process is online via sol.du.ac.in. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
+      "The entire DU SOL MBA in Rural Management admission process is online via the official portal. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

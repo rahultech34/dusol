@@ -223,7 +223,7 @@ export const mjmcContent = `<h2>MJMC from DU SOL: Fees, Eligibility, Syllabus an
 
 <h3>How to Apply</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official portal.</li>
   <li><strong>Register online:</strong> Create your profile with your email ID and mobile number.</li>
   <li><strong>Fill application form:</strong> Enter personal, academic, and graduation details carefully.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photograph, and signature.</li>
@@ -315,7 +315,7 @@ async function updateMJMC() {
     eligibility:
       "Bachelor's degree in any discipline from a recognized and accredited university. No upper age limit. Admission is merit-based depending on graduation performance.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register on the portal, fill the application form, upload marksheets and ID proof, pay the registration fee, check the merit list, and confirm admission by paying the annual course fee.",
+      "Direct online admission via the official portal. Register on the portal, fill the application form, upload marksheets and ID proof, pay the registration fee, check the merit list, and confirm admission by paying the annual course fee.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

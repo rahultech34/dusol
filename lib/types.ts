@@ -27,6 +27,7 @@ export interface Blog {
   seoDescription?: string;
   seoKeywords?: string;
   ogImage?: string;
+  schemaMarkup?: string;
 }
 
 export interface ProgramCurriculumSemester {

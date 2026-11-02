@@ -275,7 +275,7 @@ export const mbaBusinessManagementContent = `<h2>DU SOL MBA in Business Manageme
 <h3>How to Apply for DU SOL MBA in Business Management</h3>
 <p>The entire DU SOL MBA in Business Management admission process is handled online, allowing you to apply comfortably from any location:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Navigate to the official DU SOL admission portal at the official portal.</li>
   <li><strong>Register &amp; Fill Form:</strong> Register with a valid email and mobile number, and enter your personal and academic details.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload scanned marksheets, graduation certificates, ID proof, and photographs.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the registration fee payment online via net banking, UPI, or debit/credit card.</li>
@@ -366,7 +366,7 @@ async function updateMBABusinessManagement() {
     eligibility:
       "Candidates normally require a bachelor's degree of minimum 50% marks (relaxation for reserved categories as per government norms) in any discipline. It also asks for OPENMAT score (distance education entrance conducted by DU SOL). Make sure to check eligibility criteria of the current year before applying as it may vary from session to session.",
     admissionProcess:
-      "The entire DU SOL MBA in Business Management admission process is online: 1. Visit the official admission portal at sol.du.ac.in. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
+      "The entire DU SOL MBA in Business Management admission process is online: 1. Visit the official admission portal on the official portal. 2. Register and fill in the online application form. 3. Upload documents such as marksheets and ID proof. 4. Pay the registration fee online. 5. Check the merit list and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

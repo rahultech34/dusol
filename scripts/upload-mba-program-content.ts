@@ -192,7 +192,7 @@ const mbaContent = `<h2>MBA from DU SOL: Fees, Eligibility, Specializations and 
   </tbody>
 </table>
 </div>
-<p><em>Fees are subject to periodic university revisions. Confirm the current figures on the official portal at sol.du.ac.in before paying.</em></p>
+<p><em>Fees are subject to periodic university revisions. Confirm the current figures on the official portal on the official portal before paying.</em></p>
 
 <h3>Career Scope After the Programme</h3>
 <p>An MBA from DU SOL prepares you for diverse executive, consulting, and managerial appointments across top sectors:</p>
@@ -231,7 +231,7 @@ const mbaContent = `<h2>MBA from DU SOL: Fees, Eligibility, Specializations and 
 
 <h3>How to Apply for MBA from DU SOL</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official portal.</li>
   <li><strong>Register:</strong> Fill in the online registration form with your email ID and mobile number.</li>
   <li><strong>Upload documents:</strong> Attach graduation marksheets, certificates, ID proof, photograph, and signature.</li>
   <li><strong>Pay application fee:</strong> Submit the ₹500 application fee through the online payment gateway.</li>
@@ -321,7 +321,7 @@ async function updateMBA() {
     eligibility:
       "Bachelor's degree in any stream from a recognized university with minimum 50% marks (45% for reserved categories). Merit-based admission.",
     admissionProcess:
-      "Direct online admission via sol.du.ac.in. Register online, upload graduation marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
+      "Direct online admission via the official portal. Register online, upload graduation marksheets and ID, pay the application fee, check the merit list, and confirm admission by paying the annual fee.",
     content: mbaContent,
     faqs: mbaFaqs,
     fees: mbaFees,

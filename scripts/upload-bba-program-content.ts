@@ -44,7 +44,7 @@ const bbaContent = `<h2>BBA from DU SOL: Distance Education Course Details</h2>
 <p>Semester examinations are conducted at designated centres, and you must appear in person.</p>
 
 <h3>BBA from DU SOL Fee Structure</h3>
-<p><em>Fees are indicative and may be revised, so confirm the current amount on sol.du.ac.in before applying.</em></p>
+<p><em>Fees are indicative and may be revised, so confirm the current amount on the official portal before applying.</em></p>
 <div class="overflow-x-auto my-4">
 <table>
   <thead>

@@ -259,7 +259,7 @@ export const btechContent = `<h2>BTech from DU SOL: Fees, Eligibility, Duration 
 
 <h3>How to Apply</h3>
 <ol>
-  <li><strong>Visit the official portal:</strong> Go to the official admission portal at sol.du.ac.in.</li>
+  <li><strong>Visit the official portal:</strong> Go to the official admission portal on the official portal.</li>
   <li><strong>Register online:</strong> Create an applicant account with your valid email ID and mobile number.</li>
   <li><strong>Fill application form:</strong> Choose your branch and entry route (Direct or Lateral), then enter academic details.</li>
   <li><strong>Upload documents:</strong> Attach 10th, 12th / Diploma marksheets, ID proof, photo, and signature.</li>
@@ -355,7 +355,7 @@ async function updateBTech() {
     eligibility:
       "Direct Entry: 10+2 passed from a recognized board, preferably with Physics, Chemistry, and Mathematics (PCM). Lateral Entry: 3-Year Engineering Diploma from a recognized State Technical Board / AICTE-approved institution. Merit-based admission.",
     admissionProcess:
-      "Direct online application via sol.du.ac.in. Register online, select specialization and entry route (Direct or Lateral), upload 10+2 / Diploma marksheets and ID proof, pay the registration fee, verify documents on the merit list, and confirm admission by paying the course fee.",
+      "Direct online application via the official portal. Register online, select specialization and entry route (Direct or Lateral), upload 10+2 / Diploma marksheets and ID proof, pay the registration fee, verify documents on the merit list, and confirm admission by paying the course fee.",
     curriculum: [
       {
         semesterOrYear: "Semester 1 & 2 (Foundation)",

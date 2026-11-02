@@ -275,7 +275,7 @@ export const mbaRetailManagementContent = `<h2>DU SOL MBA in Retail Management: 
 <h3>How to Apply for DU SOL MBA in Retail Management</h3>
 <p>The entire DU SOL MBA in Retail Management admission process is online, so you can apply from anywhere without visiting the campus:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Visit the Official Portal:</strong> Go to the official admission portal at <code>sol.du.ac.in</code>.</li>
+  <li><strong>Visit the Official Portal:</strong> Go to the official admission portal at the official portal.</li>
   <li><strong>Register &amp; Fill Form:</strong> Register with your primary email and phone number, and fill in your academic details.</li>
   <li><strong>Upload Mandatory Documents:</strong> Upload clear scanned copies of marksheets, certificates, and ID proof.</li>
   <li><strong>Pay Registration Fee:</strong> Complete the initial registration fee payment online.</li>
@@ -366,7 +366,7 @@ async function updateMBARetailManagement() {
     eligibility:
       "Candidates should have a Bachelor's Degree in any subject from a government accredited university. Open to all graduates from any stream. Candidates can complete the degree flexibly between two to five years.",
     admissionProcess:
-      "The entire DU SOL MBA in Retail Management admission process is online via sol.du.ac.in. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
+      "The entire DU SOL MBA in Retail Management admission process is online via the official portal. Register on the portal, upload marksheets and ID proof, pay the registration fee, check the merit list, and pay the course fee once admitted.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

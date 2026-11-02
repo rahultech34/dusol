@@ -79,6 +79,7 @@ export async function getAllBlogs(onlyPublished = false): Promise<Blog[]> {
         seoDescription: data.seoDescription,
         seoKeywords: data.seoKeywords,
         ogImage: data.ogImage,
+        schemaMarkup: data.schemaMarkup || data.schema || "",
       });
     });
 
@@ -121,6 +122,7 @@ export async function getBlogById(id: string): Promise<Blog | null> {
       seoDescription: data.seoDescription,
       seoKeywords: data.seoKeywords,
       ogImage: data.ogImage,
+      schemaMarkup: data.schemaMarkup || data.schema || "",
     };
   } catch (error) {
     console.error("[getBlogById] Error:", error);
@@ -187,6 +189,7 @@ export async function getBlogBySlug(slug: string, allowDraft = false): Promise<B
       seoDescription: data.seoDescription,
       seoKeywords: data.seoKeywords,
       ogImage: data.ogImage,
+      schemaMarkup: data.schemaMarkup || data.schema || "",
     };
   } catch (error) {
     console.error("[getBlogBySlug] Error:", error);
@@ -217,6 +220,7 @@ export async function saveBlog(
     const dataToSave = {
       ...blogData,
       slug,
+      schemaMarkup: typeof blogData.schemaMarkup === "string" ? blogData.schemaMarkup : (blogData.schemaMarkup || ""),
       updatedAt: now,
       createdAt: blogData.createdAt || now,
       publishedAt: blogData.status === "published" ? blogData.publishedAt || now : blogData.publishedAt || null,

@@ -219,7 +219,7 @@ export const mbaMarketingManagementContent = `<h2>DU SOL MBA in Marketing Manage
 <h3>How to Apply for DU SOL MBA in Marketing Management</h3>
 <p>The entire admission process is conducted online via the official DU SOL portal:</p>
 <ol class="list-decimal pl-6 space-y-2 my-3">
-  <li><strong>Register:</strong> Open the official SOL admission portal at <code>sol.du.ac.in</code> and register with your email and mobile number.</li>
+  <li><strong>Register:</strong> Open the official SOL admission portal at the official portal and register with your email and mobile number.</li>
   <li><strong>Select Specialisation:</strong> Choose the Master of Business Administration (MBA) programme and select Marketing Management.</li>
   <li><strong>Enter Details:</strong> Fill in your personal, academic, and contact details accurately.</li>
   <li><strong>Upload Documents:</strong> Upload your photograph, signature, graduation marksheets, and ID proof.</li>
@@ -362,7 +362,7 @@ async function updateMBAMarketingManagement() {
     eligibility:
       "Generally, candidates require a bachelor's degree from a recognised university with minimum satisfactory marks (typically 50% aggregate marks, 45% for reserved categories). Selection criteria such as merit or an entrance score (OPENMAT) may vary for different admission cycles.",
     admissionProcess:
-      "The entire DU SOL MBA in Marketing Management admission process is online: 1. Open the official SOL admission portal at sol.du.ac.in and register. 2. Select MBA in Marketing Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation safe.",
+      "The entire DU SOL MBA in Marketing Management admission process is online: 1. Open the official SOL admission portal on the official portal and register. 2. Select MBA in Marketing Management. 3. Fill in personal and academic details. 4. Upload photograph, signature, and marksheets. 5. Pay the fee online. 6. Submit the form and keep the confirmation safe.",
     curriculum: [
       {
         semesterOrYear: "Semester 1",

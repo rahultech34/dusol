@@ -49,7 +49,7 @@ export const coursesFeesHtmlContent = `<h2>DUSOL Courses Fees List 2026: UG and 
       </tr>
       <tr class="bg-slate-50/50">
         <td class="p-3 border border-slate-200 font-semibold">Official Payment Portal</td>
-        <td class="p-3 border border-slate-200"><a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a></td>
+        <td class="p-3 border border-slate-200"><span>official university portal</span></td>
       </tr>
     </tbody>
   </table>
@@ -188,7 +188,7 @@ export const coursesFeesHtmlContent = `<h2>DUSOL Courses Fees List 2026: UG and 
 <p>DUSOL Courses Fees might be updated according to the university updates on the annual basis. A figure that applied last session might be revised this session, so treat any list, including this one, as a guide and confirm the final amount on the official website.</p>
 
 <h3>How to Pay</h3>
-<p><strong>DUSOL Courses Fees – Category wise final payment amount:</strong> Before submission of DUSOL Courses Fees, candidates should verify the final amount to be paid according to their category. The DUSOL Courses Fees are available to pay online at <a href="https://sol.du.ac.in" target="_blank" rel="noopener noreferrer" class="text-[#652a7c] font-bold underline">sol.du.ac.in</a> website. Make payment directly to the university and never transfer money to agents or any third parties.</p>
+<p><strong>DUSOL Courses Fees – Category wise final payment amount:</strong> Before submission of DUSOL Courses Fees, candidates should verify the final amount to be paid according to their category. The DUSOL Courses Fees are available to pay online at <span>official university portal</span> website. Make payment directly to the university and never transfer money to agents or any third parties.</p>
 
 <h3>Budgeting Tips for Planning</h3>
 <ul class="list-disc pl-6 space-y-2 my-3">
@@ -231,10 +231,10 @@ async function updateCoursesFees() {
     summary: "Check the DUSOL Courses Fees List 2026: UG and PG course fees, registration charges and payment tips for Delhi University School of Open Learning.",
     content: coursesFeesHtmlContent,
     category: "Course Fees",
-    externalLink: "https://sol.du.ac.in",
+    externalLink: "",
     quickSteps: [
       "Compare the DUSOL Courses Fees List of two or three programmes before choosing.",
-      "Check the official portal (sol.du.ac.in) for active session registration charges.",
+      "Check the official portal (official portal) for active session registration charges.",
       "Log in to the student portal and review category-wise fee details before payment.",
       "Pay the fee directly through the official university payment gateway.",
       "Download and save the official fee receipt and payment acknowledgment.",

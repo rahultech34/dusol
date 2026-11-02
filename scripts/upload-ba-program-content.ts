@@ -201,7 +201,7 @@ const baContent = `<h2>BA from DU SOL: Distance Education Course, Fees and Admis
   </tbody>
 </table>
 </div>
-<p><em>These amounts are approximate. Verify current fees at sol.du.ac.in before paying.</em></p>
+<p><em>These amounts are approximate. Verify current fees on the official portal before paying.</em></p>
 
 <h3>Career Scope after BA Distance Education</h3>
 <ul>
