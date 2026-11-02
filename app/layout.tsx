@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  verification: {
+    google: "BCVtyQQNBt10FiEMIidFjjkHFOyol5Sr3yVt56op8uA",
+  },
 };
 
 import { AdmissionModalProvider } from "@/components/admission/AdmissionModalContext";
