@@ -233,6 +233,20 @@ function sanitizeEditorTables(container: HTMLElement | null) {
   });
 }
 
+interface ActiveFormats {
+  block: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "blockquote" | "";
+  bold: boolean;
+  italic: boolean;
+  underline: boolean;
+  strikeThrough: boolean;
+  alignLeft: boolean;
+  alignCenter: boolean;
+  alignRight: boolean;
+  bulletList: boolean;
+  orderedList: boolean;
+  link: boolean;
+}
+
 export function RichTextEditor({
   value,
   onChange,
@@ -242,6 +256,21 @@ export function RichTextEditor({
   const [activeTab, setActiveTab] = useState<"visual" | "code" | "preview">("visual");
   const editorRef = useRef<HTMLDivElement | null>(null);
   const isInternalUpdate = useRef(false);
+
+  // Active toolbar formats state (to highlight H1, H2, P, Bold, etc. when selected/active)
+  const [activeFormats, setActiveFormats] = useState<ActiveFormats>({
+    block: "",
+    bold: false,
+    italic: false,
+    underline: false,
+    strikeThrough: false,
+    alignLeft: false,
+    alignCenter: false,
+    alignRight: false,
+    bulletList: false,
+    orderedList: false,
+    link: false,
+  });
 
   // Link Modal & Floating Link Tooltip State
   const [isLinkModalOpen, setIsLinkModalOpen] = useState(false);
@@ -259,6 +288,128 @@ export function RichTextEditor({
     x: number;
     y: number;
   } | null>(null);
+
+  // Inspects current cursor/selection and detects active block and inline formats
+  const updateActiveFormats = useCallback(() => {
+    if (activeTab !== "visual" || !editorRef.current) return;
+
+    const sel = window.getSelection();
+    if (!sel || sel.rangeCount === 0) return;
+
+    const node = sel.anchorNode;
+    if (!node || !editorRef.current.contains(node)) return;
+
+    // 1. Detect Block element (h1, h2, h3, h4, h5, h6, p, blockquote) and ancestor inline styles
+    let blockTag: ActiveFormats["block"] = "";
+    let curr: Node | null = node;
+    let hasLink = false;
+    let hasBulletList = false;
+    let hasOrderedList = false;
+    let isBold = false;
+    let isItalic = false;
+    let isUnderline = false;
+    let isStrike = false;
+
+    while (curr && curr !== editorRef.current) {
+      if (curr.nodeType === Node.ELEMENT_NODE) {
+        const el = curr as HTMLElement;
+        const tag = el.tagName.toLowerCase();
+        if (!blockTag && ["h1", "h2", "h3", "h4", "h5", "h6", "p", "blockquote"].includes(tag)) {
+          blockTag = tag as ActiveFormats["block"];
+        }
+        if (tag === "a") hasLink = true;
+        if (tag === "ul") hasBulletList = true;
+        if (tag === "ol") hasOrderedList = true;
+        if (
+          tag === "b" ||
+          tag === "strong" ||
+          el.style.fontWeight === "bold" ||
+          parseInt(el.style.fontWeight || "0", 10) >= 700
+        ) {
+          isBold = true;
+        }
+        if (tag === "i" || tag === "em" || el.style.fontStyle === "italic") {
+          isItalic = true;
+        }
+        if (tag === "u" || el.style.textDecoration?.includes("underline")) {
+          isUnderline = true;
+        }
+        if (
+          tag === "s" ||
+          tag === "strike" ||
+          tag === "del" ||
+          el.style.textDecoration?.includes("line-through")
+        ) {
+          isStrike = true;
+        }
+      }
+      curr = curr.parentNode;
+    }
+
+    // Fallback to queryCommandValue for formatBlock
+    if (!blockTag) {
+      try {
+        const val = (document.queryCommandValue("formatBlock") || "").toLowerCase().replace(/<|>/g, "");
+        if (["h1", "h2", "h3", "h4", "h5", "h6", "p", "blockquote"].includes(val)) {
+          blockTag = val as ActiveFormats["block"];
+        }
+      } catch (e) {}
+    }
+
+    if (!blockTag && editorRef.current.contains(node)) {
+      blockTag = "p";
+    }
+
+    // 2. Query document formatting commands
+    let alignLeft = false;
+    let alignCenter = false;
+    let alignRight = false;
+
+    try {
+      if (!isBold) isBold = document.queryCommandState("bold");
+      if (!isItalic) isItalic = document.queryCommandState("italic");
+      if (!isUnderline) isUnderline = document.queryCommandState("underline");
+      if (!isStrike) isStrike = document.queryCommandState("strikeThrough");
+      alignLeft = document.queryCommandState("justifyLeft");
+      alignCenter = document.queryCommandState("justifyCenter");
+      alignRight = document.queryCommandState("justifyRight");
+      if (!hasBulletList) hasBulletList = document.queryCommandState("insertUnorderedList");
+      if (!hasOrderedList) hasOrderedList = document.queryCommandState("insertOrderedList");
+    } catch (e) {}
+
+    setActiveFormats({
+      block: blockTag,
+      bold: isBold,
+      italic: isItalic,
+      underline: isUnderline,
+      strikeThrough: isStrike,
+      alignLeft,
+      alignCenter,
+      alignRight,
+      bulletList: hasBulletList,
+      orderedList: hasOrderedList,
+      link: hasLink,
+    });
+  }, [activeTab]);
+
+  // Listen for selection changes anywhere within the editor
+  useEffect(() => {
+    const handleSelectionChange = () => {
+      const sel = window.getSelection();
+      if (
+        editorRef.current &&
+        sel &&
+        sel.anchorNode &&
+        editorRef.current.contains(sel.anchorNode)
+      ) {
+        updateActiveFormats();
+      }
+    };
+    document.addEventListener("selectionchange", handleSelectionChange);
+    return () => {
+      document.removeEventListener("selectionchange", handleSelectionChange);
+    };
+  }, [updateActiveFormats]);
 
   // Sync initial and external changes to Visual Editor and sanitize tables
   useEffect(() => {
@@ -289,6 +440,7 @@ export function RichTextEditor({
         editorRef.current?.focus();
         document.execCommand(command, false, arg);
         handleEditorInput();
+        updateActiveFormats();
       }, 50);
       return;
     }
@@ -296,6 +448,8 @@ export function RichTextEditor({
     editorRef.current?.focus();
     document.execCommand(command, false, arg);
     handleEditorInput();
+    updateActiveFormats();
+    setTimeout(updateActiveFormats, 15);
   };
 
   // Robust Heading and Block formatting with cross-browser compatibility
@@ -316,21 +470,25 @@ export function RichTextEditor({
     }
 
     try {
-      // 1. Try modern tag name (Chrome, Edge, Safari prefer "h1", "h2")
-      let ok = document.execCommand("formatBlock", false, cleanTag);
+      // 1. Try bracketed tag name (Firefox and Chrome standard)
+      let ok = document.execCommand("formatBlock", false, `<${cleanTag}>`);
       if (!ok) {
-        // 2. Try bracketed tag name (Firefox prefers "<h1>", "<h2>")
-        ok = document.execCommand("formatBlock", false, `<${cleanTag}>`);
+        // 2. Try modern clean tag name
+        ok = document.execCommand("formatBlock", false, cleanTag);
       }
       if (!ok) {
         // 3. Try uppercase tag name
         document.execCommand("formatBlock", false, cleanTag.toUpperCase());
       }
     } catch (e) {
-      document.execCommand("formatBlock", false, `<${cleanTag}>`);
+      try {
+        document.execCommand("formatBlock", false, `<${cleanTag}>`);
+      } catch (err) {}
     }
 
     handleEditorInput();
+    updateActiveFormats();
+    setTimeout(updateActiveFormats, 15);
   };
 
   // Smart paste handler that strips Word/Docs junk and pastes real formatted content
@@ -617,57 +775,77 @@ export function RichTextEditor({
             type="button"
             onMouseDown={(e) => {
               e.preventDefault();
-              formatHeading("h1");
+              formatHeading(activeFormats.block === "h1" ? "p" : "h1");
             }}
-            className="px-2 py-1 rounded-lg text-xs font-extrabold text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border border-slate-200 hover:border-[#652a7c]/40 transition-colors flex items-center gap-1"
+            className={`px-2 py-1 rounded-lg text-xs font-extrabold transition-all flex items-center gap-1 cursor-pointer border ${
+              activeFormats.block === "h1"
+                ? "bg-[#652a7c] text-white border-[#652a7c] shadow-xs"
+                : "text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border-slate-200 hover:border-[#652a7c]/40"
+            }`}
             title="Heading 1 (Main Title)"
           >
-            <Heading1 className="w-4 h-4 text-[#652a7c]" />
+            <Heading1 className={`w-4 h-4 ${activeFormats.block === "h1" ? "text-white" : "text-[#652a7c]"}`} />
             <span>H1</span>
           </button>
           <button
             type="button"
             onMouseDown={(e) => {
               e.preventDefault();
-              formatHeading("h2");
+              formatHeading(activeFormats.block === "h2" ? "p" : "h2");
             }}
-            className="px-2 py-1 rounded-lg text-xs font-bold text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border border-slate-200 hover:border-[#652a7c]/40 transition-colors flex items-center gap-1"
+            className={`px-2 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 cursor-pointer border ${
+              activeFormats.block === "h2"
+                ? "bg-[#652a7c] text-white border-[#652a7c] shadow-xs"
+                : "text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border-slate-200 hover:border-[#652a7c]/40"
+            }`}
             title="Heading 2 (Section Title)"
           >
-            <Heading2 className="w-4 h-4 text-[#652a7c]" />
+            <Heading2 className={`w-4 h-4 ${activeFormats.block === "h2" ? "text-white" : "text-[#652a7c]"}`} />
             <span>H2</span>
           </button>
           <button
             type="button"
             onMouseDown={(e) => {
               e.preventDefault();
-              formatHeading("h3");
+              formatHeading(activeFormats.block === "h3" ? "p" : "h3");
             }}
-            className="px-2 py-1 rounded-lg text-xs font-semibold text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border border-slate-200 hover:border-[#652a7c]/40 transition-colors flex items-center gap-1"
+            className={`px-2 py-1 rounded-lg text-xs font-semibold transition-all flex items-center gap-1 cursor-pointer border ${
+              activeFormats.block === "h3"
+                ? "bg-[#652a7c] text-white border-[#652a7c] shadow-xs"
+                : "text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border-slate-200 hover:border-[#652a7c]/40"
+            }`}
             title="Heading 3 (Sub-section)"
           >
-            <Heading3 className="w-4 h-4 text-[#652a7c]" />
+            <Heading3 className={`w-4 h-4 ${activeFormats.block === "h3" ? "text-white" : "text-[#652a7c]"}`} />
             <span>H3</span>
           </button>
           <button
             type="button"
             onMouseDown={(e) => {
               e.preventDefault();
-              formatHeading("h4");
+              formatHeading(activeFormats.block === "h4" ? "p" : "h4");
             }}
-            className="px-2 py-1 rounded-lg text-xs font-semibold text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border border-slate-200 hover:border-[#652a7c]/40 transition-colors flex items-center gap-1"
+            className={`px-2 py-1 rounded-lg text-xs font-semibold transition-all flex items-center gap-1 cursor-pointer border ${
+              activeFormats.block === "h4"
+                ? "bg-[#652a7c] text-white border-[#652a7c] shadow-xs"
+                : "text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border-slate-200 hover:border-[#652a7c]/40"
+            }`}
             title="Heading 4"
           >
-            <Heading4 className="w-4 h-4 text-[#652a7c]" />
+            <Heading4 className={`w-4 h-4 ${activeFormats.block === "h4" ? "text-white" : "text-[#652a7c]"}`} />
             <span>H4</span>
           </button>
           <button
             type="button"
             onMouseDown={(e) => {
               e.preventDefault();
-              formatHeading("h5");
+              formatHeading(activeFormats.block === "h5" ? "p" : "h5");
             }}
-            className="px-2 py-1 rounded-lg text-xs font-semibold text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border border-slate-200 hover:border-[#652a7c]/40 transition-colors"
+            className={`px-2 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer border ${
+              activeFormats.block === "h5"
+                ? "bg-[#652a7c] text-white border-[#652a7c] shadow-xs font-bold"
+                : "text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border-slate-200 hover:border-[#652a7c]/40"
+            }`}
             title="Heading 5"
           >
             <span>H5</span>
@@ -676,9 +854,13 @@ export function RichTextEditor({
             type="button"
             onMouseDown={(e) => {
               e.preventDefault();
-              formatHeading("h6");
+              formatHeading(activeFormats.block === "h6" ? "p" : "h6");
             }}
-            className="px-2 py-1 rounded-lg text-xs font-semibold text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border border-slate-200 hover:border-[#652a7c]/40 transition-colors"
+            className={`px-2 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer border ${
+              activeFormats.block === "h6"
+                ? "bg-[#652a7c] text-white border-[#652a7c] shadow-xs font-bold"
+                : "text-slate-800 hover:text-[#652a7c] hover:bg-purple-100/60 border-slate-200 hover:border-[#652a7c]/40"
+            }`}
             title="Heading 6"
           >
             <span>H6</span>
@@ -689,7 +871,11 @@ export function RichTextEditor({
               e.preventDefault();
               formatHeading("p");
             }}
-            className="px-2 py-1 rounded-lg text-xs font-medium text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`px-2 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer border ${
+              activeFormats.block === "p"
+                ? "bg-[#652a7c] text-white border-[#652a7c] shadow-xs font-bold"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 border-transparent"
+            }`}
             title="Normal Paragraph"
           >
             Normal (P)
@@ -704,7 +890,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("bold");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.bold
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Bold (Ctrl+B)"
           >
             <Bold className="w-4 h-4" />
@@ -715,7 +905,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("italic");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.italic
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Italic (Ctrl+I)"
           >
             <Italic className="w-4 h-4" />
@@ -726,7 +920,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("underline");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.underline
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Underline (Ctrl+U)"
           >
             <UnderlineIcon className="w-4 h-4" />
@@ -737,7 +935,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("strikeThrough");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.strikeThrough
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Strikethrough"
           >
             <Strikethrough className="w-4 h-4" />
@@ -752,7 +954,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("justifyLeft");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.alignLeft
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Align Left"
           >
             <AlignLeft className="w-4 h-4" />
@@ -763,7 +969,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("justifyCenter");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.alignCenter
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Align Center"
           >
             <AlignCenter className="w-4 h-4" />
@@ -774,7 +984,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("justifyRight");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.alignRight
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Align Right"
           >
             <AlignRight className="w-4 h-4" />
@@ -789,7 +1003,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("insertUnorderedList");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.bulletList
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Bullet List"
           >
             <List className="w-4 h-4" />
@@ -800,7 +1018,11 @@ export function RichTextEditor({
               e.preventDefault();
               execCmd("insertOrderedList");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.orderedList
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Numbered List"
           >
             <ListOrdered className="w-4 h-4" />
@@ -809,9 +1031,13 @@ export function RichTextEditor({
             type="button"
             onMouseDown={(e) => {
               e.preventDefault();
-              formatHeading("blockquote");
+              formatHeading(activeFormats.block === "blockquote" ? "p" : "blockquote");
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.block === "blockquote"
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Quote Block"
           >
             <Quote className="w-4 h-4" />
@@ -826,7 +1052,11 @@ export function RichTextEditor({
               e.preventDefault();
               openLinkModal();
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors cursor-pointer"
+            className={`p-1.5 rounded-lg transition-all cursor-pointer ${
+              activeFormats.link
+                ? "bg-[#652a7c] text-white shadow-xs"
+                : "text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70"
+            }`}
             title="Insert / Edit Link (Ctrl+K or Cmd+K)"
           >
             <LinkIcon className="w-4 h-4" />
@@ -1000,9 +1230,23 @@ export function RichTextEditor({
           ref={editorRef}
           contentEditable
           suppressContentEditableWarning
-          onInput={handleEditorInput}
-          onPaste={handlePaste}
-          onClick={handleEditorClick}
+          spellCheck={false}
+          autoCorrect="off"
+          autoCapitalize="off"
+          onInput={() => {
+            handleEditorInput();
+            updateActiveFormats();
+          }}
+          onPaste={(e) => {
+            handlePaste(e);
+            setTimeout(updateActiveFormats, 15);
+          }}
+          onClick={(e) => {
+            handleEditorClick(e);
+            updateActiveFormats();
+          }}
+          onKeyUp={updateActiveFormats}
+          onMouseUp={updateActiveFormats}
           onKeyDown={handleKeyDown}
           style={{ caretColor: "#0f172a", colorScheme: "light" }}
           className={`editor-content p-6 sm:p-8 min-h-[420px] outline-none text-slate-900 leading-relaxed text-sm sm:text-base focus:outline-none bg-white overflow-x-auto caret-slate-900 [color-scheme:light] ${
@@ -1018,6 +1262,7 @@ export function RichTextEditor({
             onChange={(e) => onChange(e.target.value)}
             placeholder="Edit raw HTML code..."
             rows={16}
+            spellCheck={false}
             style={{ caretColor: "#0f172a", colorScheme: "light" }}
             className="w-full p-6 outline-none text-xs sm:text-sm text-slate-900 leading-relaxed font-mono resize-y bg-slate-50/50 min-h-[420px] caret-slate-900 [color-scheme:light]"
           />
