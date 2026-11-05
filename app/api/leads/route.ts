@@ -26,21 +26,32 @@ const PROGRAM_MAPPING: Record<string, string> = {
   // Core DU SOL UG Programs
   "BA": "P0062",
   "Bachelor of Arts": "P0062",
+  "Bachelor of Arts (BA)": "P0062",
   "Bachelor of Arts (BA) Programme": "P0062",
   "B.A": "P0062",
+  "Distance BA from DU SOL": "P0062",
   "BCOM": "P0038",
   "Bachelor of Commerce": "P0038",
+  "Bachelor of Commerce (B.Com)": "P0038",
   "BCom": "P0038",
   "B.Com": "P0038",
+  "Distance BCom from DU SOL": "P0038",
   "BBA": "P0016",
   "Bachelor of Business Administration": "P0016",
+  "Bachelor of Business Administration (BBA)": "P0016",
+  "Distance BBA from DU SOL": "P0016",
   "BMS": "P0020",
   "Bachelor of Management Studies": "P0020",
+  "Bachelor of Management Studies (BMS)": "P0020",
+  "Distance BMS from DU SOL": "P0020",
   "BCA": "P0039",
   "Bachelor of Computer Application": "P0039",
+  "Bachelor of Computer Application (BCA)": "P0039",
   "BLIS": "P0072",
   "BLISc": "P0072",
   "Bachelor of Library and Information Science": "P0072",
+  "Bachelor of Library and Information Science (BLIS)": "P0072",
+  "Distance BLIS from DU SOL": "P0072",
   "BTech": "P0072",
   "B.Tech": "P0072",
   "Bachelor of Technology": "P0072",
@@ -49,18 +60,26 @@ const PROGRAM_MAPPING: Record<string, string> = {
   "MBA": "P0314",
   "Master of Business Administration": "P0314",
   "Master of Business Administration (MBA)": "P0314",
+  "Distance MBA from DU SOL": "P0314",
   "MBA in General Management": "P0040",
   "MCOM": "P0034",
   "MCom": "P0034",
   "M.Com": "P0034",
   "Master of Commerce": "P0034",
+  "Master of Commerce (M.Com)": "P0034",
+  "Distance MCOM from DU SOL": "P0034",
   "MA": "P0330",
   "Master of Arts": "P0330",
+  "Master of Arts (MA)": "P0330",
+  "Distance MA from DU SOL": "P0330",
   "MLIS": "P0068",
   "MLISc": "P0068",
   "Master of Library and Information Science": "P0068",
+  "Master of Library and Information Science (MLIS)": "P0068",
+  "Distance MLIS from DU SOL": "P0068",
   "MJMC": "P0035",
   "Master of Journalism and Mass Communication": "P0035",
+  "Master of Journalism and Mass Communication (MJMC)": "P0035",
   "MA (JMC)": "P0035",
 
   // MBA Specializations
@@ -69,23 +88,28 @@ const PROGRAM_MAPPING: Record<string, string> = {
   "MBA in Business Analytics": "P0002",
   "MBA (BAM) Business Analytics Management": "P0002",
   "MBA (BA) Business Analytics": "P0043",
+  "MBA in Human Resource Management": "P0006",
   "MBA (HRM) Human Resource Management": "P0006",
+  "MBA in Finance Management": "P0007",
   "MBA (FM) Finance Management": "P0007",
+  "MBA in Marketing Management": "P0005",
   "MBA (MM) Marketing Management": "P0005",
+  "MBA in Operations Management": "P0010",
   "MBA (OM) Operations Management": "P0010",
+  "MBA in Project Management": "P0009",
   "MBA (PM) Project Management": "P0009",
+  "MBA in International Business Management": "P0012",
   "MBA (IBM) International Business Management": "P0012",
+  "MBA in Supply Chain Management": "P0028",
   "MBA (SCM) Supply Chain Management": "P0028",
+  "MBA in Retail Management": "P0027",
   "MBA (RM) Retail Management": "P0027",
   "MBA in Hospital Administration": "P0281",
   "MBA (HM) Healthcare Management": "P0281",
   "MBA in International Trade": "P0173",
   "MBA (ITM) International Trade Management": "P0173",
   "MBA in Rural Management": "P0015",
-  "MBA in Retail Management": "P0027",
   "MBA in Business Management": "P0170",
-  "MBA in Project Management": "P0009",
-  "MBA in Marketing Management": "P0005",
 };
 
 function resolveProgramId(courseName?: string): string {
@@ -120,8 +144,14 @@ export async function POST(req: NextRequest) {
     const state = sanitizeText(body.state || body.city || "Delhi NCR");
     const university_name = sanitizeText(body.university_name || "Delhi University (DU SOL)");
     const university_code = sanitizeText(body.university_code || "DU_SOL");
-    const source_name = sanitizeText(body.source_name || (body.source && body.source !== "website_form" ? body.source : "WS") || "WS");
-    const source_id = sanitizeText(body.source_id || "49");
+    const source_name = sanitizeText(
+      (body.source_name && body.source_name !== "WS" ? body.source_name : "") ||
+      (body.source && body.source !== "website_form" && body.source !== "WS" ? body.source : "") ||
+      "WS_DUSOL"
+    );
+    const source_id = sanitizeText(
+      body.source_id && body.source_id !== "49" ? body.source_id : "499"
+    );
     const supplier_id = sanitizeText(body.supplier_id || "");
 
     const referer = req.headers.get("referer") || "";
@@ -136,6 +166,12 @@ export async function POST(req: NextRequest) {
     }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ success: false, message: "Please provide a valid email address." }, { status: 400 });
+    }
+    if (!course || course === "Select Course") {
+      return NextResponse.json({ success: false, message: "Please select the course you are interested in." }, { status: 400 });
+    }
+    if (!state || state === "Select your state") {
+      return NextResponse.json({ success: false, message: "Please select your current state / region." }, { status: 400 });
     }
 
     const prog_id = resolveProgramId(course);
