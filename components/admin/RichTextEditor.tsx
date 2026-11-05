@@ -26,6 +26,10 @@ import {
   AlignCenter,
   AlignRight,
   Table as TableIcon,
+  ExternalLink,
+  Unlink,
+  X,
+  Edit2,
 } from "lucide-react";
 
 interface RichTextEditorProps {
@@ -239,6 +243,23 @@ export function RichTextEditor({
   const editorRef = useRef<HTMLDivElement | null>(null);
   const isInternalUpdate = useRef(false);
 
+  // Link Modal & Floating Link Tooltip State
+  const [isLinkModalOpen, setIsLinkModalOpen] = useState(false);
+  const [linkUrl, setLinkUrl] = useState("");
+  const [linkText, setLinkText] = useState("");
+  const [linkOpenInNewTab, setLinkOpenInNewTab] = useState(true);
+  const [editingAnchor, setEditingAnchor] = useState<HTMLAnchorElement | null>(null);
+  const savedSelectionRange = useRef<Range | null>(null);
+
+  // Floating Link Bar (when clicking an existing link in the editor)
+  const [floatingLink, setFloatingLink] = useState<{
+    anchor: HTMLAnchorElement;
+    href: string;
+    text: string;
+    x: number;
+    y: number;
+  } | null>(null);
+
   // Sync initial and external changes to Visual Editor and sanitize tables
   useEffect(() => {
     if (editorRef.current && !isInternalUpdate.current) {
@@ -339,10 +360,150 @@ export function RichTextEditor({
     handleEditorInput();
   };
 
-  const handleInsertLink = () => {
-    const url = prompt("Enter URL link (e.g. https://example.com):", "https://");
-    if (url && url !== "https://") {
-      execCmd("createLink", url);
+  const openLinkModal = (anchorToEdit?: HTMLAnchorElement | null) => {
+    if (activeTab !== "visual") {
+      setActiveTab("visual");
+    }
+
+    const sel = window.getSelection();
+    let currentAnchor: HTMLAnchorElement | null = anchorToEdit || null;
+
+    if (!currentAnchor && sel && sel.rangeCount > 0) {
+      const range = sel.getRangeAt(0);
+      savedSelectionRange.current = range.cloneRange();
+
+      let parent: Node | null = sel.anchorNode;
+      while (parent && parent !== editorRef.current) {
+        if (parent.nodeName === "A") {
+          currentAnchor = parent as HTMLAnchorElement;
+          break;
+        }
+        parent = parent.parentNode;
+      }
+    }
+
+    if (currentAnchor) {
+      setEditingAnchor(currentAnchor);
+      setLinkUrl(currentAnchor.getAttribute("href") || "");
+      setLinkText(currentAnchor.textContent || "");
+      setLinkOpenInNewTab(currentAnchor.target === "_blank");
+    } else {
+      setEditingAnchor(null);
+      setLinkUrl("https://");
+      const selectedText = sel ? sel.toString().trim() : "";
+      setLinkText(selectedText);
+      setLinkOpenInNewTab(true);
+    }
+
+    setFloatingLink(null);
+    setIsLinkModalOpen(true);
+  };
+
+  const handleSaveLink = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!linkUrl.trim()) return;
+
+    let cleanUrl = linkUrl.trim();
+    if (
+      !cleanUrl.startsWith("http://") &&
+      !cleanUrl.startsWith("https://") &&
+      !cleanUrl.startsWith("mailto:") &&
+      !cleanUrl.startsWith("tel:") &&
+      !cleanUrl.startsWith("/") &&
+      !cleanUrl.startsWith("#")
+    ) {
+      cleanUrl = `https://${cleanUrl}`;
+    }
+
+    if (editingAnchor) {
+      // 1. Updating existing link in place!
+      editingAnchor.setAttribute("href", cleanUrl);
+      if (linkText.trim()) {
+        editingAnchor.textContent = linkText.trim();
+      }
+      if (linkOpenInNewTab) {
+        editingAnchor.setAttribute("target", "_blank");
+        editingAnchor.setAttribute("rel", "noopener noreferrer");
+      } else {
+        editingAnchor.removeAttribute("target");
+        editingAnchor.removeAttribute("rel");
+      }
+    } else {
+      // 2. Inserting a brand new link
+      editorRef.current?.focus();
+      const sel = window.getSelection();
+
+      if (savedSelectionRange.current && sel) {
+        sel.removeAllRanges();
+        sel.addRange(savedSelectionRange.current);
+      }
+
+      const currentSel = window.getSelection();
+      if (currentSel && currentSel.rangeCount > 0) {
+        const range = currentSel.getRangeAt(0);
+        const a = document.createElement("a");
+        a.href = cleanUrl;
+        a.textContent = linkText.trim() || cleanUrl;
+        if (linkOpenInNewTab) {
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+        }
+
+        range.deleteContents();
+        range.insertNode(a);
+
+        // Move cursor after the inserted link
+        range.setStartAfter(a);
+        range.setEndAfter(a);
+        currentSel.removeAllRanges();
+        currentSel.addRange(range);
+      }
+    }
+
+    handleEditorInput();
+    setIsLinkModalOpen(false);
+    setEditingAnchor(null);
+    savedSelectionRange.current = null;
+  };
+
+  const handleRemoveLink = () => {
+    const targetAnchor = editingAnchor || floatingLink?.anchor;
+    if (targetAnchor && editorRef.current?.contains(targetAnchor)) {
+      const text = targetAnchor.textContent || "";
+      const textNode = document.createTextNode(text);
+      targetAnchor.parentNode?.replaceChild(textNode, targetAnchor);
+      handleEditorInput();
+    }
+    setIsLinkModalOpen(false);
+    setEditingAnchor(null);
+    setFloatingLink(null);
+  };
+
+  const handleEditorClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    const anchor = target.closest("a");
+    if (anchor && editorRef.current?.contains(anchor)) {
+      e.preventDefault();
+      const rect = anchor.getBoundingClientRect();
+      const parentRect = editorRef.current.parentElement?.getBoundingClientRect();
+      if (parentRect) {
+        setFloatingLink({
+          anchor,
+          href: anchor.getAttribute("href") || "",
+          text: anchor.textContent || "",
+          x: Math.max(10, rect.left - parentRect.left),
+          y: Math.max(0, rect.bottom - parentRect.top + 8),
+        });
+      }
+    } else {
+      setFloatingLink(null);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      openLinkModal();
     }
   };
 
@@ -663,10 +824,10 @@ export function RichTextEditor({
             type="button"
             onMouseDown={(e) => {
               e.preventDefault();
-              handleInsertLink();
+              openLinkModal();
             }}
-            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors"
-            title="Insert Link"
+            className="p-1.5 rounded-lg text-slate-700 hover:text-[#652a7c] hover:bg-slate-200/70 transition-colors cursor-pointer"
+            title="Insert / Edit Link (Ctrl+K or Cmd+K)"
           >
             <LinkIcon className="w-4 h-4" />
           </button>
@@ -788,6 +949,52 @@ export function RichTextEditor({
 
       {/* Editor Body */}
       <div className="relative min-h-[420px]">
+        {/* Floating Link Action Pill when clicking any link in visual editor */}
+        {floatingLink && activeTab === "visual" && (
+          <div
+            style={{ left: `${floatingLink.x}px`, top: `${floatingLink.y}px` }}
+            className="absolute z-30 bg-slate-900 text-white rounded-xl shadow-xl px-3 py-1.5 flex items-center gap-2 text-xs border border-slate-700 animate-in fade-in zoom-in-95 duration-150 select-none"
+          >
+            <LinkIcon className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+            <a
+              href={floatingLink.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-300 hover:text-purple-200 underline truncate max-w-[200px]"
+              title={floatingLink.href}
+            >
+              {floatingLink.href}
+            </a>
+            <span className="w-px h-3.5 bg-slate-700" />
+            <button
+              type="button"
+              onClick={() => openLinkModal(floatingLink.anchor)}
+              className="px-2 py-0.5 rounded bg-purple-700 hover:bg-purple-600 text-white font-medium text-[11px] flex items-center gap-1 cursor-pointer"
+              title="Change Link Destination URL"
+            >
+              <Edit2 className="w-3 h-3" />
+              <span>Change URL</span>
+            </button>
+            <button
+              type="button"
+              onClick={handleRemoveLink}
+              className="px-2 py-0.5 rounded bg-rose-700 hover:bg-rose-600 text-white font-medium text-[11px] flex items-center gap-1 cursor-pointer"
+              title="Remove Link (Unlink)"
+            >
+              <Unlink className="w-3 h-3" />
+              <span>Unlink</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setFloatingLink(null)}
+              className="text-slate-400 hover:text-white p-0.5 cursor-pointer"
+              title="Close"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        )}
+
         {/* 1. VISUAL WYSIWYG MODE (Default) */}
         <div
           ref={editorRef}
@@ -795,7 +1002,10 @@ export function RichTextEditor({
           suppressContentEditableWarning
           onInput={handleEditorInput}
           onPaste={handlePaste}
-          className={`editor-content p-6 sm:p-8 min-h-[420px] outline-none text-slate-800 leading-relaxed text-sm sm:text-base focus:outline-none bg-white overflow-x-auto ${
+          onClick={handleEditorClick}
+          onKeyDown={handleKeyDown}
+          style={{ caretColor: "#0f172a", colorScheme: "light" }}
+          className={`editor-content p-6 sm:p-8 min-h-[420px] outline-none text-slate-900 leading-relaxed text-sm sm:text-base focus:outline-none bg-white overflow-x-auto caret-slate-900 [color-scheme:light] ${
             activeTab === "visual" ? "block" : "hidden"
           }`}
           data-placeholder={placeholder}
@@ -808,7 +1018,8 @@ export function RichTextEditor({
             onChange={(e) => onChange(e.target.value)}
             placeholder="Edit raw HTML code..."
             rows={16}
-            className="w-full p-6 outline-none text-xs sm:text-sm text-slate-900 leading-relaxed font-mono resize-y bg-slate-50/50 min-h-[420px]"
+            style={{ caretColor: "#0f172a", colorScheme: "light" }}
+            className="w-full p-6 outline-none text-xs sm:text-sm text-slate-900 leading-relaxed font-mono resize-y bg-slate-50/50 min-h-[420px] caret-slate-900 [color-scheme:light]"
           />
         )}
 
@@ -828,7 +1039,7 @@ export function RichTextEditor({
       <div className="px-4 py-2 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 rounded-b-2xl">
         <span>
           {activeTab === "visual" &&
-            "✏️ Visual Editor: Sticky toolbar stays fixed as you scroll. Select text or click +Row to expand tables."}
+            "✏️ Visual Editor: Select text or click any link to edit its URL. Press Ctrl+K or Cmd+K to link."}
           {activeTab === "code" && "💻 HTML Code Mode: View or edit underlying HTML tags directly."}
           {activeTab === "preview" && "👁️ Preview Mode: Exact replica of how readers will see this post."}
         </span>
@@ -836,6 +1047,152 @@ export function RichTextEditor({
           {value ? value.replace(/<[^>]*>/g, "").trim().split(/\s+/).filter(Boolean).length : 0} words
         </span>
       </div>
+
+      {/* Link Insert / Edit Modal Dialog */}
+      {isLinkModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 backdrop-blur-xs p-4 animate-in fade-in">
+          <div
+            className="bg-white rounded-3xl border border-slate-200 shadow-2xl w-full max-w-md p-6 space-y-5 text-left"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-purple-50 text-[#652a7c] flex items-center justify-center">
+                  <LinkIcon className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900">
+                    {editingAnchor ? "Change Link URL" : "Insert Hyperlink"}
+                  </h3>
+                  <p className="text-[11px] text-slate-500">
+                    {editingAnchor
+                      ? "Change the destination address or display text of this link"
+                      : "Attach a destination URL to content or text"}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setIsLinkModalOpen(false);
+                  setEditingAnchor(null);
+                }}
+                className="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Destination URL *
+                </label>
+                <input
+                  type="text"
+                  required
+                  autoFocus
+                  value={linkUrl}
+                  onChange={(e) => setLinkUrl(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      handleSaveLink();
+                    }
+                  }}
+                  placeholder="https://example.com or /student-zone"
+                  style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 text-xs sm:text-sm text-slate-900 outline-none font-medium caret-slate-900 [color-scheme:light]"
+                />
+                <span className="text-[11px] text-slate-400 mt-1 block">
+                  Tip: Supports full URLs (https://...), relative paths (/blogs/...), or mailto: links.
+                </span>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Display Text (Optional)
+                </label>
+                <input
+                  type="text"
+                  value={linkText}
+                  onChange={(e) => setLinkText(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      handleSaveLink();
+                    }
+                  }}
+                  placeholder="Text shown to readers"
+                  style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 text-xs sm:text-sm text-slate-900 outline-none caret-slate-900 [color-scheme:light]"
+                />
+              </div>
+
+              <div className="flex items-center gap-2 pt-1">
+                <input
+                  type="checkbox"
+                  id="link-new-tab"
+                  checked={linkOpenInNewTab}
+                  onChange={(e) => setLinkOpenInNewTab(e.target.checked)}
+                  className="rounded border-slate-300 text-[#652a7c] focus:ring-[#652a7c] cursor-pointer"
+                />
+                <label
+                  htmlFor="link-new-tab"
+                  className="text-xs font-medium text-slate-700 cursor-pointer select-none"
+                >
+                  Open link in a new tab (target="_blank")
+                </label>
+              </div>
+
+              <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                {editingAnchor ? (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      handleRemoveLink();
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-rose-600 hover:bg-rose-50 font-semibold text-xs transition-colors cursor-pointer"
+                  >
+                    <Unlink className="w-3.5 h-3.5" />
+                    <span>Remove Link</span>
+                  </button>
+                ) : <span />}
+
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsLinkModalOpen(false);
+                      setEditingAnchor(null);
+                    }}
+                    className="px-4 py-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 font-semibold text-xs transition-colors cursor-pointer"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      handleSaveLink();
+                    }}
+                    className="px-5 py-2 rounded-xl bg-[#652a7c] hover:bg-purple-900 text-white font-bold text-xs shadow-md transition-colors cursor-pointer"
+                  >
+                    {editingAnchor ? "Update URL" : "Insert Link"}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -284,7 +284,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={title}
                 onChange={(e) => handleTitleChange(e.target.value)}
                 placeholder="e.g. Complete DU SOL Admission Guide 2026: Eligibility & Fees"
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-base font-bold text-slate-900"
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-base font-bold text-slate-900 caret-slate-900 [color-scheme:light]"
               />
             </div>
 
@@ -300,7 +301,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                   value={slug}
                   onChange={(e) => setSlug(slugifyHelper(e.target.value))}
                   placeholder="complete-du-sol-admission-guide-2026"
-                  className="w-full bg-transparent outline-none text-slate-900 font-semibold pl-1"
+                  style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                  className="w-full bg-transparent outline-none text-slate-900 font-semibold pl-1 caret-slate-900 [color-scheme:light]"
                 />
               </div>
             </div>
@@ -314,7 +316,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={excerpt}
                 onChange={(e) => setExcerpt(e.target.value)}
                 placeholder="A concise summary of the article displayed on blog archive cards and search previews..."
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-700"
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-700 caret-slate-900 [color-scheme:light]"
               />
             </div>
           </div>
@@ -351,7 +354,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={seoTitle}
                 onChange={(e) => setSeoTitle(e.target.value)}
                 placeholder={title || "Custom browser tab title"}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-900"
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-900 caret-slate-900 [color-scheme:light]"
               />
             </div>
 
@@ -364,7 +368,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={seoDescription}
                 onChange={(e) => setSeoDescription(e.target.value)}
                 placeholder={excerpt || "Search engine description snippet (150-160 characters recommended)"}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-700"
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-700 caret-slate-900 [color-scheme:light]"
               />
             </div>
 
@@ -377,7 +382,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={seoKeywords}
                 onChange={(e) => setSeoKeywords(e.target.value)}
                 placeholder="du sol admission, distance ba, distance bcom, eligibility 2026"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-900"
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 outline-none text-xs sm:text-sm text-slate-900 caret-slate-900 [color-scheme:light]"
               />
             </div>
           </div>
@@ -474,7 +480,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={schemaMarkup}
                 onChange={(e) => setSchemaMarkup(e.target.value)}
                 placeholder={`{\n  "@context": "https://schema.org",\n  "@type": "BlogPosting",\n  "headline": "${title || "Article Headline"}",\n  "author": {\n    "@type": "Person",\n    "name": "${author || "DU SOL Admissions Team"}"\n  }\n}`}
-                className={`w-full px-4 py-3 rounded-xl border font-mono text-xs leading-relaxed outline-none transition-all ${
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className={`w-full px-4 py-3 rounded-xl border font-mono text-xs leading-relaxed outline-none transition-all caret-slate-900 [color-scheme:light] ${
                   schemaValidation.empty
                     ? "border-slate-200 focus:border-[#652a7c] focus:ring-2 focus:ring-[#652a7c]/10 text-slate-800 bg-slate-50/50"
                     : schemaValidation.valid
@@ -567,7 +574,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
                 placeholder="Admissions, Exams, Courses, Results"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-900 outline-none focus:border-[#652a7c]"
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-900 outline-none focus:border-[#652a7c] caret-slate-900 [color-scheme:light]"
               />
             </div>
 
@@ -581,7 +589,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={author}
                 onChange={(e) => setAuthor(e.target.value)}
                 placeholder="DU SOL Editorial Team"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-900 outline-none focus:border-[#652a7c]"
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-900 outline-none focus:border-[#652a7c] caret-slate-900 [color-scheme:light]"
               />
             </div>
 
@@ -595,7 +604,8 @@ export function BlogForm({ initialData, isEdit = false }: BlogFormProps) {
                 value={tagsInput}
                 onChange={(e) => setTagsInput(e.target.value)}
                 placeholder="DU SOL, Admission 2026, BA, Distance Learning"
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-900 outline-none focus:border-[#652a7c]"
+                style={{ caretColor: "#0f172a", colorScheme: "light" }}
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-900 outline-none focus:border-[#652a7c] caret-slate-900 [color-scheme:light]"
               />
             </div>
           </div>

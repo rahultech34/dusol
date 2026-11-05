@@ -71,14 +71,11 @@ export function ImageUploader({
 
       {value ? (
         <div className="relative rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 group">
-          <div className="relative aspect-video max-h-60 w-full overflow-hidden">
-            <Image
+          <div className="relative max-h-64 w-full overflow-hidden flex items-center justify-center p-2 bg-slate-100/60">
+            <img
               src={value}
               alt="Uploaded image preview"
-              fill
-              sizes="(max-width: 768px) 100vw, 400px"
-              unoptimized
-              className="object-cover"
+              className="w-full h-auto max-h-60 object-contain rounded-xl mx-auto block"
             />
           </div>
           <button

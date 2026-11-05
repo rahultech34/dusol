@@ -1,10 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    // @ts-ignore
-    agentUpgrade: "security",
-  },
   serverExternalPackages: [
     "firebase-admin",
     "@google-cloud/firestore",
@@ -25,14 +21,6 @@ const nextConfig: NextConfig = {
         hostname: "**",
       },
     ],
-  },
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
   },
   async redirects() {
     return [

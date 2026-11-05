@@ -19,12 +19,24 @@ body {
   overflow-x: clip;
 }
 
+/* Ensure caret / text cursor is always dark and never invisible/white across all themes */
+.editor-content,
+.editor-content *,
+input,
+textarea,
+[contenteditable] {
+  caret-color: #0f172a !important;
+  color-scheme: light !important;
+}
+
 /* Rich text editor and rendered HTML styling */
 .editor-content,
 .prose-content {
   line-height: 1.75;
   color: #1e293b;
   font-size: 1rem;
+  caret-color: #0f172a !important;
+  color-scheme: light !important;
 }
 
 .editor-content:empty:before {
